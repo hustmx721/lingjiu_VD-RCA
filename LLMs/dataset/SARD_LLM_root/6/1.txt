@@ -1,0 +1,2 @@
+这段C语言代码存在内存泄露的问题。问题出现在FUNC_int64_t_calloc_44_norm函数中，具体在分配内存的行：data = (int64_t *)calloc(100, sizeof(int64_t));
+内存泄露类型属于“忘记释放已分配的内存”。因为在FUNC_int64_t_calloc_44_norm函数结束前，没有对应的free(data);语句来释放这块内存。尽管有一个funcPtr函数指针指向了normSink函数，但normSink函数并没有执行任何与内存释放相关的操作。风险值为0.9。

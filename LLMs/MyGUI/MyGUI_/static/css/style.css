@@ -1,0 +1,155 @@
+/* 设置网页背景 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-image: url('/static/img/background.png');  /* 根据实际路径更新 */
+    background-size: cover;   /* 背景图片适应整个页面 */
+    background-position: center;
+    background-attachment: fixed;  /* 背景固定不随页面滚动 */
+}
+
+/* 主内容区域 */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* 左右面板 */
+.left-panel, .right-panel {
+    width: 45%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 标题样式 */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.inline-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-method-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 48%;
+}
+
+.green-btn {
+    background-color: #4cae4c;
+}
+
+.green-btn:hover {
+    background-color: #3d8b3d;
+}
+
+.blue-btn {
+    background-color: #007bff;
+}
+
+.blue-btn:hover {
+    background-color: #0069d9;
+}
+
+#fileInputContainer {
+    margin-top: 20px;
+}
+
+.file-names {
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.chat-container {
+    height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+.chat-entry {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.chat-entry.user {
+    background-color: #d0eaff;
+    text-align: right;
+}
+
+.chat-entry.bot {
+    background-color: #ffe0e0;
+    text-align: left;
+}
+
+/* 检查按钮样式 */
+.check-button {
+    padding: 15px 40px;
+    font-size: 18px;
+    border: none;
+    background-color: #69b3ff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.check-button:hover {
+    background-color: #82c4ff;
+}
+
+/* 按钮居中对齐 */
+.footer-centered {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}

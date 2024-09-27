@@ -1,0 +1,1 @@
+这段C语言代码存在内存泄露的问题。问题出现在FUNC_wchar_t_malloc_01_norm函数中，具体来说是在调用printWLine(data)之后，没有释放data指针所指向的内存。内存泄露发生在FUNC_wchar_t_malloc_01_norm函数结束时，因为data指针所指向的内存是通过malloc分配的，但在函数结束前没有使用free函数来释放它。内存泄露类型属于“忘记释放已分配的内存”。风险值为0.55。

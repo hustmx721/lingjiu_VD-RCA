@@ -1,0 +1,1 @@
+这段C语言代码存在内存泄露的问题。问题出现在FUNC_char_malloc_06_norm函数中。具体地，在以下行分配了内存：data = (char *)malloc(100*sizeof(char));然而，在这段代码的最后，没有对应的free(data);语句来释放这块内存。这意味着一旦FUNC_char_malloc_06_norm函数执行完毕，分配给data的内存将不会被释放，导致内存泄露。内存泄露类型属于“忘记释放已分配的内存”。风险值为0.7。

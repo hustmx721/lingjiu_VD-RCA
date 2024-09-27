@@ -1,0 +1,1 @@
+这段C语言代码存在内存泄露的问题。问题出现在FUNC_int64_t_realloc_41_norm函数中，具体在分配（或重新分配）内存的行：data = (int64_t *)realloc(data, 100*sizeof(int64_t));内存泄露类型属于“忘记释放已分配的内存”。因为在FUNC_int64_t_realloc_41_norm函数结束前，没有对应的free(data);语句来释放这块内存。尽管normSink函数被调用，并且它接收了data作为参数，但normSink函数内部并没有执行任何与内存释放相关的操作。风险值为0.9。

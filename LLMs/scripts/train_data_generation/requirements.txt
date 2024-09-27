@@ -1,0 +1,2 @@
+langchain==0.2.11
+argparse==1.4.0

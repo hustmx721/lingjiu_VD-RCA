@@ -1,0 +1,22 @@
+void foo(int test1)
+{
+	int i;
+	int * p = NULL;
+
+	for(i = 0; i < 10; i++)
+	{
+		p = (int *)malloc(sizeof(int));
+		if(p != NULL)
+			*p = 1;
+		test1++;
+	}
+	printf("test1 = %d\n",test1);
+	free(p);
+}
+
+int main(void)
+{
+	int test1 = 0;
+	foo(test1);
+	return 0;
+}

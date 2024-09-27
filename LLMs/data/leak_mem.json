@@ -1,0 +1,1212 @@
+[
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid __memory() {\nint *ptr = (int*)malloc(sizeof(int) * 10);\nfree(ptr);\n}\n\nint main() {\n__memory();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid _memory() {\nint *ptr = (int*)malloc(sizeof(int) * 10);\n}\n\nint main() {\n_memory();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nchar* create_string() {\nchar *str = (char*)malloc(sizeof(char) * 100);\nreturn str;\n}\n\nint main() {\nchar *myStr = create_string();\nfree(myStr);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nchar* create_string() {\nchar *str = (char*)malloc(sizeof(char) * 100);\nreturn str;\n}\n\nint main() {\nchar *myStr = create_string();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid process() {\nint *ptr = (int*)malloc(sizeof(int) * 10);\nif (ptr == NULL) {\nreturn;\n}\nif (some_condition) {\nfree(ptr);\nreturn;\n}\nfree(ptr);\n}\n\nint main() {\nprocess();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid process() {\nint *ptr = (int*)malloc(sizeof(int) * 10);\nif (ptr == NULL) {\nreturn;\n}\nif (some_condition) return;\n}\n\nint main() {\nprocess();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid __in_loop() {\nfor (int i = 0; i < 10; i++) {\nint *ptr = (int*)malloc(sizeof(int));\nfree(ptr);\n}\n}\n\nint main() {\n__in_loop();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid _in_loop() {\nfor (int i = 0; i < 10; i++) {\nint *ptr = (int*)malloc(sizeof(int));\n}\n}\n\nint main() {\n_in_loop();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid _realloc_() {\nint *ptr = (int*)malloc(sizeof(int) * 10);\nint *temp = (int*)realloc(ptr, sizeof(int) * 20);\nif (temp == NULL) {\nfree(ptr);\nreturn;\n}\nptr = temp;\nfree(ptr);\n}\n\nint main() {\n_realloc_();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid realloc_() {\nint *ptr = (int*)malloc(sizeof(int) * 10);\nptr = (int*)realloc(ptr, sizeof(int) * 20);\n}\n\nint main() {\nrealloc_();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid __function() {\nint *ptr = (int*)malloc(sizeof(int) * 10);\nfree(ptr);\n}\n\nint main() {\n__function();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid _function() {\nint *ptr = (int*)malloc(sizeof(int) * 10);\n}\n\nint main() {\n_function();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nint *global_ptr;\n\nvoid setup() {\nglobal_ptr = (int*)malloc(sizeof(int) * 10);\n}\n\nvoid teardown() {\nfree(global_ptr);\n}\n\nint main() {\nsetup();\nteardown();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nint *global_ptr;\n\nvoid setup() {\nglobal_ptr = (int*)malloc(sizeof(int) * 10);\n}\n\nvoid teardown() {\n}\n\nint main() {\nsetup();\nteardown();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid safe_memory() {\nint *arr = (int*)malloc(11 * sizeof(int));\nif (arr != NULL) {\narr[10] = 5;\nfree(arr);\n}\n}\n\nint main() {\nsafe_memory();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid _memory() {\nint *arr = (int*)malloc(10 * sizeof(int));\narr[10] = 5;\n}\n\nint main() {\n_memory();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid safe_memory() {\nint *arr = (int*)malloc(6 * sizeof(int));\nif (arr != NULL) {\nfor (int i = 0; i < 6; i++) {\narr[i] = i;\n}\nfree(arr);\n}\n}\n\nint main() {\nsafe_memory();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid _memory() {\nint *arr = (int*)malloc(5 * sizeof(int));\nfor (int i = 0; i <= 5; i++) {\narr[i] = i;\n}\n}\n\nint main() {\n_memory();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid safe_memory() {\nint *arr = (int*)malloc(12 * sizeof(int));\nif (arr != NULL) {\narr[11] = 100;\nfree(arr);\n}\n}\n\nint main() {\nsafe_memory();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid _memory() {\nint *arr = (int*)malloc(10 * sizeof(int));\narr[11] = 100;\n}\n\nint main() {\n_memory();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid safe_memory() {\nint n = 10;\nint *arr = (int*)malloc((n + 1) * sizeof(int));\nif (arr != NULL) {\narr[n] = 20;\nfree(arr);\n}\n}\n\nint main() {\nsafe_memory();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid _memory() {\nint n = 10;\nint *arr = (int*)malloc(n * sizeof(int));\narr[n] = 20;\n}\n\nint main() {\n_memory();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid safe_memory() {\nint *arr = (int*)malloc(6 * sizeof(int));\nif (arr != NULL) {\nint index = 6;\nif (index - 1 < 6) {\narr[index - 1] = 50;\n}\nfree(arr);\n}\n}\n\nint main() {\nsafe_memory();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid _memory() {\nint *arr = (int*)malloc(5 * sizeof(int));\nint index = 6;\narr[index - 1] = 50;\n}\n\nint main() {\n_memory();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid _memory_() {\nint *ptr = (int*)malloc(sizeof(int));\nif (ptr != NULL) {\n*ptr = 10;\nfree(ptr);\n}\n}\n\nint main() {\n_memory_();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid memory_() {\nint *ptr = (int*)malloc(sizeof(int));\n*ptr = 10;\n}\n\nint main() {\nmemory_();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <string.h>\n\nvoid _memory_() {\nchar *str = (char*)malloc(100 * sizeof(char));\nif (str != NULL) {\nstrcpy(str, \"Hello, World!\");\nfree(str);\n}\n}\n\nint main() {\n_memory_();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <string.h>\n\nvoid memory_() {\nchar *str = (char*)malloc(100 * sizeof(char));\nstrcpy(str, \"Hello, World!\");\n}\n\nint main() {\nmemory_();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid _memory_() {\nint *arr = (int*)malloc(10 * sizeof(int));\nif (arr != NULL) {\nfor (int i = 0; i < 10; i++) {\narr[i] = i;\n}\nfree(arr);\n}\n}\n\nint main() {\n_memory_();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid memory_() {\nint *arr = (int*)malloc(10 * sizeof(int));\nfor (int i = 0; i < 10; i++) {\narr[i] = i;\n}\n}\n\nint main() {\nmemory_();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nvoid _memory_() {\nstruct Node *head = (struct Node*)malloc(sizeof(struct Node));\nif (head != NULL) {\nhead->data = 1;\nhead->next = NULL;\nfree(head);\n}\n}\n\nint main() {\n_memory_();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nvoid memory_() {\nstruct Node *head = (struct Node*)malloc(sizeof(struct Node));\nhead->data = 1;\nhead->next = NULL;\n}\n\nint main() {\nmemory_();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid _memory_() {\nint **ptr_array = (int**)malloc(5 * sizeof(int*));\nif (ptr_array != NULL) {\nfor (int i = 0; i < 5; i++) {\nptr_array[i] = (int*)malloc(sizeof(int));\nif (ptr_array[i] != NULL) {\n*(ptr_array[i]) = i;\n}\n}\nfor (int i = 0; i < 5; i++) {\nfree(ptr_array[i]);\n}\nfree(ptr_array);\n}\n}\n\nint main() {\n_memory_();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid memory_() {\nint **ptr_array = (int**)malloc(5 * sizeof(int*));\nfor (int i = 0; i < 5; i++) {\nptr_array[i] = (int*)malloc(sizeof(int));\n*(ptr_array[i]) = i;\n}\n}\n\nint main() {\nmemory_();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid _memory_() {\nint *ptr = (int*)malloc(sizeof(int));\n*ptr = 10;\nint *new_ptr = (int*)malloc(sizeof(int));\n*new_ptr = 20;\nfree(new_ptr);\nfree(ptr);\n}\n\nint main() {\n_memory_();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid memory_() {\nint *ptr = (int*)malloc(sizeof(int));\n*ptr = 10;\nint *new_ptr = (int*)malloc(sizeof(int));\nptr = new_ptr;\n*new_ptr = 20;\nfree(ptr);\n}\n\nint main() {\nmemory_();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <string.h>\n\nvoid _memory_() {\nchar *str = (char*)malloc(100 * sizeof(char));\nstrcpy(str, \"Hello, World!\");\nchar *new_str = (char*)malloc(50 * sizeof(char));\nstrcpy(new_str, \"Goodbye!\");\nfree(new_str);\nfree(str);\n}\n\nint main() {\n_memory_();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <string.h>\n\nvoid memory_() {\nchar *str = (char*)malloc(100 * sizeof(char));\nstrcpy(str, \"Hello, World!\");\nchar *new_str = (char*)malloc(50 * sizeof(char));\nstr = new_str;\nstrcpy(new_str, \"Goodbye!\");\nfree(str);\n}\n\nint main() {\nmemory_();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid _memory_() {\nint *arr = (int*)malloc(10 * sizeof(int));\nfor (int i = 0; i < 10; i++) {\narr[i] = i;\n}\nint *new_arr = (int*)malloc(5 * sizeof(int));\nfor (int i = 0; i < 5; i++) {\nnew_arr[i] = i * 2;\n}\nfree(new_arr);\nfree(arr);\n}\n\nint main() {\n_memory_();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid memory_() {\nint *arr = (int*)malloc(10 * sizeof(int));\nfor (int i = 0; i < 10; i++) {\narr[i] = i;\n}\nint *new_arr = (int*)malloc(5 * sizeof(int));\narr = new_arr;\nfor (int i = 0; i < 5; i++) {\nnew_arr[i] = i * 2;\n}\nfree(arr);\n}\n\nint main() {\nmemory_();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nvoid _memory_() {\nstruct Node *head = (struct Node*)malloc(sizeof(struct Node));\nhead->data = 1;\nhead->next = NULL;\nstruct Node *new_de = (struct Node*)malloc(sizeof(struct Node));\nnew_de->data = 2;\nnew_de->next = NULL;\nfree(new_de);\nfree(head);\n}\n\nint main() {\n_memory_();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nvoid memory_() {\nstruct Node *head = (struct Node*)malloc(sizeof(struct Node));\nhead->data = 1;\nhead->next = NULL;\nstruct Node *new_de = (struct Node*)malloc(sizeof(struct Node));\nhead = new_de;\nnew_de->data = 2;\nnew_de->next = NULL;\nfree(head);\n}\n\nint main() {\nmemory_();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid _memory_() {\nint **ptr_array = (int**)malloc(5 * sizeof(int*));\nfor (int i = 0; i < 5; i++) {\nptr_array[i] = (int*)malloc(sizeof(int));\n*(ptr_array[i]) = i;\n}\nint **new_ptr_array = (int**)malloc(3 * sizeof(int*));\nfor (int i = 0; i < 3; i++) {\nnew_ptr_array[i] = (int*)malloc(sizeof(int));\n*(new_ptr_array[i]) = i * 10;\n}\nfor (int i = 0; i < 5; i++) {\nfree(ptr_array[i]);\n}\nfree(ptr_array);\nfor (int i = 0; i < 3; i++) {\nfree(new_ptr_array[i]);\n}\nfree(new_ptr_array);\n}\n\nint main() {\n_memory_();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid memory_() {\nint **ptr_array = (int**)malloc(5 * sizeof(int*));\nfor (int i = 0; i < 5; i++) {\nptr_array[i] = (int*)malloc(sizeof(int));\n*(ptr_array[i]) = i;\n}\nint **new_ptr_array = (int**)malloc(3 * sizeof(int*));\nptr_array = new_ptr_array;\nfor (int i = 0; i < 3; i++) {\nnew_ptr_array[i] = (int*)malloc(sizeof(int));\n*(new_ptr_array[i]) = i * 10;\n}\nfor (int i = 0; i < 3; i++) {\nfree(new_ptr_array[i]);\n}\nfree(ptr_array);\n}\n\nint main() {\nmemory_();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nint *ptr = malloc(10 * sizeof(int));\nfree(ptr);\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nint *ptr = malloc(10 * sizeof(int));\nchar *charPtr = (char *)ptr;\nfree(charPtr);\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\ndouble *ptr = malloc(10 * sizeof(double));\nfree(ptr);\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\ndouble *ptr = malloc(10 * sizeof(double));\nint *intPtr = (int *)ptr;\nfree(intPtr);\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nchar *ptr = malloc(100 * sizeof(char));\nfree(ptr);\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nchar *ptr = malloc(100 * sizeof(char));\nvoid *voidPtr = ptr;\nfree((int *)voidPtr);\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nfloat *ptr = malloc(5 * sizeof(float));\nfree(ptr);\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nfloat *ptr = malloc(5 * sizeof(float));\nshort *shortPtr = (short *)ptr;\nfree(shortPtr);\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nlong *ptr = malloc(8 * sizeof(long));\nfree(ptr);\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nlong *ptr = malloc(8 * sizeof(long));\nunsigned long *ulongPtr = (unsigned long *)ptr;\nfree((void **)ulongPtr);\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid use_memory() {\nint *ptr = (int*)malloc(sizeof(int) * 10);\nfree(ptr);\n}\n\nint main() {\nwhile(1) {\nuse_memory();\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid _memory() {\nint *ptr = (int*)malloc(sizeof(int) * 10);\n}\n\nint main() {\nwhile(1) {\n_memory();\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nchar *create_string() {\nchar *str = (char*)malloc(100 * sizeof(char));\nsprintf(str, \"Hello, World!\");\nreturn str;\n}\n\nint main() {\nwhile(1) {\nchar *my_str = create_string();\nfree(my_str);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nchar *create_string() {\nchar *str = (char*)malloc(100 * sizeof(char));\nsprintf(str, \"Hello, World!\");\nreturn str;\n}\n\nint main() {\nwhile(1) {\nchar *my_str = create_string();\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid process_data(int size) {\nint *data = (int*)malloc(size * sizeof(int));\nfree(data);\n}\n\nint main() {\nfor(int i = 0; i < 1000; i++) {\nprocess_data(100);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid process_data(int size) {\nint *data = (int*)malloc(size * sizeof(int));\n}\n\nint main() {\nfor(int i = 0; i < 1000; i++) {\nprocess_data(100);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nstruct Node* create_de(int data) {\nstruct Node *de = (struct Node*)malloc(sizeof(struct Node));\nde->data = data;\nde->next = NULL;\nreturn de;\n}\n\nvoid add_to_list(struct Node **head, int data) {\nstruct Node *new_de = create_de(data);\nnew_de->next = *head;\n*head = new_de;\n}\n\nvoid free_list(struct Node *head) {\nwhile(head != NULL) {\nstruct Node *temp = head;\nhead = head->next;\nfree(temp);\n}\n}\n\nint main() {\nstruct Node *head = NULL;\nfor(int i = 0; i < 1000; i++) {\nadd_to_list(&head, i);\n}\nfree_list(head);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nstruct Node* create_de(int data) {\nstruct Node *de = (struct Node*)malloc(sizeof(struct Node));\nde->data = data;\nde->next = NULL;\nreturn de;\n}\n\nvoid add_to_list(struct Node **head, int data) {\nstruct Node *new_de = create_de(data);\nnew_de->next = *head;\n*head = new_de;\n}\n\nint main() {\nstruct Node *head = NULL;\nfor(int i = 0; i < 1000; i++) {\nadd_to_list(&head, i);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid *create_resource() {\nvoid *resource = malloc(1024);\nreturn resource;\n}\n\nvoid use_resource(void *resource) {\n}\n\nvoid free_resource(void *resource) {\nfree(resource);\n}\n\nint main() {\nwhile(1) {\nvoid *resource = create_resource();\nuse_resource(resource);\nfree_resource(resource);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid *create_resource() {\nvoid *resource = malloc(1024);\nreturn resource;\n}\n\nvoid use_resource(void *resource) {\n}\n\nint main() {\nwhile(1) {\nvoid *resource = create_resource();\nuse_resource(resource);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid _() {\nchar *buffer = (char*)malloc(100);\nfree(buffer);\n}\n\nint main() {\nfor (int i = 0; i < 1000; i++) {\n_();\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid () {\nchar *buffer = (char*)malloc(100);\n}\n\nint main() {\nfor (int i = 0; i < 1000; i++) {\n();\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nchar *create_string() {\nchar *str = (char*)malloc(50);\nsprintf(str, \"Hello, World!\");\nreturn str;\n}\n\nint main() {\nfor (int i = 0; i < 1000; i++) {\nchar *my_str = create_string();\nfree(my_str);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nchar *create_string() {\nchar *str = (char*)malloc(50);\nsprintf(str, \"Hello, World!\");\nreturn str;\n}\n\nint main() {\nfor (int i = 0; i < 1000; i++) {\nchar *my_str = create_string();\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid process_data(int *data, int size) {\n// 处理数据...\n}\n\nint main() {\nfor (int i = 0; i < 1000; i++) {\nint *data = (int*)malloc(100 * sizeof(int));\nprocess_data(data, 100);\nfree(data);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid process_data(int *data, int size) {\n// 处理数据...\n}\n\nint main() {\nfor (int i = 0; i < 1000; i++) {\nint *data = (int*)malloc(100 * sizeof(int));\nprocess_data(data, 100);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nstruct Node* create_de(int data) {\nstruct Node *de = (struct Node*)malloc(sizeof(struct Node));\nde->data = data;\nde->next = NULL;\nreturn de;\n}\n\nvoid append_de(struct Node **head, int data) {\nstruct Node *new_de = create_de(data);\nif (*head == NULL) {\n*head = new_de;\n} else {\nstruct Node *current = *head;\nwhile (current->next != NULL) {\ncurrent = current->next;\n}\ncurrent->next = new_de;\n}\n}\n\nvoid free_list(struct Node *head) {\nwhile (head != NULL) {\nstruct Node *temp = head;\nhead = head->next;\nfree(temp);\n}\n}\n\nint main() {\nstruct Node *head = NULL;\nfor (int i = 0; i < 1000; i++) {\nappend_de(&head, i);\n}\nfree_list(head);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nstruct Node* create_de(int data) {\nstruct Node *de = (struct Node*)malloc(sizeof(struct Node));\nde->data = data;\nde->next = NULL;\nreturn de;\n}\n\nvoid append_de(struct Node **head, int data) {\nstruct Node *new_de = create_de(data);\nif (*head == NULL) {\n*head = new_de;\n} else {\nstruct Node *current = *head;\nwhile (current->next != NULL) {\ncurrent = current->next;\n}\ncurrent->next = new_de;\n}\n}\n\nint main() {\nstruct Node *head = NULL;\nfor (int i = 0; i < 1000; i++) {\nappend_de(&head, i);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid *allocate_resource() {\nvoid *resource = malloc(256);\nreturn resource;\n}\n\nvoid use_resource(void *resource) {\n// 使用资源...\n}\n\nvoid free_resource(void *resource) {\nfree(resource);\n}\n\nint main() {\nfor (int i = 0; i < 1000; i++) {\nvoid *resource = allocate_resource();\nuse_resource(resource);\nfree_resource(resource);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid *allocate_resource() {\nvoid *resource = malloc(256);\nreturn resource;\n}\n\nvoid use_resource(void *resource) {\n// 使用资源...\n}\n\nint main() {\nfor (int i = 0; i < 1000; i++) {\nvoid *resource = allocate_resource();\nuse_resource(resource);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid __memory() {\nchar *buffer = (char*)malloc(100);\nfree(buffer);\n}\n\nint main() {\n__memory();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid _memory() {\nchar *buffer;\nfree(buffer);\n}\n\nint main() {\n_memory();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nvoid append_de(struct Node **head, int data) {\nstruct Node *new_de = (struct Node*)malloc(sizeof(struct Node));\nnew_de->data = data;\nnew_de->next = *head;\n*head = new_de;\n}\n\nvoid free_list(struct Node *head) {\nwhile (head != NULL) {\nstruct Node *temp = head;\nhead = head->next;\nfree(temp);\n}\n}\n\nint main() {\nstruct Node *head = NULL;\nfor (int i = 0; i < 10; i++) {\nappend_de(&head, i);\n}\nfree_list(head);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nvoid append_de(struct Node **head, int data) {\nstruct Node *new_de = (struct Node*)malloc(sizeof(struct Node));\nnew_de->data = data;\nnew_de->next = *head;\n*head = new_de;\n}\n\nint main() {\nstruct Node *head;\nfor (int i = 0; i < 10; i++) {\nappend_de(&head, i);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid process_data() {\nchar *buffer = (char*)malloc(100);\nif (buffer != NULL) {\nsprintf(buffer, \"Data\");\nfree(buffer);\n}\n}\n\nint main() {\nprocess_data();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid process_data() {\nchar *buffer;\nsprintf(buffer, \"Data\");\n}\n\nint main() {\nprocess_data();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid *create_resource() {\nvoid *resource = malloc(256);\nreturn resource;\n}\n\nvoid use_and_free_resource(void *resource) {\nif (resource != NULL) {\nfree(resource);\n}\n}\n\nint main() {\nvoid *resource = create_resource();\nuse_and_free_resource(resource);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid *create_resource() {\nvoid *resource;\nreturn resource;\n}\n\nvoid use_and_free_resource(void *resource) {\nfree(resource);\n}\n\nint main() {\nvoid *resource = create_resource();\nuse_and_free_resource(resource);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nstruct Data {\nint *values;\nint size;\n};\n\nstruct Data *initialize_data(int size) {\nstruct Data *data = (struct Data*)malloc(sizeof(struct Data));\nif (data != NULL) {\ndata->values = (int*)malloc(size * sizeof(int));\nif (data->values != NULL) {\ndata->size = size;\nfor (int i = 0; i < size; i++) {\ndata->values[i] = i;\n}\n} else {\nfree(data);\ndata = NULL;\n}\n}\nreturn data;\n}\n\nvoid free_data(struct Data *data) {\nif (data != NULL) {\nif (data->values != NULL) {\nfree(data->values);\n}\nfree(data);\n}\n}\n\nint main() {\nstruct Data *my_data = initialize_data(10);\nif (my_data != NULL) {\nfree_data(my_data);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nstruct Data {\nint *values;\nint size;\n};\n\nstruct Data *initialize_data(int size) {\nstruct Data *data = (struct Data*)malloc(sizeof(struct Data));\ndata->size = size;\nfor (int i = 0; i < size; i++) {\ndata->values[i] = i;\n}\nreturn data;\n}\n\nint main() {\nstruct Data *my_data = initialize_data(10);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid __memory() {\nint *ptr = (int *)malloc(sizeof(int) * 10);\nfree(ptr);\n}\n\nint main() {\n__memory();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid _memory() {\nint *ptr = (int *)malloc(sizeof(int) * 10);\n}\n\nint main() {\n_memory();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid __memory_loop() {\nint *ptrs[10];\nfor (int i = 0; i < 10; i++) {\nptrs[i] = (int *)malloc(sizeof(int));\n}\nfor (int i = 0; i < 10; i++) {\nfree(ptrs[i]);\n}\n}\n\nint main() {\n__memory_loop();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid _memory_loop() {\nfor (int i = 0; i < 10; i++) {\nint *ptr = (int *)malloc(sizeof(int));\n}\n}\n\nint main() {\n_memory_loop();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid __memory_on_error() {\nint *ptr = (int *)malloc(sizeof(int) * 10);\nif (!ptr) {\nperror(\"malloc failed\");\nexit(EXIT_FAILURE);\n}\nif (1) {\nfree(ptr);\nperror(\"Simulated error\");\nexit(EXIT_FAILURE);\n}\nfree(ptr);\n}\n\nint main() {\n__memory_on_error();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid _memory_on_error() {\nint *ptr = (int *)malloc(sizeof(int) * 10);\nif (!ptr) {\nperror(\"malloc failed\");\nexit(EXIT_FAILURE);\n}\nif (1) {\nperror(\"Simulated error\");\nexit(EXIT_FAILURE);\n}\n}\n\nint main() {\n_memory_on_error();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nint *__memory_return() {\nreturn (int *)malloc(sizeof(int) * 10);\n}\n\nint main() {\nint *ptr = __memory_return();\nfree(ptr);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nint *_memory_return() {\nreturn (int *)malloc(sizeof(int) * 10);\n}\n\nint main() {\nint *ptr = _memory_return();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid func() {\nint *ptr = (int*)malloc(sizeof(int) * 10);\nfree(ptr);\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid func() {\nint *ptr = (int*)malloc(sizeof(int) * 10);\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nint* createArray() {\nreturn (int*)malloc(sizeof(int) * 100);\n}\n\nint main() {\nint *arr = createArray();\nfree(arr);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nint* createArray() {\nreturn (int*)malloc(sizeof(int) * 100);\n}\n\nint main() {\nint *arr = createArray();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nchar* getString() {\nchar *str = (char*)malloc(100);\nstrcpy(str, \"Hello, World!\");\nreturn str;\n}\n\nint main() {\nchar *myStr = getString();\nprintf(\"%s\\n\", myStr);\nfree(myStr);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nchar* getString() {\nchar *str = (char*)malloc(100);\nstrcpy(str, \"Hello, World!\");\nreturn str;\n}\n\nint main() {\nchar *myStr = getString();\nprintf(\"%s\\n\", myStr);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\nint data;\nstruct Node* next;\n};\n\nstruct Node* createNode(int data) {\nstruct Node* newNode = (struct Node*)malloc(sizeof(struct Node));\nnewNode->data = data;\nnewNode->next = NULL;\nreturn newNode;\n}\n\nvoid freeList(struct Node* head) {\nstruct Node* tmp;\nwhile (head != NULL) {\ntmp = head;\nhead = head->next;\nfree(tmp);\n}\n}\n\nint main() {\nstruct Node* head = createNode(10);\nfreeList(head);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\nint data;\nstruct Node* next;\n};\n\nstruct Node* createNode(int data) {\nstruct Node* newNode = (struct Node*)malloc(sizeof(struct Node));\nnewNode->data = data;\nnewNode->next = NULL;\nreturn newNode;\n}\n\nint main() {\nstruct Node* head = createNode(10);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid processData() {\nint *dataArray = (int*)malloc(sizeof(int) * 5);\nfor (int i = 0; i < 5; i++) {\ndataArray[i] = i * 10;\n}\n// Process data...\nfree(dataArray);\n}\n\nint main() {\nprocessData();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid processData() {\nint *dataArray = (int*)malloc(sizeof(int) * 5);\nfor (int i = 0; i < 5; i++) {\ndataArray[i] = i * 10;\n}\n// Process data...\n}\n\nint main() {\nprocessData();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid process() {\nint *ptr = (int*)malloc(sizeof(int));\nif (ptr != NULL) {\n*ptr = 10;\nfree(ptr);\n}\n}\n\nint main() {\nprocess();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid process() {\nint *ptr;\n*ptr = 10;\n}\n\nint main() {\nprocess();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nvoid copyString(char *dest, const char *src) {\nstrcpy(dest, src);\n}\n\nint main() {\nchar *myString = (char*)malloc(strlen(\"Hello, world!\") + 1);\nif (myString != NULL) {\ncopyString(myString, \"Hello, world!\");\nprintf(\"%s\\n\", myString);\nfree(myString);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nvoid copyString(char *dest, const char *src) {\nstrcpy(dest, src);\n}\n\nint main() {\nchar *myString;\ncopyString(myString, \"Hello, world!\");\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nvoid appendNode(struct Node **head, int data) {\nstruct Node *newNode = (struct Node*)malloc(sizeof(struct Node));\nif (newNode != NULL) {\nnewNode->data = data;\nnewNode->next = *head;\n*head = newNode;\n}\n}\n\nvoid freeList(struct Node *head) {\nstruct Node *tmp;\nwhile (head != NULL) {\ntmp = head;\nhead = head->next;\nfree(tmp);\n}\n}\n\nint main() {\nstruct Node *head = NULL;\nappendNode(&head, 10);\nfreeList(head);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nvoid appendNode(struct Node **head, int data) {\nstruct Node *newNode;\nnewNode->data = data;\nnewNode->next = *head;\n*head = newNode;\n}\n\nint main() {\nstruct Node *head = NULL;\nappendNode(&head, 10);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid createArray() {\nint *arr = (int*)malloc(sizeof(int) * 10);\nif (arr != NULL) {\narr[0] = 1;\nfree(arr);\n}\n}\n\nint main() {\ncreateArray();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid createArray() {\nint *arr;\narr[0] = 1;\n}\n\nint main() {\ncreateArray();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid fillArray(int *arr, int size) {\nfor (int i = 0; i < size; i++) {\narr[i] = i;\n}\n}\n\nint main() {\nint *myArray = (int*)malloc(sizeof(int) * 10);\nif (myArray != NULL) {\nfillArray(myArray, 10);\nfree(myArray);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid fillArray(int *arr, int size) {\nfor (int i = 0; i < size; i++) {\narr[i] = i;\n}\n}\n\nint main() {\nint *myArray;\nfillArray(myArray, 10);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <string.h>\n\nvoid create_string() {\nchar *str = (char *)malloc(100 * sizeof(char));\nstrcpy(str, \"Hello, World!\");\nfree(str);\n}\n\nint main() {\ncreate_string();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <string.h>\n\nvoid create_string() {\nchar *str = (char *)malloc(100 * sizeof(char));\nstrcpy(str, \"Hello, World!\");\n}\n\nint main() {\ncreate_string();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid allocate_memory() {\nint *arr = (int *)malloc(10 * sizeof(int));\nfor (int i = 0; i < 10; i++) {\narr[i] = i;\n}\nfree(arr);\n}\n\nint main() {\nallocate_memory();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nvoid allocate_memory() {\nint *arr = (int *)malloc(10 * sizeof(int));\nfor (int i = 0; i < 10; i++) {\narr[i] = i;\n}\n}\n\nint main() {\nallocate_memory();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid print_message() {\nchar *msg = (char *)malloc(50 * sizeof(char));\nsprintf(msg, \"This is a test message.\");\nprintf(\"%s\\n\", msg);\nfree(msg);\n}\n\nint main() {\nprint_message();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid print_message() {\nchar *msg = (char *)malloc(50 * sizeof(char));\nsprintf(msg, \"This is a test message.\");\nprintf(\"%s\\n\", msg);\n}\n\nint main() {\nprint_message();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nvoid add_de(struct Node **head, int data) {\nstruct Node *new_de = (struct Node *)malloc(sizeof(struct Node));\nnew_de->data = data;\nnew_de->next = *head;\n*head = new_de;\n}\n\nvoid free_list(struct Node *head) {\nstruct Node *tmp;\nwhile (head != NULL) {\ntmp = head;\nhead = head->next;\nfree(tmp);\n}\n}\n\nint main() {\nstruct Node *head = NULL;\nadd_de(&head, 10);\nfree_list(head);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nvoid add_de(struct Node **head, int data) {\nstruct Node *new_de = (struct Node *)malloc(sizeof(struct Node));\nnew_de->data = data;\nnew_de->next = *head;\n*head = new_de;\n}\n\nint main() {\nstruct Node *head = NULL;\nadd_de(&head, 10);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid read_input(char **input) {\n*input = (char *)malloc(256 * sizeof(char));\nif (*input == NULL) {\nfprintf(stderr, \"Memory allocation failed\\n\");\nreturn;\n}\nfgets(*input, 256, stdin);\n}\n\nint main() {\nchar *input = NULL;\nread_input(&input);\nprintf(\"Input: %s\", input);\nfree(input);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid read_input(char **input) {\n*input = (char *)malloc(256 * sizeof(char));\nif (*input == NULL) {\nfprintf(stderr, \"Memory allocation failed\\n\");\nreturn;\n}\nfgets(*input, 256, stdin);\n}\n\nint main() {\nchar *input = NULL;\nread_input(&input);\nprintf(\"Input: %s\", input);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid __memory() {\nint *ptr = (int *)malloc(sizeof(int) * 10);\nfree(ptr);\n}\n\nint main() {\n__memory();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid _memory() {\nint *ptr = (int *)malloc(sizeof(int) * 10);\n}\n\nint main() {\n_memory();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n#include <string.h>\n\nchar *create_string() {\nchar *str = (char *)malloc(100);\nstrcpy(str, \"Hello, World!\");\nreturn str;\n}\n\nint main() {\nchar *str = create_string();\nfree(str);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n#include <string.h>\n\nchar *create_string() {\nchar *str = (char *)malloc(100);\nstrcpy(str, \"Hello, World!\");\nreturn str;\n}\n\nint main() {\ncreate_string();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid __memory_in_loop(int n) {\nint *ptrs = (int *)malloc(sizeof(int) * n);\nfor (int i = 0; i < n; ++i) {\n// Use ptrs[i] instead of allocating individually\n}\nfree(ptrs);\n}\n\nint main() {\n__memory_in_loop(10);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid _memory_in_loop(int n) {\nfor (int i = 0; i < n; ++i) {\nint *ptr = (int *)malloc(sizeof(int));\n}\n}\n\nint main() {\n_memory_in_loop(10);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nstruct Node *create_de(int data) {\nstruct Node *de = (struct Node *)malloc(sizeof(struct Node));\nde->data = data;\nde->next = NULL;\nreturn de;\n}\n\nvoid add_de(struct Node **head, int data) {\nstruct Node *new_de = create_de(data);\nnew_de->next = *head;\n*head = new_de;\n}\n\nvoid free_list(struct Node *head) {\nstruct Node *tmp;\nwhile (head != NULL) {\ntmp = head;\nhead = head->next;\nfree(tmp);\n}\n}\n\nint main() {\nstruct Node *head = NULL;\nadd_de(&head, 1);\nfree_list(head);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nstruct Node *create_de(int data) {\nstruct Node *de = (struct Node *)malloc(sizeof(struct Node));\nde->data = data;\nde->next = NULL;\nreturn de;\n}\n\nvoid add_de(struct Node **head, int data) {\nstruct Node *new_de = create_de(data);\nnew_de->next = *head;\n*head = new_de;\n}\n\nint main() {\nstruct Node *head = NULL;\nadd_de(&head, 1);\n// Missing free() for head\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid *__memory_func() {\nvoid *ptr = malloc(100);\nreturn ptr;\n}\n\nint main() {\nvoid *ptr = __memory_func();\nfree(ptr);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid *_memory_func() {\nvoid *ptr = malloc(100);\nreturn ptr;\n}\n\nint main() {\n_memory_func();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nint *ptr = (int*)malloc(sizeof(int));\nfree(ptr);\nptr = NULL;\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nint *ptr = (int*)malloc(sizeof(int));\nfree(ptr);\nfree(ptr);\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nint *global_ptr = NULL;\n\nvoid alloc() {\nglobal_ptr = (int*)malloc(sizeof(int));\n}\n\nvoid dealloc() {\nif (global_ptr != NULL) {\nfree(global_ptr);\nglobal_ptr = NULL;\n}\n}\n\nint main() {\nalloc();\ndealloc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nint *global_ptr;\n\nvoid alloc() {\nglobal_ptr = (int*)malloc(sizeof(int));\n}\n\nvoid dealloc() {\nfree(global_ptr);\nfree(global_ptr);\n}\n\nint main() {\nalloc();\ndealloc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func(int *ptr) {\nif (ptr != NULL) {\nfree(ptr);\nptr = NULL;\n}\n}\n\nint main() {\nint *ptr = (int*)malloc(sizeof(int));\nfunc(ptr);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func(int *ptr) {\nfree(ptr);\nfunc(ptr);\n}\n\nint main() {\nint *ptr = (int*)malloc(sizeof(int));\nfunc(ptr);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nint *ptr1 = (int*)malloc(sizeof(int));\nint *ptr2 = ptr1;\nfree(ptr1);\nptr1 = NULL;\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nint *ptr1 = (int*)malloc(sizeof(int));\nint *ptr2 = ptr1;\nfree(ptr1);\nfree(ptr2);\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nint main() {\nint *ptr = (int*)malloc(sizeof(int) * 10);\nfree(ptr);\nptr = NULL;\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nint main() {\nint *ptr = (int*)malloc(sizeof(int) * 10);\nfor (int i = 0; i < 10; i++) {\nfree(&ptr[i]);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nint *ptr = NULL;\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nint *ptr;\nfree(ptr);\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nint *ptr = (int*)malloc(sizeof(int));\nif (ptr != NULL) {\nfree(ptr);\n}\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nint *ptr;\nif (ptr != NULL) {\nfree(ptr);\n}\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nint *global_ptr = NULL;\n\nvoid func() {\nif (global_ptr != NULL) {\nfree(global_ptr);\n}\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nint *global_ptr;\n\nvoid func() {\nfree(global_ptr);\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func(int *ptr) {\nif (ptr != NULL) {\nfree(ptr);\n}\n}\n\nint main() {\nint *ptr = (int*)malloc(sizeof(int));\nif (ptr != NULL) {\nfunc(ptr);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func(int *ptr) {\nfree(ptr);\n}\n\nint main() {\nint *ptr;\nfunc(ptr);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nstruct Node *head = NULL;\n\nvoid add_de(int data) {\nstruct Node *new_de, *temp;\nnew_de = (struct Node*)malloc(sizeof(struct Node));\nnew_de->data = data;\nnew_de->next = NULL;\n\nif (head == NULL) {\nhead = new_de;\n} else {\ntemp = head;\nwhile (temp->next != NULL) {\n}\ntemp->next = new_de;\n}\n}\n\nint main() {\nadd_de(1);\nadd_de(2);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nint *ptr = (int*)malloc(sizeof(int) * 10);\nif (ptr != NULL) {\nfree(ptr);\n}\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nint *ptr = (int*)malloc(sizeof(int) * 10);\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nint *global_ptr = NULL;\n\nvoid init() {\nglobal_ptr = (int*)malloc(sizeof(int) * 10);\n}\n\nvoid cleanup() {\nif (global_ptr != NULL) {\nfree(global_ptr);\nglobal_ptr = NULL;\n}\n}\n\nint main() {\ninit();\ncleanup();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nint *global_ptr;\n\nvoid init() {\nglobal_ptr = (int*)malloc(sizeof(int) * 10);\n}\n\nvoid cleanup() {\n}\n\nint main() {\ninit();\ncleanup();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nint *ptr = (int*)malloc(sizeof(int));\nif (ptr != NULL) {\nif (0) {\n}\nfree(ptr);\n}\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nint *ptr = (int*)malloc(sizeof(int));\nif (0) {\nfree(ptr);\n}\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func(int condition) {\nint *ptr = (int*)malloc(sizeof(int) * 10);\nif (ptr != NULL) {\nif (condition) {\n}\nfree(ptr);\n}\n}\n\nint main() {\nfunc(0);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func(int condition) {\nint *ptr = (int*)malloc(sizeof(int) * 10);\nif (condition) {\nfree(ptr);\n}\n}\n\nint main() {\nfunc(0);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nstruct Node *head = NULL;\n\nvoid add_de(int data) {\nstruct Node *new_de = (struct Node*)malloc(sizeof(struct Node));\nif (new_de != NULL) {\nnew_de->data = data;\nnew_de->next = head;\nhead = new_de;\n}\n}\n\nvoid free_list() {\nstruct Node *temp;\nwhile (head != NULL) {\ntemp = head;\nhead = head->next;\nfree(temp);\n}\n}\n\nint main() {\nadd_de(1);\nadd_de(2);\nadd_de(3);\nfree_list();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nstruct Node *head = NULL;\n\nvoid add_de(int data) {\nstruct Node *new_de = (struct Node*)malloc(sizeof(struct Node));\nnew_de->data = data;\nnew_de->next = head;\nhead = new_de;\n}\n\n\nint main() {\nadd_de(1);\nadd_de(2);\nadd_de(3);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nint *ptr = (int*)malloc(sizeof(int) * 10);\nif (ptr == NULL) {\nreturn;\n}\nptr[0] = 1;\nfree(ptr);\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nint *ptr = (int*)malloc(sizeof(int) * 10);\nptr[0] = 1;\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n#include <string.h>\n\nvoid func(const char *str) {\nchar *copy = (char*)malloc(strlen(str) + 1);\nif (copy == NULL) {\nreturn;\n}\nstrcpy(copy, str);\nfree(copy);\n}\n\nint main() {\nfunc(\"Hello, world!\");\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n#include <string.h>\n\nvoid func(const char *str) {\nchar *copy = (char*)malloc(strlen(str) + 1);\nstrcpy(copy, str);\n}\n\nint main() {\nfunc(\"Hello, world!\");\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nstruct Node *create_de(int data) {\nstruct Node *new_de = (struct Node*)malloc(sizeof(struct Node));\nif (new_de == NULL) {\nreturn NULL;\n}\nnew_de->data = data;\nnew_de->next = NULL;\nreturn new_de;\n}\n\nint main() {\nstruct Node *head = create_de(1);\nif (head != NULL) {\nfree(head);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nstruct Node *create_de(int data) {\nstruct Node *new_de = (struct Node*)malloc(sizeof(struct Node));\nnew_de->data = data;\nnew_de->next = NULL;\nreturn new_de;\n}\n\nint main() {\nstruct Node *head = create_de(1);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid process_data(int *data, int size) {\nint *temp = (int*)malloc(size * sizeof(int));\nif (temp == NULL) {\nreturn;\n}\nfor (int i = 0; i < size; i++) {\ntemp[i] = data[i] * 2;\n}\nfree(temp);\n}\n\nint main() {\nint data[] = {1, 2, 3, 4, 5};\nprocess_data(data, 5);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid process_data(int *data, int size) {\nint *temp = (int*)malloc(size * sizeof(int));\nfor (int i = 0; i < size; i++) {\ntemp[i] = data[i] * 2;\n}\n}\n\nint main() {\nint data[] = {1, 2, 3, 4, 5};\nprocess_data(data, 5);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid *my_realloc(void *ptr, size_t size) {\nvoid *new_ptr = realloc(ptr, size);\nif (new_ptr == NULL) {\nreturn ptr;\n}\nreturn new_ptr;\n}\n\nint main() {\nint *data = (int*)malloc(5 * sizeof(int));\nif (data != NULL) {\nint *temp = (int*)my_realloc(data, 10 * sizeof(int));\nif (temp == NULL) {\nfree(data);\n} else {\ndata = temp;\n}\n}\nif (data != NULL) {\nfree(data);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid *my_realloc(void *ptr, size_t size) {\nvoid *new_ptr = realloc(ptr, size);\nreturn new_ptr;\n}\n\nint main() {\nint *data = (int*)malloc(5 * sizeof(int));\nif (data != NULL) {\ndata = (int*)my_realloc(data, 10 * sizeof(int));\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nint *ptr = (int*)malloc(sizeof(int));\n*ptr = 42;\n\nint *newPtr = (int*)malloc(sizeof(int));\n*newPtr = 100;\n\nfree(ptr);\nptr = newPtr;\n\nfree(ptr);\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid func() {\nint *ptr = (int*)malloc(sizeof(int));\n*ptr = 42;\n\nint *newPtr = (int*)malloc(sizeof(int));\nptr = newPtr;\n\n*newPtr = 100;\nfree(newPtr);\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid processData(int **dataPtr) {\n*dataPtr = (int*)malloc(sizeof(int) * 10);\nfor (int i = 0; i < 10; i++) {\n(*dataPtr)[i] = i;\n}\n\nint *tempPtr = (int*)malloc(sizeof(int) * 5);\nfor (int i = 0; i < 5; i++) {\ntempPtr[i] = i * 2;\n}\n\nfree(*dataPtr);\n*dataPtr = tempPtr;\n}\n\nint main() {\nint *data = NULL;\nprocessData(&data);\nfree(data);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nvoid processData(int **dataPtr) {\n*dataPtr = (int*)malloc(sizeof(int) * 10);\nfor (int i = 0; i < 10; i++) {\n(*dataPtr)[i] = i;\n}\n\nint *tempPtr = (int*)malloc(sizeof(int) * 5);\n*dataPtr = tempPtr;\n\nfor (int i = 0; i < 5; i++) {\ntempPtr[i] = i * 2;\n}\nfree(tempPtr);\n}\n\nint main() {\nint *data = NULL;\nprocessData(&data);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nchar *createString() {\nchar *str = (char*)malloc(50 * sizeof(char));\nsprintf(str, \"Hello, World!\");\nreturn str;\n}\n\nint main() {\nchar *greeting = createString();\nchar *farewell = createString();\nprintf(\"%s\\n\", farewell);\nfree(greeting);\nfree(farewell);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nchar *createString() {\nchar *str = (char*)malloc(50 * sizeof(char));\nsprintf(str, \"Hello, World!\");\nreturn str;\n}\n\nint main() {\nchar *greeting = createString();\nchar *farewell = createString();\nprintf(\"%s\\n\", farewell);\nfree(farewell);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nstruct Node *createNode(int data) {\nstruct Node *newNode = (struct Node*)malloc(sizeof(struct Node));\nnewNode->data = data;\nnewNode->next = NULL;\nreturn newNode;\n}\n\nvoid appendNode(struct Node **headPtr, int data) {\nstruct Node *newNode = createNode(data);\nif (*headPtr == NULL) {\n*headPtr = newNode;\n} else {\nstruct Node *current = *headPtr;\nwhile (current->next != NULL) {\ncurrent = current->next;\n}\ncurrent->next = newNode;\n}\n}\n\nvoid freeList(struct Node *head) {\nwhile (head != NULL) {\nstruct Node *temp = head;\nhead = head->next;\nfree(temp);\n}\n}\n\nint main() {\nstruct Node *head = NULL;\nappendNode(&head, 5);\nappendNode(&head, 10);\nfreeList(head);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nstruct Node *createNode(int data) {\nstruct Node *newNode = (struct Node*)malloc(sizeof(struct Node));\nnewNode->data = data;\nnewNode->next = NULL;\nreturn newNode;\n}\n\nvoid appendNode(struct Node **headPtr, int data) {\nstruct Node *newNode = createNode(data);\nif (*headPtr == NULL) {\n*headPtr = newNode;\n} else {\nstruct Node *current = *headPtr;\nwhile (current->next != NULL) {\ncurrent = current->next;\n}\ncurrent->next = newNode;\n}\nif (data == 10) {\n*headPtr = newNode;\n}\n}\n\nint main() {\nstruct Node *head = NULL;\nappendNode(&head, 5);\nappendNode(&head, 10);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nchar* createString() {\nchar* str = (char*)malloc(100);\nsprintf(str, \"Hello, World!\");\nreturn str;\n}\n\nint main() {\nchar* myString = createString();\nprintf(\"%s\\n\", myString);\nfree(myString);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nchar* createString() {\nchar* str = (char*)malloc(100);\nsprintf(str, \"Hello, World!\");\nreturn str;\n}\n\nint main() {\nchar* myString = createString();\nprintf(\"%s\\n\", myString);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nint* createArray() {\nint* array = (int*)malloc(10 * sizeof(int));\nfor (int i = 0; i < 10; i++) {\narray[i] = i;\n}\nreturn array;\n}\n\nint main() {\nint* myArray = createArray();\nfor (int i = 0; i < 10; i++) {\nprintf(\"%d \", myArray[i]);\n}\nprintf(\"\\n\");\nfree(myArray);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nint* createArray() {\nint* array = (int*)malloc(10 * sizeof(int));\nfor (int i = 0; i < 10; i++) {\narray[i] = i;\n}\nreturn array;\n}\n\nint main() {\nint* myArray = createArray();\nfor (int i = 0; i < 10; i++) {\nprintf(\"%d \", myArray[i]);\n}\nprintf(\"\\n\");\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nchar* createCopiedString(const char* original) {\nchar* copy = (char*)malloc(strlen(original) + 1);\nstrcpy(copy, original);\nreturn copy;\n}\n\nint main() {\nchar* original = \"Example String\";\nchar* copiedString = createCopiedString(original);\nprintf(\"%s\\n\", copiedString);\nfree(copiedString);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nchar* createCopiedString(const char* original) {\nchar* copy = (char*)malloc(strlen(original) + 1);\nstrcpy(copy, original);\nreturn copy;\n}\n\nint main() {\nchar* original = \"Example String\";\nchar* copiedString = createCopiedString(original);\nprintf(\"%s\\n\", copiedString);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\nint data;\nstruct Node* next;\n};\n\nstruct Node* createNode(int data) {\nstruct Node* de = (struct Node*)malloc(sizeof(struct Node));\nde->data = data;\nde->next = NULL;\nreturn de;\n}\n\nint main() {\nstruct Node* head = createNode(10);\nprintf(\"Node data: %d\\n\", head->data);\nfree(head);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\nint data;\nstruct Node* next;\n};\n\nstruct Node* createNode(int data) {\nstruct Node* de = (struct Node*)malloc(sizeof(struct Node));\nde->data = data;\nde->next = NULL;\nreturn de;\n}\n\nint main() {\nstruct Node* head = createNode(10);\nprintf(\"Node data: %d\\n\", head->data);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nint** createMatrix(int rows, int cols) {\nint** matrix = (int**)malloc(rows * sizeof(int*));\nfor (int i = 0; i < rows; i++) {\nmatrix[i] = (int*)malloc(cols * sizeof(int));\nfor (int j = 0; j < cols; j++) {\nmatrix[i][j] = i * cols + j;\n}\n}\nreturn matrix;\n}\n\nint main() {\nint rows = 3, cols = 3;\nint** matrix = createMatrix(rows, cols);\nfor (int i = 0; i < rows; i++) {\nfor (int j = 0; j < cols; j++) {\nprintf(\"%d \", matrix[i][j]);\n}\nprintf(\"\\n\");\n}\nfor (int i = 0; i < rows; i++) {\nfree(matrix[i]);\n}\nfree(matrix);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nint** createMatrix(int rows, int cols) {\nint** matrix = (int**)malloc(rows * sizeof(int*));\nfor (int i = 0; i < rows; i++) {\nmatrix[i] = (int*)malloc(cols * sizeof(int));\nfor (int j = 0; j < cols; j++) {\nmatrix[i][j] = i * cols + j;\n}\n}\nreturn matrix;\n}\n\nint main() {\nint rows = 3, cols = 3;\nint** matrix = createMatrix(rows, cols);\nfor (int i = 0; i < rows; i++) {\nfor (int j = 0; j < cols; j++) {\nprintf(\"%d \", matrix[i][j]);\n}\nprintf(\"\\n\");\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid func() {\nint *ptr = (int *)malloc(sizeof(int));\nif (!ptr) {\nprintf(\"Memory allocation failed\\n\");\nreturn;\n}\n*ptr = 10;\n// Some other operations\nif (1) { // Simulating a condition\nfree(ptr);\nreturn;\n}\n// Use ptr\nfree(ptr);\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid func() {\nint *ptr = (int *)malloc(sizeof(int));\nif (!ptr) {\nprintf(\"Memory allocation failed\\n\");\ngoto cleanup;\n}\n*ptr = 10;\n// Some other operations\nif (1) { // Simulating a condition\ngoto cleanup;\n}\n// Use ptr\nfree(ptr);\ncleanup:\nreturn;\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid process() {\nchar *buffer = (char *)malloc(100);\nif (!buffer) {\nprintf(\"Memory allocation failed\\n\");\nreturn;\n}\n// Do some processing with buffer\nif (1) { // Simulated error condition\nfree(buffer);\nprintf(\"An error occurred\\n\");\nreturn;\n}\n// Continue processing\nfree(buffer);\n}\n\nint main() {\nprocess();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid process() {\nchar *buffer = (char *)malloc(100);\nif (!buffer) goto error;\n// Do some processing with buffer\nif (1) { // Simulated error condition\ngoto error;\n}\n// Continue processing\nfree(buffer);\nreturn;\nerror:\nprintf(\"An error occurred\\n\");\nreturn;\n}\n\nint main() {\nprocess();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nint* createArray() {\nint *array = (int *)malloc(10 * sizeof(int));\nif (!array) {\nprintf(\"Memory allocation failed\\n\");\nreturn NULL;\n}\nfor (int i = 0; i < 10; i++) {\narray[i] = i;\n}\nif (1) { // Simulated condition\nfree(array);\nprintf(\"Failed to create array\\n\");\nreturn NULL;\n}\nreturn array;\n}\n\nint main() {\nint *myArray = createArray();\nif (myArray) {\n// Use myArray\nfree(myArray);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nint* createArray() {\nint *array = (int *)malloc(10 * sizeof(int));\nif (!array) goto fail;\nfor (int i = 0; i < 10; i++) {\narray[i] = i;\n}\nif (1) { // Simulated condition\ngoto fail;\n}\nreturn array;\nfail:\nprintf(\"Failed to create array\\n\");\nreturn NULL;\n}\n\nint main() {\nint *myArray = createArray();\nif (myArray) {\n// Use myArray\nfree(myArray);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid func() {\nint *ptr1 = (int *)malloc(sizeof(int));\nint *ptr2 = (int *)malloc(sizeof(int));\nif (!ptr1 || !ptr2) {\nprintf(\"Memory allocation failed\\n\");\nif (ptr1) free(ptr1);\nif (ptr2) free(ptr2);\nreturn;\n}\n*ptr1 = 1;\n*ptr2 = 2;\nif (1) { // Simulated error\nfree(ptr1);\nfree(ptr2);\nprintf(\"Cleanup\\n\");\nreturn;\n}\n// Do something with ptr1 and ptr2\nfree(ptr1);\nfree(ptr2);\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid func() {\nint *ptr1 = (int *)malloc(sizeof(int));\nint *ptr2 = (int *)malloc(sizeof(int));\nif (!ptr1 || !ptr2) goto cleanup;\n*ptr1 = 1;\n*ptr2 = 2;\nif (1) { // Simulated error\ngoto cleanup;\n}\n// Do something with ptr1 and ptr2\nfree(ptr1);\nfree(ptr2);\nreturn;\ncleanup:\nprintf(\"Cleanup\\n\");\nreturn;\n}\n\nint main() {\nfunc();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid* createData() {\nvoid *data = malloc(100);\nif (!data) {\nprintf(\"Memory allocation failed\\n\");\nreturn NULL;\n}\n// Initialize data\nif (1) { // Simulated error condition\nfree(data);\nprintf(\"Error creating data\\n\");\nreturn NULL;\n}\nreturn data;\n}\n\nint main() {\nvoid *myData = createData();\nif (myData) {\n// Use myData\nfree(myData);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid* createData() {\nvoid *data = malloc(100);\nif (!data) goto error;\n// Initialize data\nif (1) { // Simulated error condition\ngoto error;\n}\nreturn data;\nerror:\nprintf(\"Error creating data\\n\");\nreturn NULL;\n}\n\nint main() {\nvoid *myData = createData();\nif (myData) {\n// Use myData\nfree(myData);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid func() {\nint *ptr = (int *)malloc(sizeof(int));\nfree(ptr);\n}\n\nint main() {\nfor (int i = 0; i < 10; i++) {\nfunc();\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid func() {\nint *ptr = (int *)malloc(sizeof(int));\n}\n\nint main() {\nfor (int i = 0; i < 10; i++) {\nfunc();\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid recursive_func(int n) {\nif (n <= 0) return;\nint *ptr = (int *)malloc(sizeof(int));\nrecursive_func(n - 1);\nfree(ptr);\n}\n\nint main() {\nrecursive_func(10);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid recursive_func(int n) {\nif (n <= 0) return;\nint *ptr = (int *)malloc(sizeof(int));\nrecursive_func(n - 1);\n}\n\nint main() {\nrecursive_func(10);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\nfor (int i = 0; i < 10; i++) {\nint *arr = (int *)malloc(10 * sizeof(int));\nfree(arr);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\nfor (int i = 0; i < 10; i++) {\nint *arr = (int *)malloc(10 * sizeof(int));\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid func(int n) {\nif (n <= 0) return;\nint *ptr = (int *)malloc(n * sizeof(int));\nfunc(n - 1);\nfree(ptr);\n}\n\nint main() {\nfunc(10);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nvoid func(int n) {\nif (n <= 0) return;\nint *ptr = (int *)malloc(n * sizeof(int));\nfunc(n - 1);\n}\n\nint main() {\nfunc(10);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\nfor (int i = 0; i < 10; i++) {\nchar *str = (char *)malloc(50 * sizeof(char));\nfree(str);\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\nfor (int i = 0; i < 10; i++) {\nchar *str = (char *)malloc(50 * sizeof(char));\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\ntypedef struct Node {\nint data;\nstruct Node* next;\n} Node;\n\nvoid insert(Node** head, int data) {\nNode* newNode = (Node*)malloc(sizeof(Node));\nnewNode->data = data;\nnewNode->next = *head;\n*head = newNode;\n}\n\nvoid deleteList(Node* de) {\nwhile (de != NULL) {\nNode* temp = de;\nde = de->next;\nfree(temp);\n}\n}\n\nint main() {\nNode* head = NULL;\ninsert(&head, 1);\ninsert(&head, 2);\ndeleteList(head);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\ntypedef struct Node {\nint data;\nstruct Node* next;\n} Node;\n\nvoid insert(Node** head, int data) {\nNode* newNode = (Node*)malloc(sizeof(Node));\nnewNode->data = data;\nnewNode->next = *head;\n*head = newNode;\n}\n\nvoid deleteList(Node* de) {\nwhile (de != NULL) {\nNode* temp = de;\nde = de->next;\n// Forgot to free the de\n}\n}\n\nint main() {\nNode* head = NULL;\ninsert(&head, 1);\ninsert(&head, 2);\ndeleteList(head);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\ntypedef struct TreeNode {\nint data;\nstruct TreeNode* left;\nstruct TreeNode* right;\n} TreeNode;\n\nTreeNode* createNode(int data) {\nTreeNode* newNode = (TreeNode*)malloc(sizeof(TreeNode));\nnewNode->data = data;\nnewNode->left = newNode->right = NULL;\nreturn newNode;\n}\n\nvoid deleteTree(TreeNode* root) {\nif (root == NULL) return;\ndeleteTree(root->left);\ndeleteTree(root->right);\nfree(root);\n}\n\nint main() {\nTreeNode* root = createNode(1);\nroot->left = createNode(2);\nroot->right = createNode(3);\ndeleteTree(root);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\ntypedef struct TreeNode {\nint data;\nstruct TreeNode* left;\nstruct TreeNode* right;\n} TreeNode;\n\nTreeNode* createNode(int data) {\nTreeNode* newNode = (TreeNode*)malloc(sizeof(TreeNode));\nnewNode->data = data;\nnewNode->left = newNode->right = NULL;\nreturn newNode;\n}\n\nvoid deleteTree(TreeNode* root) {\nif (root == NULL) return;\ndeleteTree(root->left);\ndeleteTree(root->right);\n// Forgot to free the de\n}\n\nint main() {\nTreeNode* root = createNode(1);\nroot->left = createNode(2);\nroot->right = createNode(3);\ndeleteTree(root);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\ntypedef struct Node {\nint data;\nstruct Node* next;\n} Node;\n\nvoid deleteNode(Node** head, int key) {\nNode* temp = *head;\nNode* prev = NULL;\n\nif (temp != NULL && temp->data == key) {\n*head = temp->next;\nfree(temp);\nreturn;\n}\n\nwhile (temp != NULL && temp->data != key) {\nprev = temp;\ntemp = temp->next;\n}\n\nif (temp == NULL) return;\n\nprev->next = temp->next;\nfree(temp);\n}\n\nint main() {\nNode* head = (Node*)malloc(sizeof(Node));\nhead->data = 1;\nhead->next = (Node*)malloc(sizeof(Node));\nhead->next->data = 2;\nhead->next->next = NULL;\n\ndeleteNode(&head, 1);\ndeleteNode(&head, 2);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\ntypedef struct Node {\nint data;\nstruct Node* next;\n} Node;\n\nvoid deleteNode(Node** head, int key) {\nNode* temp = *head;\nNode* prev = NULL;\n\nif (temp != NULL && temp->data == key) {\n*head = temp->next;\n// Forgot to free(temp)\nreturn;\n}\n\nwhile (temp != NULL && temp->data != key) {\nprev = temp;\ntemp = temp->next;\n}\n\nif (temp == NULL) return;\n\nprev->next = temp->next;\n// Forgot to free(temp)\n}\n\nint main() {\nNode* head = (Node*)malloc(sizeof(Node));\nhead->data = 1;\nhead->next = (Node*)malloc(sizeof(Node));\nhead->next->data = 2;\nhead->next->next = NULL;\n\ndeleteNode(&head, 1);\ndeleteNode(&head, 2);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <string.h>\n\nchar* global_str;\n\nvoid func() {\nglobal_str = (char*)malloc(100);\nstrcpy(global_str, \"Hello, World!\");\n}\n\nint main() {\nfunc();\nfree(global_str);  // Free allocated memory\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <string.h>\n\nchar* global_str;\n\nvoid func() {\nglobal_str = (char*)malloc(100);\nstrcpy(global_str, \"Hello, World!\");\n}\n\nint main() {\nfunc();\n// global_str is t freed\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nstatic int* static_arr;\n\nvoid init_array() {\nstatic_arr = (int*)malloc(10 * sizeof(int));\nfor (int i = 0; i < 10; i++) {\nstatic_arr[i] = i;\n}\n}\n\nint main() {\ninit_array();\nfree(static_arr);  // Free allocated memory\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nstatic int* static_arr;\n\nvoid init_array() {\nstatic_arr = (int*)malloc(10 * sizeof(int));\nfor (int i = 0; i < 10; i++) {\nstatic_arr[i] = i;\n}\n}\n\nint main() {\ninit_array();\n// static_arr is t freed\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nstatic char* static_str;\n\nvoid create_string() {\nstatic_str = (char*)malloc(50);\nsprintf(static_str, \"Static string example\");\n}\n\nint main() {\ncreate_string();\nprintf(\"%s\\n\", static_str);\nfree(static_str);  // Free allocated memory\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n#include <stdio.h>\n\nstatic char* static_str;\n\nvoid create_string() {\nstatic_str = (char*)malloc(50);\nsprintf(static_str, \"Static string example\");\n}\n\nint main() {\ncreate_string();\nprintf(\"%s\\n\", static_str);\n// static_str is t freed\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nchar* global_buffer;\n\nvoid allocate_buffer() {\nglobal_buffer = (char*)malloc(256);\n}\n\nint main() {\nallocate_buffer();\nfree(global_buffer);  // Free allocated memory\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nchar* global_buffer;\n\nvoid allocate_buffer() {\nglobal_buffer = (char*)malloc(256);\n}\n\nint main() {\nallocate_buffer();\n// global_buffer is t freed\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nstatic int* static_int_ptr;\n\nvoid init_ptr() {\nstatic_int_ptr = (int*)malloc(sizeof(int));\n*static_int_ptr = 42;\n}\n\nint main() {\ninit_ptr();\nfree(static_int_ptr);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdlib.h>\n\nstatic int* static_int_ptr;\n\nvoid init_ptr() {\nstatic_int_ptr = (int*)malloc(sizeof(int));\n*static_int_ptr = 42;\n}\n\nint main() {\ninit_ptr();\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\nint *ptr = (int *)malloc(10 * sizeof(int));\nif (ptr == NULL) {\nfprintf(stderr, \"Memory allocation failed\\n\");\nreturn 1;\n}\nfor (int i = 0; i < 10; i++) {\nptr[i] = i;\n}\nfree(ptr);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\nint *ptr = (int *)malloc(10 * sizeof(int));\nfor (int i = 0; i < 10; i++) {\nptr[i] = i;\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nint main() {\nchar *str = (char *)malloc(50 * sizeof(char));\nif (str == NULL) {\nfprintf(stderr, \"Memory allocation failed\\n\");\nreturn 1;\n}\nstrcpy(str, \"Hello, World!\");\nprintf(\"%s\\n\", str);\nfree(str);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nint main() {\nchar *str = (char *)malloc(50 * sizeof(char));\nstrcpy(str, \"Hello, World!\");\nprintf(\"%s\\n\", str);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\nint n = 10;\nint **matrix = (int **)malloc(n * sizeof(int *));\nif (matrix == NULL) {\nfprintf(stderr, \"Memory allocation failed\\n\");\nreturn 1;\n}\nfor (int i = 0; i < n; i++) {\nmatrix[i] = (int *)malloc(n * sizeof(int));\nif (matrix[i] == NULL) {\nfprintf(stderr, \"Memory allocation failed\\n\");\nfor (int j = 0; j < i; j++) {\nfree(matrix[j]);\n}\nfree(matrix);\nreturn 1;\n}\n}\n// Fill matrix with some values\nfor (int i = 0; i < n; i++) {\nfor (int j = 0; j < n; j++) {\nmatrix[i][j] = i + j;\n}\n}\n// Free allocated memory\nfor (int i = 0; i < n; i++) {\nfree(matrix[i]);\n}\nfree(matrix);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\nint n = 10;\nint **matrix = (int **)malloc(n * sizeof(int *));\nfor (int i = 0; i < n; i++) {\nmatrix[i] = (int *)malloc(n * sizeof(int));\n}\n// Fill matrix with some values\nfor (int i = 0; i < n; i++) {\nfor (int j = 0; j < n; j++) {\nmatrix[i][j] = i + j;\n}\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nint main() {\nstruct Node *head = (struct Node *)malloc(sizeof(struct Node));\nif (head == NULL) {\nfprintf(stderr, \"Memory allocation failed\\n\");\nreturn 1;\n}\nhead->data = 1;\nhead->next = (struct Node *)malloc(sizeof(struct Node));\nif (head->next == NULL) {\nfprintf(stderr, \"Memory allocation failed\\n\");\nfree(head);\nreturn 1;\n}\nhead->next->data = 2;\nhead->next->next = NULL;\n\nfree(head->next);\nfree(head);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nstruct Node {\nint data;\nstruct Node *next;\n};\n\nint main() {\nstruct Node *head = (struct Node *)malloc(sizeof(struct Node));\nhead->data = 1;\nhead->next = (struct Node *)malloc(sizeof(struct Node));\nhead->next->data = 2;\nhead->next->next = NULL;\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\nfloat *arr = (float *)malloc(10 * sizeof(float));\nif (arr == NULL) {\nfprintf(stderr, \"Memory allocation failed\\n\");\nreturn 1;\n}\nfor (int i = 0; i < 10; i++) {\narr[i] = i * 1.1;\n}\nfree(arr);\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\n#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\nfloat *arr = (float *)malloc(10 * sizeof(float));\nfor (int i = 0; i < 10; i++) {\narr[i] = i * 1.1;\n}\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\nstruct testCode {\nchar i;\nint a;\nint * b;\nint * c[10];\n};\n\nvoid foo(void)\n{\nint j;\nstruct testCode * testST;\n\ntestST = (struct testCode *)malloc(sizeof(struct testCode));\n\nif(testST == NULL)\nreturn;\n\ntestST->a = 1;\n\ntestST->b = (int *)malloc(sizeof(int));\n\nfor(j = 0; j < 10; j++)\n{\ntestST->c[j] = (int *)malloc(sizeof(int));\n}\n\nif(testST->b != NULL)\nfree(testST->b);\n\nfor(j = 0; j < 10; j++)\n{\nfree(testST->c[j]);\n}\n\nfree(testST);\n}\n\nint main(void)\n{\nfoo();\n\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\nstruct testCode {\nchar i;\nint a;\nint * b;\nint * c[10];\n};\n\nvoid foo(void)\n{\nint j;\nstruct testCode * testST;\nint * testVal;\n\ntestST = (struct testCode *)malloc(sizeof(struct testCode));\n\ntestST->c[4] = (int *)malloc(sizeof(int));\ntestST->c[9] = (int *)malloc(sizeof(int));\ntestST->c[13] = (int *)malloc(sizeof(int));\n\ntestVal = (int *)malloc(sizeof(int));\n\nfor(j = 0; j < 10; j++)\n{\nif(testST->c[j] != NULL)\nfree(testST->c[j]);\n}\n\nfree(testVal);\nfree(testST);\n}\n\nint main(void)\n{\nfoo();\n\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\nstruct testCode {\nchar i;\nint a;\nint * b;\nint * c[10];\n};\n\nvoid foo(void)\n{\nint j;\nstruct testCode * testST;\n\ntestST = (struct testCode *)malloc(sizeof(struct testCode));\n\nif(testST == NULL)\nreturn;\n\ntestST->a = 1;\n\ntestST->b = (int *)malloc(sizeof(int));\n\nfor(j = 0; j < 10; j++)\n{\ntestST->c[j] = (int *)malloc(sizeof(int));\n}\n\nif(testST->b != NULL)\nfree(testST->b);\n\nfor(j = 0; j < 10; j++)\n{\nfree(testST->c[j]);\n}\n\nfree(testST);\n}\n\nint main(void)\n{\nfoo();\n\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\nstruct testCode {\nchar i;\nint a;\nint * b;\nint * c[10];\n};\n\nvoid foo(void)\n{\nint j;\nstruct testCode * testST;\nint * testVal;\n\ntestST = (struct testCode *)malloc(sizeof(struct testCode));\n\ntestST->c[4] = (int *)malloc(sizeof(int));\ntestST->c[9] = (int *)malloc(sizeof(int));\n\ntestVal = (int *)malloc(sizeof(int));\n\nfor(j = 0; j < 5; j++)\n{\nif(testST->c[j] != NULL)\nfree(testST->c[j]);\n}\n\nfree(testVal);\nfree(testST);\n}\n\nint main(void)\n{\nfoo();\n\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\nstruct testCode {\nchar i;\nint a;\nint * b;\nint * c[10];\n};\n\nvoid foo(void)\n{\nint j;\nstruct testCode * testST;\n\ntestST = (struct testCode *)malloc(sizeof(struct testCode));\n\nif(testST == NULL)\nreturn;\n\ntestST->a = 1;\n\ntestST->b = (int *)malloc(sizeof(int));\n\nfor(j = 0; j < 10; j++)\n{\ntestST->c[j] = (int *)malloc(sizeof(int));\n}\n\nif(testST->b != NULL)\nfree(testST->b);\n\nfor(j = 0; j < 10; j++)\n{\nfree(testST->c[j]);\n}\n\nfree(testST);\n}\n\nint main(void)\n{\nfoo();\n\nreturn 0;\n}\n",
+        "input": "",
+        "output": "0"
+    },
+    {
+        "instruction": "请判断下列C语言代码是否含有内存泄露，不需要分析原因，如果有输出1，如果没有输出0:\nstruct testCode {\nchar i;\nint a;\nint * b;\nint * c[10];\n};\n\nvoid foo(void)\n{\nint j;\nstruct testCode * testST;\nint * testVal;\n\ntestST = (struct testCode *)malloc(sizeof(struct testCode));\n\ntestST->c[4] = (int *)malloc(sizeof(int));\ntestST->c[9] = (int *)malloc(sizeof(int));\n\ntestVal = (int *)malloc(sizeof(int));\n\nfor(j = 0; j < 10; j++)\n{\nfree(testST->c[j]);\n}\n\nfree(testVal);\nfree(testST);\n}\n\nint main(void)\n{\nfoo();\n\nreturn 0;\n}\n",
+        "input": "",
+        "output": "1"
+    }
+]

@@ -1,0 +1,1 @@
+这段C语言代码存在内存泄露的问题。问题出现在FUNC_struct_twoIntsStruct_malloc_42_norm函数中，具体来说是在第16行调用了normSource函数后，没有释放data指针所指向的内存。内存泄露类型属于“忘记释放已分配的内存”。风险值为0.75。

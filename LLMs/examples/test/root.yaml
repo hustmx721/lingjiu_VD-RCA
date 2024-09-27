@@ -1,0 +1,28 @@
+### model
+model_name_or_path: /data2/tyl/LingJiu_Vuln/_Project/src/LLMs/PretrainModels/qwen2-7B
+adapter_name_or_path: /data2/tyl/LingJiu_Vuln/_Project/src/LLMs/saves/Full-Pretrain-root  #LoRA参数存放地址
+
+### method
+stage: sft
+do_predict: true
+finetuning_type: lora
+
+### dataset
+# "Root_linjiu_root", "Root_SARD_LLM_root"
+# _fold0_test, _fold1_test, _fold2_test
+dataset: test_root  #测试用数据集
+template: qwen  #LLM类型
+cutoff_len: 1024
+max_samples: 10000
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+### output
+output_dir: /data2/tyl/LingJiu_Vuln/_Project/src/LLMs/results/test/root_predict #测试结果存放的位置
+overwrite_output_dir: true
+
+### eval
+per_device_eval_batch_size: 1
+predict_with_generate: true
+ddp_timeout: 180000000
+

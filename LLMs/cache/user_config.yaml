@@ -1,0 +1,5 @@
+cache_dir: null
+lang: zh
+last_model: Qwen2-7B
+path_dict:
+  Qwen2-7B: /mnt/data/train/models/qwen2-7b-instruction/

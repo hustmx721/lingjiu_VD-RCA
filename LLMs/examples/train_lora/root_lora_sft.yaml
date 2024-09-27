@@ -1,0 +1,42 @@
+### model
+model_name_or_path: /data2/tyl/LingJiu_Vuln/_Project/src/LLMs/PretrainModels/qwen2-7B #需要根据模型存放位置修改
+
+### method
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_target: all
+
+### dataset
+# "Root_linjiu_root", "Root_SARD_LLM_root"
+# _fold0_train, _fold1_train, _fold2_train
+# dataset: SARD_root, linjiu_root # 需要根据数据集不同进行更换
+dataset: full_root # 需要根据数据集不同进行更换
+template: qwen  #使用qwen系列的LLM就不需要更换
+cutoff_len: 1024
+max_samples: 10000
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+### output
+output_dir: /data2/tyl/LingJiu_Vuln/_Project/src/LLMs/saves/Full-Pretrain-root #LoRA的低维矩阵存放的位置
+logging_steps: 10
+save_steps: 500
+plot_loss: true
+overwrite_output_dir: true
+
+### train
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+learning_rate: 1.0e-4
+num_train_epochs: 15.0   #微调的轮数
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+fp16: true
+ddp_timeout: 180000000
+
+### eval
+val_size: 0.1
+per_device_eval_batch_size: 1
+eval_strategy: steps
+eval_steps: 500

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Leak Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <h1>Memory Leak Detection</h1>
+
+    <div class="container">
+        <!-- 左侧：选择模型和预训练数据集 -->
+        <div class="left-panel">
+            <form id="codeForm">
+                <!-- 模型和预训练数据集左右对齐 -->
+                <div class="inline-group flex-space-between">
+                    <div class="left-align">
+                        <h2>Select Model</h2>
+                        <select id="model">
+                            <option value="codeqwen1.5-7b-chat">codeqwen1.5-7b-chat</option>
+                            <option value="Qwen2.5-7B-Instruct">Qwen2-1.5B</option>
+                            <option value="Qwen2-7B">Qwen2-7B</option>
+                            <option value="Qwen2-1.5B">Qwen2-1.5B</option>
+                            <option value="Qwen2-0.5B">Qwen2-0.5B</option>
+                        </select>
+                    </div>
+                    <div class="right-align">
+                        <h2>Select SFT Dataset</h2>
+                        <select id="dataset">
+                            <option value="lingjiu">Lingjiu</option>
+                            <option value="SARD">SARD</option>
+                            <option value="leak_mem">Leak Mem</option>
+                            <option value="mixup">Mixup</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- 输入或上传的按键式选择 -->
+                <h2>Choose Input Method</h2>
+                <div class="button-group">
+                    <button type="button" class="input-method-btn green-btn" id="btnCode" data-method="code">Input Code</button>
+                    <button type="button" class="input-method-btn green-btn" id="btnFile" data-method="file">Upload File</button>
+                </div>
+
+                <!-- 输入代码片段 -->
+                <div id="codeInputContainer">
+                    <textarea id="codeInput" placeholder="Paste your code here..."></textarea>
+                </div>
+
+                <!-- 上传文件 -->
+                <div id="fileInputContainer" style="display: none;">
+                    <label for="fileInput">Upload a .c file or batch of .json files:</label>
+                    <input type="file" id="fileInput" multiple accept=".c, .json">
+                    <div id="fileNames" class="file-names"></div>
+                </div>
+
+                <!-- 检查按钮居中，和输入按钮大小一致 -->
+                <div class="footer-centered">
+                    <button type="submit" class="check-button blue-btn" form="codeForm">Check for Memory Leaks</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- 右侧：交互式聊天界面 -->
+        <div class="right-panel">
+            <h2>Interaction History</h2>
+            <div id="chatContainer" class="chat-container"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>
