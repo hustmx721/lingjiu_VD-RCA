@@ -1,0 +1,20 @@
+{
+    "type": "1",
+    "func": {
+        "utf16ToUtf8": "FUN1",
+        "utf16_to_utf8_length": "FUN2",
+        "data": "FUN3",
+        "length": "FUN4",
+        "resize": "FUN5",
+        "utf16_to_utf8": "FUN6",
+        "begin": "FUN7"
+    },
+    "var": {
+        "std": "VAR1",
+        "string": "VAR2",
+        "StringPiece16": "VAR3",
+        "utf16": "VAR4",
+        "utf8Length": "VAR5",
+        "utf8": "VAR6"
+    }
+}

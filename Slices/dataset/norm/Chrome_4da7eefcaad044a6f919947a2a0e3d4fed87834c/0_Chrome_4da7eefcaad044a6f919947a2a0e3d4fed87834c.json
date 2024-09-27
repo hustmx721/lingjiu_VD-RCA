@@ -1,0 +1,13 @@
+{
+    "type": "0",
+    "func": {
+        "OffScreenRootWindow": "FUN1",
+        "XUnmapWindow": "FUN2",
+        "XDestroyWindow": "FUN3"
+    },
+    "var": {
+        "refCount": "VAR1",
+        "display": "VAR2",
+        "window": "VAR3"
+    }
+}

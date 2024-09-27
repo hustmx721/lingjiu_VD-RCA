@@ -1,0 +1,12 @@
+{
+    "type": "1",
+    "func": {
+        "CancelPendingTask": "FUN1",
+        "ResumeAttachOrDestroy": "FUN2"
+    },
+    "var": {
+        "filter_": "VAR1",
+        "element_instance_id_": "VAR2",
+        "MSG_ROUTING_NONE": "VAR3"
+    }
+}

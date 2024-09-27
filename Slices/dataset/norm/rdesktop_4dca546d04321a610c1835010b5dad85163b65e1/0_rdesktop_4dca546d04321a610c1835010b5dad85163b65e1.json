@@ -1,0 +1,28 @@
+{
+    "type": "0",
+    "func": {
+        "process_plane": "FUN1",
+        "UNUSED": "FUN2",
+        "CVAL": "FUN3"
+    },
+    "var": {
+        "uint8": "VAR1",
+        "in": "VAR2",
+        "width": "VAR3",
+        "height": "VAR4",
+        "out": "VAR5",
+        "size": "VAR6",
+        "indexw": "VAR7",
+        "indexh": "VAR8",
+        "code": "VAR9",
+        "collen": "VAR10",
+        "replen": "VAR11",
+        "color": "VAR12",
+        "x": "VAR13",
+        "revcode": "VAR14",
+        "last_line": "VAR15",
+        "this_line": "VAR16",
+        "org_in": "VAR17",
+        "org_out": "VAR18"
+    }
+}

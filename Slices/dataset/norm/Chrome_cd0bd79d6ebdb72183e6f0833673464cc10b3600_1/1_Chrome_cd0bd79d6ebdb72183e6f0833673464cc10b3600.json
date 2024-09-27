@@ -1,0 +1,32 @@
+{
+    "type": "1",
+    "func": {
+        "CreateSampleFromInputBuffer": "FUN1",
+        "RETURN_ON_FAILURE": "FUN2",
+        "DuplicateHandle": "FUN3",
+        "handle": "FUN4",
+        "GetCurrentProcessHandle": "FUN5",
+        "shm": "FUN6",
+        "Map": "FUN7",
+        "size": "FUN8",
+        "CreateInputSample": "FUN9",
+        "memory": "FUN10"
+    },
+    "var": {
+        "IMFSample": "VAR1",
+        "media": "VAR2",
+        "BitstreamBuffer": "VAR3",
+        "bitstream_buffer": "VAR4",
+        "base": "VAR5",
+        "renderer_process": "VAR6",
+        "stream_size": "VAR7",
+        "alignment": "VAR8",
+        "shared_memory_handle": "VAR9",
+        "FALSE": "VAR10",
+        "DUPLICATE_SAME_ACCESS": "VAR11",
+        "STRING": "VAR12",
+        "SharedMemory": "VAR13",
+        "shm": "VAR14",
+        "uint8": "VAR15"
+    }
+}

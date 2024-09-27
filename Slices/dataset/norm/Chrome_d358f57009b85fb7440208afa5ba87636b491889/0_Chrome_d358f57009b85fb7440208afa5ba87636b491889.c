@@ -1,0 +1,1 @@
+void VAR1::FUN1(

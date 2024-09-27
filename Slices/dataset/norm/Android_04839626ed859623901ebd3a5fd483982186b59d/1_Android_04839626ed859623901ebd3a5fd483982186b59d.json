@@ -1,0 +1,15 @@
+{
+    "type": "1",
+    "func": {
+        "GetLast": "FUN1"
+    },
+    "var": {
+        "Cluster": "VAR1",
+        "Segment": "VAR2",
+        "m_clusters": "VAR3",
+        "m_clusterCount": "VAR4",
+        "m_eos": "VAR5",
+        "idx": "VAR6",
+        "pCluster": "VAR7"
+    }
+}

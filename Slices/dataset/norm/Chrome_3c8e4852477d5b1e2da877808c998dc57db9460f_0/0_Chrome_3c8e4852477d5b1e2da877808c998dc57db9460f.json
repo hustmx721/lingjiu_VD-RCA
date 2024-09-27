@@ -1,0 +1,22 @@
+{
+    "type": "0",
+    "func": {
+        "WorkerRestarted": "FUN1",
+        "DCHECK_EQ": "FUN2",
+        "DCHECK": "FUN3",
+        "sessions": "FUN4",
+        "SetRenderer": "FUN5",
+        "process_id": "FUN6"
+    },
+    "var": {
+        "SharedWorkerDevToolsAgentHost": "VAR1",
+        "SharedWorkerHost": "VAR2",
+        "worker_host": "VAR3",
+        "WORKER_TERMINATED": "VAR4",
+        "state_": "VAR5",
+        "worker_host_": "VAR6",
+        "WORKER_NOT_READY": "VAR7",
+        "DevToolsSession": "VAR8",
+        "session": "VAR9"
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "type": "1",
+    "func": {
+        "wiki_handle_rest_call": "FUN1",
+        "http_request_param_get": "FUN2",
+        "http_request_get_query_string": "FUN3",
+        "http_response_printf": "FUN4",
+        "file_read": "FUN5",
+        "http_response_send": "FUN6",
+        "file_write": "FUN7",
+        "wiki_get_pages": "FUN8",
+        "http_response_set_status": "FUN9"
+    },
+    "var": {
+        "HttpRequest": "VAR1",
+        "req": "VAR2",
+        "HttpResponse": "VAR3",
+        "res": "VAR4",
+        "func": "VAR5",
+        "CHAR": "VAR6",
+        "STRING": "VAR7",
+        "page": "VAR8",
+        "R_OK": "VAR9",
+        "wikitext": "VAR10",
+        "WikiPageList": "VAR11",
+        "pages": "VAR12",
+        "n_pages": "VAR13",
+        "i": "VAR14",
+        "expr": "VAR15",
+        "tm": "VAR16",
+        "pTm": "VAR17",
+        "datebuf": "VAR18",
+        "mtime": "VAR19",
+        "name": "VAR20"
+    }
+}

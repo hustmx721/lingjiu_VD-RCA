@@ -1,0 +1,13 @@
+{
+    "type": "1",
+    "func": {
+        "cJSON_CreateArray": "FUN1",
+        "cJSON_New_Item": "FUN2"
+    },
+    "var": {
+        "cJSON": "VAR1",
+        "item": "VAR2",
+        "type": "VAR3",
+        "cJSON_Array": "VAR4"
+    }
+}

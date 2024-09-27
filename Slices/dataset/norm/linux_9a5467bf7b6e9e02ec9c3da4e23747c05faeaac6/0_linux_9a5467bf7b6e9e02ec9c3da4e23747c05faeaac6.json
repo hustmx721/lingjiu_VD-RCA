@@ -1,0 +1,20 @@
+{
+    "type": "0",
+    "func": {
+        "crypto_report_comp": "FUN1",
+        "nla_put": "FUN2"
+    },
+    "var": {
+        "sk_buff": "VAR1",
+        "skb": "VAR2",
+        "crypto_alg": "VAR3",
+        "alg": "VAR4",
+        "rcomp": "VAR5",
+        "type": "VAR6",
+        "STRING": "VAR7",
+        "CRYPTOCFGA_REPORT_COMPRESS": "VAR8",
+        "crypto_report_comp": "VAR9",
+        "nla_put_failure": "VAR10",
+        "EMSGSIZE": "VAR11"
+    }
+}

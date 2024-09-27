@@ -1,0 +1,15 @@
+{
+    "type": "0",
+    "func": {
+        "OnGenerationRequested": "FUN1",
+        "GetIfExisting": "FUN2",
+        "DCHECK": "FUN3"
+    },
+    "var": {
+        "ManualFillingControllerImpl": "VAR1",
+        "PasswordGenerationController": "VAR2",
+        "pwd_generation_controller": "VAR3",
+        "pwd_generation_controller_for_testing_": "VAR4",
+        "web_contents_": "VAR5"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "type": "0",
+    "func": {
+        "removedFromDocument": "FUN1",
+        "document": "FUN2",
+        "removeStyleSheetCandidateNode": "FUN3",
+        "renderer": "FUN4",
+        "updateStyleSelector": "FUN5"
+    },
+    "var": {
+        "HTMLLinkElement": "VAR1",
+        "HTMLElement": "VAR2"
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "type": "1",
+    "func": {
+        "Reset": "FUN1",
+        "Size": "FUN2",
+        "Rect": "FUN3",
+        "string": "FUN4",
+        "string16": "FUN5"
+    },
+    "var": {
+        "PrintMsg_Print_Params": "VAR1",
+        "page_size": "VAR2",
+        "gfx": "VAR3",
+        "content_size": "VAR4",
+        "printable_area": "VAR5",
+        "margin_top": "VAR6",
+        "margin_left": "VAR7",
+        "dpi": "VAR8",
+        "min_shrink": "VAR9",
+        "max_shrink": "VAR10",
+        "desired_dpi": "VAR11",
+        "document_cookie": "VAR12",
+        "selection_only": "VAR13",
+        "supports_alpha_blend": "VAR14",
+        "preview_ui_addr": "VAR15",
+        "std": "VAR16",
+        "preview_request_id": "VAR17",
+        "is_first_request": "VAR18",
+        "fit_to_paper_size": "VAR19",
+        "print_to_pdf": "VAR20",
+        "display_header_footer": "VAR21",
+        "date": "VAR22",
+        "title": "VAR23",
+        "url": "VAR24"
+    }
+}

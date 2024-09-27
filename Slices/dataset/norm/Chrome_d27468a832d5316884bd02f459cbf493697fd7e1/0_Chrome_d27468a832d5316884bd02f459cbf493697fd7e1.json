@@ -1,0 +1,15 @@
+{
+    "type": "0",
+    "func": {
+        "supportsARIADragging": "FUN1",
+        "getAttribute": "FUN2",
+        "equalIgnoringASCIICase": "FUN3"
+    },
+    "var": {
+        "AXLayoutObject": "VAR1",
+        "AtomicString": "VAR2",
+        "grabbed": "VAR3",
+        "aria_grabbedAttr": "VAR4",
+        "STRING": "VAR5"
+    }
+}

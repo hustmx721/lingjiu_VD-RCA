@@ -1,0 +1,23 @@
+{
+    "type": "0",
+    "func": {
+        "vorbis_book_decodev_add": "FUN1",
+        "decode_map": "FUN2"
+    },
+    "var": {
+        "codebook": "VAR1",
+        "book": "VAR2",
+        "ogg_int32_t": "VAR3",
+        "a": "VAR4",
+        "oggpack_buffer": "VAR5",
+        "b": "VAR6",
+        "n": "VAR7",
+        "point": "VAR8",
+        "used_entries": "VAR9",
+        "v": "VAR10",
+        "dec_buf": "VAR11",
+        "i": "VAR12",
+        "j": "VAR13",
+        "dim": "VAR14"
+    }
+}

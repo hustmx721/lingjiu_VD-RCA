@@ -1,0 +1,17 @@
+{
+    "type": "0",
+    "func": {
+        "NPN_RemoveProperty": "FUN1",
+        "removeProperty": "FUN2"
+    },
+    "var": {
+        "npp": "VAR1",
+        "NPObject": "VAR2",
+        "npobj": "VAR3",
+        "propertyName": "VAR4",
+        "NPP": "VAR5",
+        "npObject": "VAR6",
+        "_class": "VAR7",
+        "removeProperty": "VAR8"
+    }
+}

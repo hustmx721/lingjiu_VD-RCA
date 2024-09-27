@@ -1,0 +1,33 @@
+{
+    "type": "1",
+    "func": {
+        "accept_ice_connection": "FUN1",
+        "g_debug": "FUN2",
+        "IceAcceptConnection": "FUN3",
+        "gsm_xsmp_client_new": "FUN4",
+        "gsm_store_add": "FUN5",
+        "gsm_client_peek_id": "FUN6",
+        "G_OBJECT": "FUN7",
+        "g_object_unref": "FUN8"
+    },
+    "var": {
+        "GIOChannel": "VAR1",
+        "source": "VAR2",
+        "condition": "VAR3",
+        "GsmIceConnectionData": "VAR4",
+        "data": "VAR5",
+        "listener": "VAR6",
+        "ice_conn": "VAR7",
+        "status": "VAR8",
+        "GsmClient": "VAR9",
+        "client": "VAR10",
+        "GsmXsmpServer": "VAR11",
+        "server": "VAR12",
+        "STRING": "VAR13",
+        "IceAcceptSuccess": "VAR14",
+        "TRUE": "VAR15",
+        "context": "VAR16",
+        "priv": "VAR17",
+        "client_store": "VAR18"
+    }
+}

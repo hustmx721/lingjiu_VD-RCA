@@ -1,0 +1,15 @@
+{
+    "type": "0",
+    "func": {
+        "Properties": "FUN1",
+        "back": "FUN2"
+    },
+    "var": {
+        "CompositedLayerRasterInvalidatorTest": "VAR1",
+        "PropertyTreeState": "VAR2",
+        "state": "VAR3",
+        "data_": "VAR4",
+        "chunks": "VAR5",
+        "properties": "VAR6"
+    }
+}

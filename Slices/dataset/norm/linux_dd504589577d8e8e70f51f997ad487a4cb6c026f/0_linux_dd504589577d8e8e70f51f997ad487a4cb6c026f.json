@@ -1,0 +1,13 @@
+{
+    "type": "0",
+    "func": {
+        "skcipher_release": "FUN1",
+        "crypto_free_skcipher": "FUN2",
+        "kfree": "FUN3"
+    },
+    "var": {
+        "skcipher_tfm": "VAR1",
+        "tfm": "VAR2",
+        "skcipher": "VAR3"
+    }
+}

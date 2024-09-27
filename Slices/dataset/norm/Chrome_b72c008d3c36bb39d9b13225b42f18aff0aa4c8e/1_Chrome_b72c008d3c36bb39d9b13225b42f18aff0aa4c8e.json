@@ -1,0 +1,11 @@
+{
+    "type": "1",
+    "func": {
+        "callback": "FUN1"
+    },
+    "var": {
+        "UsbDeviceHandle": "VAR1",
+        "TransferCallback": "VAR2",
+        "callback_": "VAR3"
+    }
+}

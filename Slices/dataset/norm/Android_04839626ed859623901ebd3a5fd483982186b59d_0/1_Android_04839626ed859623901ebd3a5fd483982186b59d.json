@@ -1,0 +1,14 @@
+{
+    "type": "1",
+    "func": {
+        "Chapters": "FUN1",
+        "Clear": "FUN2"
+    },
+    "var": {
+        "Chapters": "VAR1",
+        "m_editions_count": "VAR2",
+        "Edition": "VAR3",
+        "e": "VAR4",
+        "m_editions": "VAR5"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "type": "0",
+    "func": {
+        "unicode_cp_is_allowed": "FUN1"
+    },
+    "var": {
+        "uni_cp": "VAR1",
+        "document_type": "VAR2",
+        "ENT_HTML_DOC_HTML401": "VAR3",
+        "ENT_HTML_DOC_HTML5": "VAR4",
+        "ENT_HTML_DOC_XHTML": "VAR5",
+        "ENT_HTML_DOC_XML1": "VAR6"
+    }
+}

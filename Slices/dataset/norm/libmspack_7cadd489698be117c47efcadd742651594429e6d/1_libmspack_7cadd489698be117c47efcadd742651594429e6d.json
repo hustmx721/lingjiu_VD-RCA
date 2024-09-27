@@ -1,0 +1,24 @@
+{
+    "type": "1",
+    "func": {
+        "create_output_name": "FUN1",
+        "tolower": "FUN2"
+    },
+    "var": {
+        "fname": "VAR1",
+        "dir": "VAR2",
+        "lower": "VAR3",
+        "isunix": "VAR4",
+        "utf8": "VAR5",
+        "p": "VAR6",
+        "name": "VAR7",
+        "c": "VAR8",
+        "fe": "VAR9",
+        "sep": "VAR10",
+        "slash": "VAR11",
+        "x": "VAR12",
+        "CHAR": "VAR13",
+        "stderr": "VAR14",
+        "STRING": "VAR15"
+    }
+}

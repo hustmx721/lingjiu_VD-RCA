@@ -1,0 +1,13 @@
+{
+    "type": "1",
+    "func": {
+        "snd_usb_mixer_disconnect": "FUN1",
+        "usb_kill_urb": "FUN2"
+    },
+    "var": {
+        "usb_mixer_interface": "VAR1",
+        "mixer": "VAR2",
+        "urb": "VAR3",
+        "rc_urb": "VAR4"
+    }
+}

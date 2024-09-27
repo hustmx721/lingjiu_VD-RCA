@@ -1,0 +1,35 @@
+{
+    "type": "1",
+    "func": {
+        "gst_vorbis_tag_add_coverart": "FUN1",
+        "g_try_malloc0": "FUN2",
+        "g_base64_decode_step": "FUN3",
+        "gst_tag_image_data_to_image_buffer": "FUN4",
+        "gst_tag_list_add": "FUN5",
+        "gst_buffer_unref": "FUN6",
+        "g_free": "FUN7",
+        "GST_WARNING": "FUN8"
+    },
+    "var": {
+        "GstTagList": "VAR1",
+        "tags": "VAR2",
+        "gchar": "VAR3",
+        "img_data_base64": "VAR4",
+        "base64_len": "VAR5",
+        "GstBuffer": "VAR6",
+        "img": "VAR7",
+        "guchar": "VAR8",
+        "img_data": "VAR9",
+        "img_len": "VAR10",
+        "save": "VAR11",
+        "state": "VAR12",
+        "not_enough_data": "VAR13",
+        "alloc_failed": "VAR14",
+        "decode_failed": "VAR15",
+        "GST_TAG_IMAGE_TYPE_NONE": "VAR16",
+        "GST_TAG_MERGE_APPEND": "VAR17",
+        "GST_TAG_PREVIEW_IMAGE": "VAR18",
+        "STRING": "VAR19",
+        "convert_failed": "VAR20"
+    }
+}

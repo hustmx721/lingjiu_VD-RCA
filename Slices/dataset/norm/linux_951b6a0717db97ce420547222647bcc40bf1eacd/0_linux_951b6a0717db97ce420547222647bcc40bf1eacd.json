@@ -1,0 +1,43 @@
+{
+    "type": "0",
+    "func": {
+        "rfcomm_sock_bind": "FUN1",
+        "min_t": "FUN2",
+        "BT_DBG": "FUN3",
+        "lock_sock": "FUN4",
+        "write_lock": "FUN5",
+        "__rfcomm_get_listen_sock_by_addr": "FUN6",
+        "bacpy": "FUN7",
+        "rfcomm_pi": "FUN8",
+        "write_unlock": "FUN9",
+        "release_sock": "FUN10"
+    },
+    "var": {
+        "sock": "VAR1",
+        "sockaddr": "VAR2",
+        "addr": "VAR3",
+        "addr_len": "VAR4",
+        "sa": "VAR5",
+        "sk": "VAR6",
+        "len": "VAR7",
+        "err": "VAR8",
+        "sa_family": "VAR9",
+        "AF_BLUETOOTH": "VAR10",
+        "EINVAL": "VAR11",
+        "STRING": "VAR12",
+        "rc_bdaddr": "VAR13",
+        "sk_state": "VAR14",
+        "BT_OPEN": "VAR15",
+        "EBADFD": "VAR16",
+        "done": "VAR17",
+        "sk_type": "VAR18",
+        "SOCK_STREAM": "VAR19",
+        "rfcomm_sk_list": "VAR20",
+        "lock": "VAR21",
+        "rc_channel": "VAR22",
+        "EADDRINUSE": "VAR23",
+        "src": "VAR24",
+        "channel": "VAR25",
+        "BT_BOUND": "VAR26"
+    }
+}

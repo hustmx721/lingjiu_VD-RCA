@@ -1,0 +1,38 @@
+void FUN1(struct VAR1 *VAR2, struct VAR1 *VAR1)
+{
+	int VAR3;
+	if (FUN2(VAR1) || FUN3(VAR1))
+		FUN4(VAR2, VAR1);
+	else
+		FUN5(VAR2, VAR1);
+	if (FUN6(VAR1))
+		FUN7(VAR2);
+	if (FUN8(VAR1))
+		FUN9(VAR2);
+	if (FUN10(VAR1))
+		FUN11(VAR2);
+	if (FUN12(VAR1)) {
+		FUN13(FUN14(VAR1), VAR1);
+		FUN15(VAR2);
+	} else if (FUN16(VAR1))
+		FUN17(VAR2);
+	if (FUN18(VAR1))
+		FUN19(VAR2);
+ 	if (FUN20(VAR1))
+ 		FUN21(VAR2);
+	if (FUN22(VAR1))
+		FUN23(VAR2);
+ 	if (FUN24(VAR1))
+ 		FUN25(VAR2);
+	if (FUN26(VAR1))
+		FUN27(VAR2);
+	VAR3 = FUN28(VAR1, -1);
+	FUN28(VAR2, VAR3);
+	FUN29(VAR2, VAR1);
+	if (FUN30(VAR1))
+		FUN31(VAR1);
+	FUN32(VAR1);
+	FUN33(VAR1, 0);
+	if (FUN34(VAR2))
+		FUN35(VAR2);
+}

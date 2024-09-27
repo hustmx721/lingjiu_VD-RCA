@@ -1,0 +1,31 @@
+{
+    "type": "1",
+    "func": {
+        "on_unregister_handler": "FUN1",
+        "find_handler_by_subtype": "FUN2",
+        "g_dbus_method_invocation_return_value": "FUN3",
+        "g_variant_new": "FUN4",
+        "dbus_unexport_handler": "FUN5",
+        "tcmur_unregister_handler": "FUN6",
+        "g_bus_unwatch_name": "FUN7",
+        "g_free": "FUN8"
+    },
+    "var": {
+        "TCMUService1HandlerManager1": "VAR1",
+        "interface": "VAR2",
+        "GDBusMethodInvocation": "VAR3",
+        "invocation": "VAR4",
+        "gchar": "VAR5",
+        "subtype": "VAR6",
+        "user_data": "VAR7",
+        "tcmur_handler": "VAR8",
+        "handler": "VAR9",
+        "dbus_info": "VAR10",
+        "info": "VAR11",
+        "opaque": "VAR12",
+        "STRING": "VAR13",
+        "FALSE": "VAR14",
+        "TRUE": "VAR15",
+        "watcher_id": "VAR16"
+    }
+}

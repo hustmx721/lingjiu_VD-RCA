@@ -1,0 +1,12 @@
+{
+    "type": "0",
+    "func": {
+        "nbd_negotiate_read": "FUN1"
+    },
+    "var": {
+        "QIOChannel": "VAR1",
+        "ioc": "VAR2",
+        "buffer": "VAR3",
+        "size": "VAR4"
+    }
+}

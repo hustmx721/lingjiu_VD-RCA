@@ -1,0 +1,10 @@
+{
+    "type": "0",
+    "func": {
+        "do_async_increment": "FUN1"
+    },
+    "var": {
+        "IncrementData": "VAR1",
+        "data": "VAR2"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "type": "1",
+    "func": {
+        "OffScreenRootWindow": "FUN1",
+        "PLATFORM": "FUN2",
+        "XUnmapWindow": "FUN3",
+        "XDestroyWindow": "FUN4"
+    },
+    "var": {
+        "refCount": "VAR1",
+        "QT": "VAR2",
+        "window": "VAR3",
+        "elif": "VAR4",
+        "EFL": "VAR5",
+        "display": "VAR6",
+        "endif": "VAR7"
+    }
+}

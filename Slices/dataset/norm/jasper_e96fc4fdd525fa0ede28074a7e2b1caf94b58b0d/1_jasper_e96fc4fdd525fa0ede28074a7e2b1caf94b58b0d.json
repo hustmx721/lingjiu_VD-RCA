@@ -1,0 +1,29 @@
+{
+    "type": "1",
+    "func": {
+        "jp2_pclr_getdata": "FUN1",
+        "jp2_getuint16": "FUN2",
+        "jp2_getuint8": "FUN3",
+        "jas_alloc2": "FUN4",
+        "jp2_getint": "FUN5"
+    },
+    "var": {
+        "jp2_box_t": "VAR1",
+        "box": "VAR2",
+        "jas_stream_t": "VAR3",
+        "in": "VAR4",
+        "jp2_pclr_t": "VAR5",
+        "pclr": "VAR6",
+        "data": "VAR7",
+        "lutsize": "VAR8",
+        "i": "VAR9",
+        "j": "VAR10",
+        "x": "VAR11",
+        "lutdata": "VAR12",
+        "numlutents": "VAR13",
+        "numchans": "VAR14",
+        "int_fast32_t": "VAR15",
+        "bpc": "VAR16",
+        "uint_fast8_t": "VAR17"
+    }
+}

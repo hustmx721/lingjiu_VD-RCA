@@ -1,0 +1,20 @@
+{
+    "type": "0",
+    "func": {
+        "setInnerHTML": "FUN1",
+        "createFragmentForInnerOuterHTML": "FUN2",
+        "host": "FUN3",
+        "replaceChildrenWithFragment": "FUN4",
+        "release": "FUN5"
+    },
+    "var": {
+        "ShadowRoot": "VAR1",
+        "String": "VAR2",
+        "markup": "VAR3",
+        "ExceptionCode": "VAR4",
+        "ec": "VAR5",
+        "RefPtr": "VAR6",
+        "DocumentFragment": "VAR7",
+        "fragment": "VAR8"
+    }
+}

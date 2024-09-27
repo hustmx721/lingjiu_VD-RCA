@@ -1,0 +1,11 @@
+{
+    "type": "0",
+    "func": {
+        "nbd_negotiate_drop_sync": "FUN1"
+    },
+    "var": {
+        "QIOChannel": "VAR1",
+        "ioc": "VAR2",
+        "size": "VAR3"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "type": "1",
+    "func": {
+        "GoForward": "FUN1",
+        "NOTIMPLEMENTED": "FUN2"
+    },
+    "var": {
+        "FrameImpl": "VAR1"
+    }
+}

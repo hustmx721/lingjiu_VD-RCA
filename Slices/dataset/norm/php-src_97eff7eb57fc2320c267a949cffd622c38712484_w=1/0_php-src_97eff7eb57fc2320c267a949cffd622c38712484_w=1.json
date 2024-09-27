@@ -1,0 +1,12 @@
+{
+    "type": "0",
+    "func": {
+        "PHP_FUNCTION": "FUN1",
+        "get_icu_disp_value_src_php": "FUN2"
+    },
+    "var": {
+        "locale_get_display_region": "VAR1",
+        "LOC_REGION_TAG": "VAR2",
+        "INTERNAL_FUNCTION_PARAM_PASSTHRU": "VAR3"
+    }
+}

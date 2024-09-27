@@ -1,0 +1,19 @@
+{
+    "type": "1",
+    "func": {
+        "nbd_negotiate_drop_sync": "FUN1",
+        "g_malloc": "FUN2",
+        "MIN": "FUN3",
+        "nbd_negotiate_read": "FUN4",
+        "g_free": "FUN5"
+    },
+    "var": {
+        "QIOChannel": "VAR1",
+        "ioc": "VAR2",
+        "size": "VAR3",
+        "ret": "VAR4",
+        "uint8_t": "VAR5",
+        "buffer": "VAR6",
+        "count": "VAR7"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "type": "0",
+    "func": {
+        "create_output_name": "FUN1"
+    },
+    "var": {
+        "fname": "VAR1",
+        "dir": "VAR2",
+        "out": "VAR3",
+        "p": "VAR4",
+        "CHAR": "VAR5",
+        "STRING": "VAR6"
+    }
+}

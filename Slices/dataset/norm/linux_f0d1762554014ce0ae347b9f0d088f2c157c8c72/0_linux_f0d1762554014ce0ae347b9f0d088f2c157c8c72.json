@@ -1,0 +1,31 @@
+{
+    "type": "0",
+    "func": {
+        "pcd_exit": "FUN1",
+        "del_gendisk": "FUN2",
+        "pi_release": "FUN3",
+        "unregister_cdrom": "FUN4",
+        "blk_cleanup_queue": "FUN5",
+        "blk_mq_free_tag_set": "FUN6",
+        "put_disk": "FUN7",
+        "unregister_blkdev": "FUN8",
+        "pi_unregister_driver": "FUN9"
+    },
+    "var": {
+        "__exit": "VAR1",
+        "pcd_unit": "VAR2",
+        "cd": "VAR3",
+        "unit": "VAR4",
+        "pcd": "VAR5",
+        "PCD_UNITS": "VAR6",
+        "disk": "VAR7",
+        "present": "VAR8",
+        "pi": "VAR9",
+        "info": "VAR10",
+        "queue": "VAR11",
+        "tag_set": "VAR12",
+        "major": "VAR13",
+        "name": "VAR14",
+        "par_drv": "VAR15"
+    }
+}

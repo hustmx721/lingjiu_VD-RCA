@@ -1,0 +1,9 @@
+{
+    "type": "0",
+    "func": {
+        "OnSpeechFinished": "FUN1"
+    },
+    "var": {
+        "ExtensionTtsController": "VAR1"
+    }
+}

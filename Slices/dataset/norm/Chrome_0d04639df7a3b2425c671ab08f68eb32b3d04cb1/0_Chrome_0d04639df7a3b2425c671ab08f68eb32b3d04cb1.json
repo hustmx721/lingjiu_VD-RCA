@@ -1,0 +1,11 @@
+{
+    "type": "0",
+    "func": {
+        "InfoBarClosed": "FUN1",
+        "OnInfoBarClosed": "FUN2"
+    },
+    "var": {
+        "AutoFillCCInfoBarDelegate": "VAR1",
+        "host_": "VAR2"
+    }
+}

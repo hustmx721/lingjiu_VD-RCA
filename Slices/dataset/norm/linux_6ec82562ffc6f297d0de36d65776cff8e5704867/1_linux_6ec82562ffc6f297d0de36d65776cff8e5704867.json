@@ -1,0 +1,27 @@
+{
+    "type": "1",
+    "func": {
+        "dev_forward_skb": "FUN1",
+        "skb_orphan": "FUN2",
+        "skb_set_dev": "FUN3",
+        "eth_type_trans": "FUN4",
+        "netif_rx": "FUN5"
+    },
+    "var": {
+        "net_device": "VAR1",
+        "dev": "VAR2",
+        "sk_buff": "VAR3",
+        "skb": "VAR4",
+        "flags": "VAR5",
+        "IFF_UP": "VAR6",
+        "NET_RX_DROP": "VAR7",
+        "len": "VAR8",
+        "mtu": "VAR9",
+        "hard_header_len": "VAR10",
+        "tstamp": "VAR11",
+        "tv64": "VAR12",
+        "pkt_type": "VAR13",
+        "PACKET_HOST": "VAR14",
+        "protocol": "VAR15"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "type": "0",
+    "func": {
+        "SProcXResQueryResourceBytes": "FUN1",
+        "REQUEST": "FUN2",
+        "REQUEST_AT_LEAST_SIZE": "FUN3",
+        "swapl": "FUN4",
+        "REQUEST_FIXED_SIZE": "FUN5"
+    },
+    "var": {
+        "client": "VAR1",
+        "xXResQueryResourceBytesReq": "VAR2",
+        "c": "VAR3",
+        "xXResResourceIdSpec": "VAR4",
+        "specs": "VAR5",
+        "stuff": "VAR6",
+        "numSpecs": "VAR7"
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "type": "1",
+    "func": {
+        "ParseSimpleBlock": "FUN1",
+        "Length": "FUN2",
+        "GetUIntLength": "FUN3",
+        "ReadUInt": "FUN4",
+        "GetTracks": "FUN5",
+        "GetTrackByNumber": "FUN6",
+        "Read": "FUN7",
+        "CreateBlock": "FUN8"
+    },
+    "var": {
+        "Cluster": "VAR1",
+        "block_size": "VAR2",
+        "pos": "VAR3",
+        "len": "VAR4",
+        "block_start": "VAR5",
+        "block_stop": "VAR6",
+        "IMkvReader": "VAR7",
+        "pReader": "VAR8",
+        "m_pSegment": "VAR9",
+        "m_pReader": "VAR10",
+        "total": "VAR11",
+        "avail": "VAR12",
+        "status": "VAR13",
+        "E_BUFFER_NOT_FULL": "VAR14",
+        "result": "VAR15",
+        "E_FILE_FORMAT_INVALID": "VAR16",
+        "track": "VAR17",
+        "Tracks": "VAR18",
+        "pTracks": "VAR19",
+        "tn": "VAR20",
+        "Track": "VAR21",
+        "pTrack": "VAR22",
+        "endif": "VAR23",
+        "flags": "VAR24",
+        "lacing": "VAR25",
+        "m_pos": "VAR26"
+    }
+}

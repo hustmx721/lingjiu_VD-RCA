@@ -1,0 +1,11 @@
+{
+    "type": "0",
+    "func": {
+        "hash_foreach_mangle_dict_of_strings": "FUN1"
+    },
+    "var": {
+        "key": "VAR1",
+        "val": "VAR2",
+        "user_data": "VAR3"
+    }
+}

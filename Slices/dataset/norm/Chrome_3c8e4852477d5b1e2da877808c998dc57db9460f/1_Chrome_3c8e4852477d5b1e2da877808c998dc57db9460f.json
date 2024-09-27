@@ -1,0 +1,21 @@
+{
+    "type": "1",
+    "func": {
+        "SetNetworkConditions": "FUN1",
+        "GetStoragePartition": "FUN2",
+        "GetNetworkContext": "FUN3"
+    },
+    "var": {
+        "NetworkHandler": "VAR1",
+        "network": "VAR2",
+        "mojom": "VAR3",
+        "conditions": "VAR4",
+        "process_": "VAR5",
+        "StoragePartition": "VAR6",
+        "partition": "VAR7",
+        "NetworkContext": "VAR8",
+        "context": "VAR9",
+        "host_id_": "VAR10",
+        "std": "VAR11"
+    }
+}

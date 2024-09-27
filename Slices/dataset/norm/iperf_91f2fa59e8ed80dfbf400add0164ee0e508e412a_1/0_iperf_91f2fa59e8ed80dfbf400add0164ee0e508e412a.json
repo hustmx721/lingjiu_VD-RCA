@@ -1,0 +1,12 @@
+{
+    "type": "0",
+    "func": {
+        "cJSON_CreateIntArray": "FUN1"
+    },
+    "var": {
+        "cJSON": "VAR1",
+        "int64_t": "VAR2",
+        "numbers": "VAR3",
+        "count": "VAR4"
+    }
+}

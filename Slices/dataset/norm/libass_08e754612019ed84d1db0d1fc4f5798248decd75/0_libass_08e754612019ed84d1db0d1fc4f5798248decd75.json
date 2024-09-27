@@ -1,0 +1,30 @@
+{
+    "type": "0",
+    "func": {
+        "calc_coeff": "FUN1",
+        "coeff_filter": "FUN2",
+        "coeff_blur121": "FUN3",
+        "calc_gauss": "FUN4",
+        "calc_matrix": "FUN5",
+        "FFMAX": "FUN6"
+    },
+    "var": {
+        "mu": "VAR1",
+        "index": "VAR2",
+        "prefilter": "VAR3",
+        "r2": "VAR4",
+        "mul": "VAR5",
+        "mul2": "VAR6",
+        "mul3": "VAR7",
+        "kernel": "VAR8",
+        "mat_freq": "VAR9",
+        "n": "VAR10",
+        "k": "VAR11",
+        "vec_freq": "VAR12",
+        "mat": "VAR13",
+        "vec": "VAR14",
+        "i": "VAR15",
+        "res": "VAR16",
+        "j": "VAR17"
+    }
+}

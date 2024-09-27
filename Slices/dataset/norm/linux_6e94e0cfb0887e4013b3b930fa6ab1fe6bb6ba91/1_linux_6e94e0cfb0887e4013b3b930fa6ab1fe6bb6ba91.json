@@ -1,0 +1,34 @@
+{
+    "type": "1",
+    "func": {
+        "check_entry_size_and_hooks": "FUN1",
+        "__alignof__": "FUN2",
+        "duprintf": "FUN3",
+        "check_entry": "FUN4",
+        "check_underflow": "FUN5",
+        "pr_err": "FUN6"
+    },
+    "var": {
+        "arpt_entry": "VAR1",
+        "e": "VAR2",
+        "xt_table_info": "VAR3",
+        "newinfo": "VAR4",
+        "base": "VAR5",
+        "limit": "VAR6",
+        "hook_entries": "VAR7",
+        "underflows": "VAR8",
+        "valid_hooks": "VAR9",
+        "h": "VAR10",
+        "err": "VAR11",
+        "STRING": "VAR12",
+        "EINVAL": "VAR13",
+        "next_offset": "VAR14",
+        "xt_entry_target": "VAR15",
+        "NF_ARP_NUMHOOKS": "VAR16",
+        "hook_entry": "VAR17",
+        "underflow": "VAR18",
+        "counters": "VAR19",
+        "xt_counters": "VAR20",
+        "comefrom": "VAR21"
+    }
+}

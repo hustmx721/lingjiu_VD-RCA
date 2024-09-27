@@ -1,0 +1,23 @@
+{
+    "type": "0",
+    "func": {
+        "add_probe": "FUN1",
+        "bb_error_msg_and_die": "FUN2",
+        "get_or_add_modentry": "FUN3"
+    },
+    "var": {
+        "name": "VAR1",
+        "module_entry": "VAR2",
+        "m": "VAR3",
+        "CHAR": "VAR4",
+        "STRING": "VAR5",
+        "option_mask32": "VAR6",
+        "OPT_REMOVE": "VAR7",
+        "OPT_SHOW_DEPS": "VAR8",
+        "flags": "VAR9",
+        "MODULE_FLAG_LOADED": "VAR10",
+        "modname": "VAR11",
+        "G": "VAR12",
+        "need_symbols": "VAR13"
+    }
+}

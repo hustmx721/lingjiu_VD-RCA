@@ -1,0 +1,38 @@
+{
+    "type": "1",
+    "func": {
+        "usage": "FUN1",
+        "ERR": "FUN2",
+        "pdf_is_pdf": "FUN3",
+        "init_pdf": "FUN4",
+        "pdf_delete": "FUN5",
+        "write_version": "FUN6",
+        "pdf_summarize": "FUN7",
+        "scrub_document": "FUN8",
+        "display_creator": "FUN9"
+    },
+    "var": {
+        "i": "VAR1",
+        "n_valid": "VAR2",
+        "do_write": "VAR3",
+        "do_scrub": "VAR4",
+        "c": "VAR5",
+        "dname": "VAR6",
+        "name": "VAR7",
+        "DIR": "VAR8",
+        "dir": "VAR9",
+        "FILE": "VAR10",
+        "fp": "VAR11",
+        "pdf_t": "VAR12",
+        "pdf": "VAR13",
+        "flags": "VAR14",
+        "STRING": "VAR15",
+        "PDF_FLAG_DISP_CREATOR": "VAR16",
+        "PDF_FLAG_QUIET": "VAR17",
+        "CHAR": "VAR18",
+        "n_xrefs": "VAR19",
+        "xrefs": "VAR20",
+        "version": "VAR21",
+        "S_IRWXU": "VAR22"
+    }
+}

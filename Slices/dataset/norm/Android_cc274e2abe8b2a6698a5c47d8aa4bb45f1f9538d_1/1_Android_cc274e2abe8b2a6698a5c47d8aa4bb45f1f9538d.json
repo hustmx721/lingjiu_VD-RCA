@@ -1,0 +1,41 @@
+{
+    "type": "1",
+    "func": {
+        "ParseNext": "FUN1",
+        "EOS": "FUN2",
+        "LoadCluster": "FUN3",
+        "GetLast": "FUN4",
+        "Length": "FUN5",
+        "GetUIntLength": "FUN6",
+        "ReadUInt": "FUN7",
+        "DoParseNext": "FUN8"
+    },
+    "var": {
+        "Segment": "VAR1",
+        "Cluster": "VAR2",
+        "pCurr": "VAR3",
+        "pResult": "VAR4",
+        "pos": "VAR5",
+        "len": "VAR6",
+        "m_clusters": "VAR7",
+        "m_index": "VAR8",
+        "next_idx": "VAR9",
+        "m_clusterCount": "VAR10",
+        "result": "VAR11",
+        "m_pos": "VAR12",
+        "total": "VAR13",
+        "avail": "VAR14",
+        "status": "VAR15",
+        "m_pReader": "VAR16",
+        "segment_stop": "VAR17",
+        "m_size": "VAR18",
+        "m_start": "VAR19",
+        "m_element_start": "VAR20",
+        "m_element_size": "VAR21",
+        "E_BUFFER_NOT_FULL": "VAR22",
+        "E_FILE_FORMAT_INVALID": "VAR23",
+        "id": "VAR24",
+        "size": "VAR25",
+        "unknown_size": "VAR26"
+    }
+}

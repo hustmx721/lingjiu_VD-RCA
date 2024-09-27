@@ -1,0 +1,12 @@
+{
+    "type": "1",
+    "func": {
+        "do_prefetch_tables": "FUN1",
+        "prefetch_table": "FUN2"
+    },
+    "var": {
+        "gcmM": "VAR1",
+        "gcmM_size": "VAR2",
+        "gcmR": "VAR3"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "type": "0",
+    "func": {
+        "vapic_enter": "FUN1"
+    },
+    "var": {
+        "kvm_vcpu": "VAR1",
+        "vcpu": "VAR2"
+    }
+}

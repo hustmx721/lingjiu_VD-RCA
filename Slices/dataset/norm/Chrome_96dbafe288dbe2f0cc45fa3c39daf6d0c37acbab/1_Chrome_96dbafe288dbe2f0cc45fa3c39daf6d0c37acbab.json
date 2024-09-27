@@ -1,0 +1,42 @@
+{
+    "type": "1",
+    "func": {
+        "xsltGenerateIdFunction": "FUN1",
+        "xsltTransformError": "FUN2",
+        "xsltXPathGetTransformContext": "FUN3",
+        "valuePop": "FUN4",
+        "xmlXPathFreeObject": "FUN5",
+        "valuePush": "FUN6",
+        "xmlXPathNewCString": "FUN7",
+        "xmlXPathCmpNodes": "FUN8",
+        "xmlXPathNewString": "FUN9"
+    },
+    "var": {
+        "ctxt": "VAR1",
+        "nargs": "VAR2",
+        "base_address": "VAR3",
+        "cur": "VAR4",
+        "obj": "VAR5",
+        "val": "VAR6",
+        "str": "VAR7",
+        "doc": "VAR8",
+        "context": "VAR9",
+        "node": "VAR10",
+        "nodelist": "VAR11",
+        "i": "VAR12",
+        "ret": "VAR13",
+        "value": "VAR14",
+        "type": "VAR15",
+        "XPATH_NODESET": "VAR16",
+        "error": "VAR17",
+        "XPATH_INVALID_TYPE": "VAR18",
+        "STRING": "VAR19",
+        "nodesetval": "VAR20",
+        "nodeNr": "VAR21",
+        "nodeTab": "VAR22",
+        "XPATH_INVALID_ARITY": "VAR23",
+        "XML_NAMESPACE_DECL": "VAR24",
+        "ns": "VAR25",
+        "xmlNsPtr": "VAR26"
+    }
+}

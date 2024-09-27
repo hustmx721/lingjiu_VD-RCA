@@ -1,0 +1,34 @@
+{
+    "type": "0",
+    "func": {
+        "runSetUp": "FUN1",
+        "options": "FUN2",
+        "document": "FUN3",
+        "documentURL": "FUN4",
+        "settings": "FUN5",
+        "setViewportEnabled": "FUN6",
+        "setViewportMetaEnabled": "FUN7",
+        "setDoHtmlPreloadScanning": "FUN8",
+        "setReferrerPolicy": "FUN9",
+        "create": "FUN10",
+        "createMediaValuesData": "FUN11"
+    },
+    "var": {
+        "viewportState": "VAR1",
+        "preloadState": "VAR2",
+        "PreloadEnabled": "VAR3",
+        "documentReferrerPolicy": "VAR4",
+        "ReferrerPolicyDefault": "VAR5",
+        "HTMLParserOptions": "VAR6",
+        "m_dummyPageHolder": "VAR7",
+        "KURL": "VAR8",
+        "ParsedURLString": "VAR9",
+        "http": "VAR10",
+        "ViewportEnabled": "VAR11",
+        "m_scanner": "VAR12",
+        "HTMLPreloadScanner": "VAR13",
+        "options": "VAR14",
+        "documentURL": "VAR15",
+        "CachedDocumentParameters": "VAR16"
+    }
+}

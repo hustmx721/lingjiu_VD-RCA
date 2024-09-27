@@ -1,0 +1,28 @@
+{
+    "type": "1",
+    "func": {
+        "hdlr_dump": "FUN1",
+        "gf_isom_box_dump_start": "FUN2",
+        "gf_4cc_to_str": "FUN3",
+        "dump_data": "FUN4",
+        "gf_isom_box_dump_done": "FUN5"
+    },
+    "var": {
+        "GF_Err": "VAR1",
+        "GF_Box": "VAR2",
+        "a": "VAR3",
+        "FILE": "VAR4",
+        "trace": "VAR5",
+        "GF_HandlerBox": "VAR6",
+        "p": "VAR7",
+        "STRING": "VAR8",
+        "nameUTF8": "VAR9",
+        "u32": "VAR10",
+        "s": "VAR11",
+        "handlerType": "VAR12",
+        "d": "VAR13",
+        "reserved1": "VAR14",
+        "reserved2": "VAR15",
+        "GF_OK": "VAR16"
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "type": "0",
+    "func": {
+        "DecodeTunnel": "FUN1",
+        "DecodePPP": "FUN2",
+        "DecodeIPV4": "FUN3",
+        "DecodeIPV6": "FUN4",
+        "DecodeVLAN": "FUN5",
+        "DecodeEthernet": "FUN6",
+        "DecodeERSPAN": "FUN7",
+        "SCLogDebug": "FUN8"
+    },
+    "var": {
+        "ThreadVars": "VAR1",
+        "tv": "VAR2",
+        "DecodeThreadVars": "VAR3",
+        "dtv": "VAR4",
+        "Packet": "VAR5",
+        "p": "VAR6",
+        "uint8_t": "VAR7",
+        "pkt": "VAR8",
+        "len": "VAR9",
+        "PacketQueue": "VAR10",
+        "pq": "VAR11",
+        "proto": "VAR12",
+        "DECODE_TUNNEL_PPP": "VAR13",
+        "DECODE_TUNNEL_IPV4": "VAR14",
+        "DECODE_TUNNEL_IPV6": "VAR15",
+        "DECODE_TUNNEL_IPV6_TEREDO": "VAR16",
+        "DECODE_TUNNEL_VLAN": "VAR17",
+        "DECODE_TUNNEL_ETHERNET": "VAR18",
+        "DECODE_TUNNEL_ERSPAN": "VAR19",
+        "STRING": "VAR20",
+        "TM_ECODE_OK": "VAR21"
+    }
+}

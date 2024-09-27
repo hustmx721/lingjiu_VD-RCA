@@ -1,0 +1,20 @@
+{
+    "type": "0",
+    "func": {
+        "SetVarImpl": "FUN1",
+        "defined": "FUN2",
+        "c_str": "FUN3",
+        "SetEnvironmentVariable": "FUN4",
+        "UTF8ToWide": "FUN5"
+    },
+    "var": {
+        "variable_name": "VAR1",
+        "std": "VAR2",
+        "string": "VAR3",
+        "new_value": "VAR4",
+        "OS_POSIX": "VAR5",
+        "elif": "VAR6",
+        "OS_WIN": "VAR7",
+        "endif": "VAR8"
+    }
+}

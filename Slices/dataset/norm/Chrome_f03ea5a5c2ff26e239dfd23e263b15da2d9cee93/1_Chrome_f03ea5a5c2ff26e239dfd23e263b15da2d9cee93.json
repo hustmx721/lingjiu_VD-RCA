@@ -1,0 +1,40 @@
+{
+    "type": "1",
+    "func": {
+        "DidAddMessageToConsole": "FUN1",
+        "ShouldReportDetailedMessageForSource": "FUN2",
+        "DetailedConsoleMessageAdded": "FUN3",
+        "Utf16": "FUN4",
+        "Send": "FUN5",
+        "FrameHostMsg_DidAddMessageToConsole": "FUN6"
+    },
+    "var": {
+        "RenderFrameImpl": "VAR1",
+        "blink": "VAR2",
+        "WebConsoleMessage": "VAR3",
+        "message": "VAR4",
+        "WebString": "VAR5",
+        "source_name": "VAR6",
+        "source_line": "VAR7",
+        "stack_trace": "VAR8",
+        "logging": "VAR9",
+        "log_severity": "VAR10",
+        "LOG_VERBOSE": "VAR11",
+        "level": "VAR12",
+        "mojom": "VAR13",
+        "ConsoleMessageLevel": "VAR14",
+        "kVerbose": "VAR15",
+        "kInfo": "VAR16",
+        "LOG_INFO": "VAR17",
+        "kWarning": "VAR18",
+        "LOG_WARNING": "VAR19",
+        "kError": "VAR20",
+        "LOG_ERROR": "VAR21",
+        "observer": "VAR22",
+        "observers_": "VAR23",
+        "text": "VAR24",
+        "uint32_t": "VAR25",
+        "routing_id_": "VAR26",
+        "int32_t": "VAR27"
+    }
+}

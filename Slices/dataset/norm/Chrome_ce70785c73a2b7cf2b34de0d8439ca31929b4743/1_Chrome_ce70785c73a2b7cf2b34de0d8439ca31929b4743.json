@@ -1,0 +1,43 @@
+{
+    "type": "1",
+    "func": {
+        "adjustBlockChildForPagination": "FUN1",
+        "isLayoutBlockFlow": "FUN2",
+        "toLayoutBlockFlow": "FUN3",
+        "applyBeforeBreak": "FUN4",
+        "adjustForUnsplittableChild": "FUN5",
+        "logicalHeight": "FUN6",
+        "setPageBreak": "FUN7",
+        "paginationStrut": "FUN8",
+        "isOutOfFlowPositioned": "FUN9",
+        "isTableCell": "FUN10",
+        "isFloating": "FUN11",
+        "marginBefore": "FUN12",
+        "setPaginationStrut": "FUN13",
+        "pageLogicalHeightForOffset": "FUN14",
+        "pageRemainingLogicalHeightForOffset": "FUN15",
+        "intMod": "FUN16",
+        "offsetFromLogicalTopOfFirstPage": "FUN17",
+        "logicalTop": "FUN18",
+        "setLogicalHeight": "FUN19"
+    },
+    "var": {
+        "LayoutBlockFlow": "VAR1",
+        "logicalTop": "VAR2",
+        "LayoutBox": "VAR3",
+        "child": "VAR4",
+        "atBeforeSideOfBlock": "VAR5",
+        "childBlockFlow": "VAR6",
+        "newLogicalTop": "VAR7",
+        "logicalTopBeforeUnsplittableAdjustment": "VAR8",
+        "logicalTopAfterUnsplittableAdjustment": "VAR9",
+        "paginationStrut": "VAR10",
+        "unsplittableAdjustmentDelta": "VAR11",
+        "childLogicalHeight": "VAR12",
+        "pageLogicalHeight": "VAR13",
+        "remainingLogicalHeight": "VAR14",
+        "AssociateWithLatterPage": "VAR15",
+        "spaceShortage": "VAR16",
+        "spaceShortageInLastColumn": "VAR17"
+    }
+}

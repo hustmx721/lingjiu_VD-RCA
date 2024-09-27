@@ -1,0 +1,31 @@
+{
+    "type": "1",
+    "func": {
+        "runSetUp": "FUN1",
+        "options": "FUN2",
+        "document": "FUN3",
+        "documentURL": "FUN4",
+        "settings": "FUN5",
+        "setViewportEnabled": "FUN6",
+        "setViewportMetaEnabled": "FUN7",
+        "setDoHtmlPreloadScanning": "FUN8",
+        "create": "FUN9",
+        "createMediaValuesData": "FUN10"
+    },
+    "var": {
+        "viewportState": "VAR1",
+        "preloadState": "VAR2",
+        "PreloadEnabled": "VAR3",
+        "HTMLParserOptions": "VAR4",
+        "m_dummyPageHolder": "VAR5",
+        "KURL": "VAR6",
+        "ParsedURLString": "VAR7",
+        "http": "VAR8",
+        "ViewportEnabled": "VAR9",
+        "m_scanner": "VAR10",
+        "HTMLPreloadScanner": "VAR11",
+        "options": "VAR12",
+        "documentURL": "VAR13",
+        "CachedDocumentParameters": "VAR14"
+    }
+}

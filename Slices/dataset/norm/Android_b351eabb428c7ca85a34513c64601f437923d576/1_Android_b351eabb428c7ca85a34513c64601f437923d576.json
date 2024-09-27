@@ -1,0 +1,23 @@
+{
+    "type": "1",
+    "func": {
+        "updateGraphicBufferInMeta": "FUN1",
+        "autoLock": "FUN2",
+        "findBufferHeader": "FUN3",
+        "updateGraphicBufferInMeta_l": "FUN4"
+    },
+    "var": {
+        "OMXNodeInstance": "VAR1",
+        "portIndex": "VAR2",
+        "sp": "VAR3",
+        "GraphicBuffer": "VAR4",
+        "graphicBuffer": "VAR5",
+        "OMX": "VAR6",
+        "buffer": "VAR7",
+        "Mutex": "VAR8",
+        "Autolock": "VAR9",
+        "mLock": "VAR10",
+        "OMX_BUFFERHEADERTYPE": "VAR11",
+        "header": "VAR12"
+    }
+}

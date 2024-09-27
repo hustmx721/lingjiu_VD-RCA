@@ -1,0 +1,29 @@
+FUN1(void)
+FUN1(int VAR1)
+ {
+ 	spnego_gss_ctx_id_t VAR2 = NULL;
+ 	VAR2 = (VAR3)
+		malloc(sizeof (VAR4));
+	if (VAR2 == NULL) {
+		return (NULL);
+	}
+	VAR2->VAR5 = VAR6;
+	VAR2->VAR7 = VAR8;
+	VAR2->VAR9 = NULL;
+	VAR2->VAR10 = NULL;
+	VAR2->VAR11 = NULL;
+	VAR2->VAR12.VAR13 = 0;
+	VAR2->VAR12.VAR14 = NULL;
+	VAR2->VAR15 = VAR16;
+	VAR2->VAR17 = 0;
+	VAR2->VAR18 = 0;
+ 	VAR2->VAR19 = 0;
+ 	VAR2->VAR20 = 0;
+ 	VAR2->VAR21 = 0;
+	VAR2->VAR22 = 0;
+	VAR2->VAR1 = VAR1;
+ 	VAR2->VAR23 = VAR24;
+ 	VAR2->VAR25 = VAR26;
+	FUN2(VAR2);
+	return (VAR2);
+}

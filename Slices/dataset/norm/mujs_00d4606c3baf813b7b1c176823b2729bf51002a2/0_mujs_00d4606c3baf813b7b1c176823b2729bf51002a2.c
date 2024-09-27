@@ -1,0 +1,39 @@
+ void FUN1(VAR1 *VAR2, VAR3 *VAR4, const char *VAR5)
+ {
+	int VAR6;
+ 	int VAR7;
+ 	int VAR8;
+ 	Resub VAR9;
+	VAR8 = 0;
+	if (VAR4->VAR10 & VAR11) {
+		if (VAR4->VAR12 > strlen(VAR5)) {
+			VAR4->VAR12 = 0;
+			FUN2(VAR2);
+			return;
+		}
+		if (VAR4->VAR12 > 0) {
+			VAR5 += VAR4->VAR12;
+			VAR8 |= VAR13;
+ 		}
+ 	}
+	VAR6 = FUN3(VAR4->VAR14, VAR5, &VAR9, VAR8);
+	if (VAR6 < 0)
+		FUN4(VAR2, VAR15);
+	if (VAR6 == 0) {
+ 		FUN5(VAR2);
+ 		FUN6(VAR2, VAR5);
+ 		FUN7(VAR2, -2, VAR15);
+		FUN8(VAR2, FUN9(VAR5, VAR9.VAR16[0].VAR17));
+		FUN7(VAR2, -2, VAR15);
+		for (VAR7 = 0; VAR7 < VAR9.VAR18; ++VAR7) {
+			FUN10(VAR2, VAR9.VAR16[VAR7].VAR17, VAR9.VAR16[VAR7].VAR19 - VAR9.VAR16[VAR7].VAR17);
+			FUN11(VAR2, -2, VAR7);
+		}
+		if (VAR4->VAR10 & VAR11)
+			VAR4->VAR12 = VAR4->VAR12 + (VAR9.VAR16[0].VAR19 - VAR5);
+		return;
+	}
+	if (VAR4->VAR10 & VAR11)
+		VAR4->VAR12 = 0;
+	FUN2(VAR2);
+}

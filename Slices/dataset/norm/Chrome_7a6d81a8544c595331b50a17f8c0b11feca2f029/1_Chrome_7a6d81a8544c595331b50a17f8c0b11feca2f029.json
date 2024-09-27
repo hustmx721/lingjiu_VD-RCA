@@ -1,0 +1,25 @@
+{
+    "type": "1",
+    "func": {
+        "reflectStringAttributeAttributeGetter": "FUN1",
+        "Holder": "FUN2",
+        "toImpl": "FUN3",
+        "v8SetReturnValueString": "FUN4",
+        "fastGetAttribute": "FUN5",
+        "GetIsolate": "FUN6"
+    },
+    "var": {
+        "v8": "VAR1",
+        "FunctionCallbackInfo": "VAR2",
+        "Value": "VAR3",
+        "info": "VAR4",
+        "Local": "VAR5",
+        "Object": "VAR6",
+        "holder": "VAR7",
+        "Element": "VAR8",
+        "impl": "VAR9",
+        "V8Element": "VAR10",
+        "HTMLNames": "VAR11",
+        "reflectstringattributeAttr": "VAR12"
+    }
+}

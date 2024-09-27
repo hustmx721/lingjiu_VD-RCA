@@ -1,0 +1,12 @@
+{
+    "type": "0",
+    "func": {
+        "my_object_throw_error": "FUN1"
+    },
+    "var": {
+        "MyObject": "VAR1",
+        "obj": "VAR2",
+        "GError": "VAR3",
+        "error": "VAR4"
+    }
+}

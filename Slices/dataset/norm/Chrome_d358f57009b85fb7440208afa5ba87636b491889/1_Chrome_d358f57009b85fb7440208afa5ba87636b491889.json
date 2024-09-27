@@ -1,0 +1,18 @@
+{
+    "type": "1",
+    "func": {
+        "OnUnregisterAgentError": "FUN1",
+        "LOG": "FUN2",
+        "value": "FUN3"
+    },
+    "var": {
+        "BluetoothDeviceChromeOS": "VAR1",
+        "std": "VAR2",
+        "string": "VAR3",
+        "error_name": "VAR4",
+        "error_message": "VAR5",
+        "WARNING": "VAR6",
+        "object_path_": "VAR7",
+        "STRING": "VAR8"
+    }
+}

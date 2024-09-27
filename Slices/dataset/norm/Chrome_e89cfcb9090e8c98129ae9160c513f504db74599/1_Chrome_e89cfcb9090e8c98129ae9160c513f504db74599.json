@@ -1,0 +1,14 @@
+{
+    "type": "1",
+    "func": {
+        "TabDetachedAt": "FUN1",
+        "TabDetachedAtImpl": "FUN2"
+    },
+    "var": {
+        "Browser": "VAR1",
+        "TabContents": "VAR2",
+        "contents": "VAR3",
+        "index": "VAR4",
+        "DETACH_TYPE_DETACH": "VAR5"
+    }
+}

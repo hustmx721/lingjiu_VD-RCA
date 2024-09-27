@@ -1,0 +1,26 @@
+{
+    "type": "0",
+    "func": {
+        "CreateSampleFromInputBuffer": "FUN1",
+        "shm": "FUN2",
+        "handle": "FUN3",
+        "RETURN_ON_FAILURE": "FUN4",
+        "Map": "FUN5",
+        "size": "FUN6",
+        "CreateInputSample": "FUN7",
+        "memory": "FUN8"
+    },
+    "var": {
+        "IMFSample": "VAR1",
+        "media": "VAR2",
+        "BitstreamBuffer": "VAR3",
+        "bitstream_buffer": "VAR4",
+        "stream_size": "VAR5",
+        "alignment": "VAR6",
+        "base": "VAR7",
+        "SharedMemory": "VAR8",
+        "shm": "VAR9",
+        "STRING": "VAR10",
+        "uint8": "VAR11"
+    }
+}

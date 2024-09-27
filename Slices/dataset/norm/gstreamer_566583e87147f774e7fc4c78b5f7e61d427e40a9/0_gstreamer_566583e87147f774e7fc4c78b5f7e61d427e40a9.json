@@ -1,0 +1,25 @@
+{
+    "type": "0",
+    "func": {
+        "gst_vorbis_tag_add_coverart": "FUN1",
+        "GST_WARNING": "FUN2"
+    },
+    "var": {
+        "GstTagList": "VAR1",
+        "tags": "VAR2",
+        "gchar": "VAR3",
+        "img_data_base64": "VAR4",
+        "base64_len": "VAR5",
+        "GstBuffer": "VAR6",
+        "img": "VAR7",
+        "img_len": "VAR8",
+        "guchar": "VAR9",
+        "out": "VAR10",
+        "save": "VAR11",
+        "state": "VAR12",
+        "not_enough_data": "VAR13",
+        "STRING": "VAR14",
+        "decode_failed": "VAR15",
+        "convert_failed": "VAR16"
+    }
+}

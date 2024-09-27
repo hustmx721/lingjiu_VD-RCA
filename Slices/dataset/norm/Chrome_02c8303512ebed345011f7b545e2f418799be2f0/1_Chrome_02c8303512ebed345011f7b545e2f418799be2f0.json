@@ -1,0 +1,20 @@
+{
+    "type": "1",
+    "func": {
+        "CreateFileHelper": "FUN1",
+        "m_result": "FUN2",
+        "m_name": "FUN3",
+        "m_url": "FUN4",
+        "m_type": "FUN5"
+    },
+    "var": {
+        "PassRefPtrWillBeRawPtr": "VAR1",
+        "CreateFileResult": "VAR2",
+        "result": "VAR3",
+        "String": "VAR4",
+        "name": "VAR5",
+        "KURL": "VAR6",
+        "url": "VAR7",
+        "type": "VAR8"
+    }
+}

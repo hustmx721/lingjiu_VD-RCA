@@ -1,0 +1,43 @@
+{
+    "type": "1",
+    "func": {
+        "proc_mount": "FUN1",
+        "task_active_pid_ns": "FUN2",
+        "ns_capable": "FUN3",
+        "ERR_PTR": "FUN4",
+        "sget": "FUN5",
+        "IS_ERR": "FUN6",
+        "ERR_CAST": "FUN7",
+        "proc_parse_options": "FUN8",
+        "deactivate_locked_super": "FUN9",
+        "proc_fill_super": "FUN10",
+        "dget": "FUN11"
+    },
+    "var": {
+        "dentry": "VAR1",
+        "file_system_type": "VAR2",
+        "fs_type": "VAR3",
+        "flags": "VAR4",
+        "dev_name": "VAR5",
+        "data": "VAR6",
+        "err": "VAR7",
+        "super_block": "VAR8",
+        "sb": "VAR9",
+        "pid_namespace": "VAR10",
+        "ns": "VAR11",
+        "options": "VAR12",
+        "MS_KERNMOUNT": "VAR13",
+        "current": "VAR14",
+        "user_ns": "VAR15",
+        "CAP_SYS_ADMIN": "VAR16",
+        "EPERM": "VAR17",
+        "proc_test_super": "VAR18",
+        "proc_set_super": "VAR19",
+        "EINVAL": "VAR20",
+        "s_root": "VAR21",
+        "s_flags": "VAR22",
+        "MS_ACTIVE": "VAR23",
+        "s_iflags": "VAR24",
+        "SB_I_NOEXEC": "VAR25"
+    }
+}

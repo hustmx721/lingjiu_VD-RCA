@@ -1,0 +1,21 @@
+VAR1::VAR2<VAR1::VAR3> VAR4::FUN1(const VAR1::VAR5& VAR6)
+{
+    FUN2(VAR7);
+    if (!VAR6.FUN3())
+        return VAR8::FUN4(VAR7);
+    if (VAR9::FUN5() == VAR9::VAR10)
+         return VAR6.FUN6();
+     if (VAR6.FUN7() < 1)
+        return VAR8::FUN8(VAR6.FUN9());
+     VAR1::VAR11<VAR1::VAR3> VAR12 = VAR6[0];
+     if (!VAR12->FUN10())
+        return FUN11(VAR13, VAR6.FUN9());
+    VAR14* VAR15 = FUN12();
+    if (!VAR15)
+        return VAR8::FUN11(VAR8::VAR16, VAR7, VAR6.FUN9());
+    VAR17<VAR18> VAR19 = VAR20::FUN13(VAR12, VAR15);
+    VAR17<VAR21> VAR22 = VAR21::FUN13(VAR19.FUN14());
+    VAR23::FUN15(VAR6.FUN6(), &VAR24, VAR22.FUN16());
+    VAR23::FUN17(VAR22.FUN14(), VAR1::VAR25<VAR1::VAR26>::FUN18(VAR6.FUN6()));
+    return VAR6.FUN6();
+}

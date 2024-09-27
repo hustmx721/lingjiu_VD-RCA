@@ -1,0 +1,23 @@
+{
+    "type": "1",
+    "func": {
+        "CreateOAuth2ServiceDelegate": "FUN1",
+        "reset": "FUN2",
+        "MutableProfileOAuth2TokenServiceDelegate": "FUN3",
+        "get": "FUN4",
+        "RunLoop": "FUN5",
+        "RunUntilIdle": "FUN6",
+        "AddObserver": "FUN7"
+    },
+    "var": {
+        "signin": "VAR1",
+        "account_consistency": "VAR2",
+        "oauth2_service_delegate_": "VAR3",
+        "client_": "VAR4",
+        "signin_error_controller_": "VAR5",
+        "account_tracker_service_": "VAR6",
+        "token_web_data_": "VAR7",
+        "revoke_all_tokens_on_load_": "VAR8",
+        "base": "VAR9"
+    }
+}

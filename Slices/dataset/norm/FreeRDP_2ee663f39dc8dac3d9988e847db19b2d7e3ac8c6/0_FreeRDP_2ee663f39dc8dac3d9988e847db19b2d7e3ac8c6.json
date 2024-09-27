@@ -1,0 +1,20 @@
+{
+    "type": "0",
+    "func": {
+        "ntlm_print_message_fields": "FUN1",
+        "WLog_DBG": "FUN2",
+        "winpr_HexDump": "FUN3"
+    },
+    "var": {
+        "NTLM_MESSAGE_FIELDS": "VAR1",
+        "fields": "VAR2",
+        "name": "VAR3",
+        "TAG": "VAR4",
+        "STRINGPRIu16STRINGPRIu16STRINGPRIu32STRING": "VAR5",
+        "Len": "VAR6",
+        "MaxLen": "VAR7",
+        "BufferOffset": "VAR8",
+        "WLOG_DEBUG": "VAR9",
+        "Buffer": "VAR10"
+    }
+}

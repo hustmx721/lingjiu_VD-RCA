@@ -1,0 +1,18 @@
+{
+    "type": "1",
+    "func": {
+        "OnSpeechFinished": "FUN1",
+        "id": "FUN2",
+        "set_error": "FUN3",
+        "FinishCurrentUtterance": "FUN4",
+        "SpeakNextUtterance": "FUN5"
+    },
+    "var": {
+        "ExtensionTtsController": "VAR1",
+        "request_id": "VAR2",
+        "std": "VAR3",
+        "string": "VAR4",
+        "error_message": "VAR5",
+        "current_utterance_": "VAR6"
+    }
+}

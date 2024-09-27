@@ -1,0 +1,43 @@
+{
+    "type": "1",
+    "func": {
+        "Convert": "FUN1",
+        "ItemsInPaintChunk": "FUN2",
+        "DCHECK": "FUN3",
+        "IsDrawing": "FUN4",
+        "GetPaintRecord": "FUN5",
+        "size": "FUN6",
+        "Effect": "FUN7",
+        "Root": "FUN8",
+        "TranslateForLayerOffsetOnce": "FUN9",
+        "SwitchToChunkState": "FUN10",
+        "StartPaint": "FUN11",
+        "EndPaintOfUnpaired": "FUN12",
+        "MapVisualRect": "FUN13",
+        "VisualRect": "FUN14",
+        "UpdateEffectBounds": "FUN15",
+        "Transform": "FUN16"
+    },
+    "var": {
+        "ConversionContext": "VAR1",
+        "PaintChunkSubset": "VAR2",
+        "paint_chunks": "VAR3",
+        "DisplayItemList": "VAR4",
+        "display_items": "VAR5",
+        "chunk": "VAR6",
+        "chunk_state": "VAR7",
+        "properties": "VAR8",
+        "switched_to_chunk_state": "VAR9",
+        "item": "VAR10",
+        "record": "VAR11",
+        "DrawingDisplayItem": "VAR12",
+        "EffectPaintPropertyNode": "VAR13",
+        "cc_list_": "VAR14",
+        "push": "VAR15",
+        "cc": "VAR16",
+        "DrawRecordOp": "VAR17",
+        "std": "VAR18",
+        "chunk_to_layer_mapper_": "VAR19",
+        "bounds": "VAR20"
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "type": "1",
+    "func": {
+        "Properties": "FUN1",
+        "Root": "FUN2",
+        "back": "FUN3",
+        "SetTransform": "FUN4",
+        "SetClip": "FUN5",
+        "SetEffect": "FUN6"
+    },
+    "var": {
+        "CompositedLayerRasterInvalidatorTest": "VAR1",
+        "TransformPaintPropertyNode": "VAR2",
+        "t": "VAR3",
+        "ClipPaintPropertyNode": "VAR4",
+        "c": "VAR5",
+        "EffectPaintPropertyNode": "VAR6",
+        "e": "VAR7",
+        "state": "VAR8",
+        "data_": "VAR9",
+        "chunks": "VAR10",
+        "properties": "VAR11"
+    }
+}

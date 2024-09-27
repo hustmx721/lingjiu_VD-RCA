@@ -1,0 +1,7 @@
+{
+    "type": "0",
+    "func": {
+        "CancelPendingTask": "FUN1"
+    },
+    "var": {}
+}

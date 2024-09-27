@@ -1,0 +1,15 @@
+{
+    "type": "0",
+    "func": {
+        "getnum": "FUN1",
+        "isdigit": "FUN2"
+    },
+    "var": {
+        "lua_State": "VAR1",
+        "L": "VAR2",
+        "fmt": "VAR3",
+        "df": "VAR4",
+        "a": "VAR5",
+        "CHAR": "VAR6"
+    }
+}

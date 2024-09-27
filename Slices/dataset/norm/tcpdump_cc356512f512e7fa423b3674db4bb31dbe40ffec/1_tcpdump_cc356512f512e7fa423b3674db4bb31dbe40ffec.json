@@ -1,0 +1,37 @@
+{
+    "type": "1",
+    "func": {
+        "wb_prep": "FUN1",
+        "ND_PRINT": "FUN2",
+        "EXTRACT_32BITS": "FUN3",
+        "ND_TTEST": "FUN4",
+        "ipaddr_string": "FUN5"
+    },
+    "var": {
+        "netdissect_options": "VAR1",
+        "ndo": "VAR2",
+        "pkt_prep": "VAR3",
+        "prep": "VAR4",
+        "len": "VAR5",
+        "n": "VAR6",
+        "pgstate": "VAR7",
+        "ps": "VAR8",
+        "u_char": "VAR9",
+        "ep": "VAR10",
+        "ndo_snapend": "VAR11",
+        "STRING": "VAR12",
+        "pp_n": "VAR13",
+        "id_off": "VAR14",
+        "io": "VAR15",
+        "ie": "VAR16",
+        "c": "VAR17",
+        "CHAR": "VAR18",
+        "slot": "VAR19",
+        "page": "VAR20",
+        "p_sid": "VAR21",
+        "p_uid": "VAR22",
+        "nid": "VAR23",
+        "id": "VAR24",
+        "off": "VAR25"
+    }
+}

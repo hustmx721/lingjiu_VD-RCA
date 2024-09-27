@@ -1,0 +1,37 @@
+{
+    "type": "0",
+    "func": {
+        "js_RegExp_prototype_exec": "FUN1",
+        "js_pushnull": "FUN2",
+        "js_regexec": "FUN3",
+        "js_error": "FUN4",
+        "js_newarray": "FUN5",
+        "js_pushstring": "FUN6",
+        "js_setproperty": "FUN7",
+        "js_pushnumber": "FUN8",
+        "js_utfptrtoidx": "FUN9",
+        "js_pushlstring": "FUN10",
+        "js_setindex": "FUN11"
+    },
+    "var": {
+        "js_State": "VAR1",
+        "J": "VAR2",
+        "js_Regexp": "VAR3",
+        "re": "VAR4",
+        "text": "VAR5",
+        "result": "VAR6",
+        "i": "VAR7",
+        "opts": "VAR8",
+        "m": "VAR9",
+        "flags": "VAR10",
+        "JS_REGEXP_G": "VAR11",
+        "last": "VAR12",
+        "REG_NOTBOL": "VAR13",
+        "prog": "VAR14",
+        "STRING": "VAR15",
+        "sub": "VAR16",
+        "sp": "VAR17",
+        "nsub": "VAR18",
+        "ep": "VAR19"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "type": "1",
+    "func": {
+        "cJSON_CreateInt": "FUN1",
+        "cJSON_New_Item": "FUN2"
+    },
+    "var": {
+        "cJSON": "VAR1",
+        "num": "VAR2",
+        "item": "VAR3",
+        "type": "VAR4",
+        "cJSON_Number": "VAR5",
+        "valuefloat": "VAR6",
+        "valueint": "VAR7"
+    }
+}

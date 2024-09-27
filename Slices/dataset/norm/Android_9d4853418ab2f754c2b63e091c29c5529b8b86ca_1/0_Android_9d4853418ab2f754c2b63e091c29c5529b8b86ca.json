@@ -1,0 +1,30 @@
+{
+    "type": "0",
+    "func": {
+        "perform_transform_test": "FUN1",
+        "next_format": "FUN2",
+        "safecat": "FUN3",
+        "image_transform_add": "FUN4",
+        "transform_test": "FUN5",
+        "FILEID": "FUN6",
+        "fail": "FUN7"
+    },
+    "var": {
+        "png_modifier": "VAR1",
+        "pm": "VAR2",
+        "colour_type": "VAR3",
+        "bit_depth": "VAR4",
+        "palette_number": "VAR5",
+        "test_lbg": "VAR6",
+        "test_tRNS": "VAR7",
+        "counter": "VAR8",
+        "base_pos": "VAR9",
+        "name": "VAR10",
+        "STRING": "VAR11",
+        "pos": "VAR12",
+        "image_transform": "VAR13",
+        "list": "VAR14",
+        "repeat": "VAR15",
+        "interlace_type": "VAR16"
+    }
+}

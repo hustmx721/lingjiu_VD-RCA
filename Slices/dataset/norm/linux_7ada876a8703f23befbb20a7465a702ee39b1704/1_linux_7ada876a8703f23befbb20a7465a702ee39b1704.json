@@ -1,0 +1,18 @@
+{
+    "type": "1",
+    "func": {
+        "queue_lock": "FUN1",
+        "get_futex_key_refs": "FUN2",
+        "hash_futex": "FUN3",
+        "spin_lock": "FUN4"
+    },
+    "var": {
+        "futex_hash_bucket": "VAR1",
+        "futex_q": "VAR2",
+        "q": "VAR3",
+        "hb": "VAR4",
+        "key": "VAR5",
+        "lock_ptr": "VAR6",
+        "lock": "VAR7"
+    }
+}

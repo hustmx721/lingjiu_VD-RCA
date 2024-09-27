@@ -1,0 +1,22 @@
+{
+    "type": "0",
+    "func": {
+        "serviceWorker": "FUN1",
+        "ASSERT": "FUN2",
+        "frame": "FUN3",
+        "securityOrigin": "FUN4",
+        "canAccessCheckSuborigins": "FUN5",
+        "securityContext": "FUN6",
+        "from": "FUN7"
+    },
+    "var": {
+        "ServiceWorkerContainer": "VAR1",
+        "NavigatorServiceWorker": "VAR2",
+        "Navigator": "VAR3",
+        "navigator": "VAR4",
+        "ExceptionState": "VAR5",
+        "exceptionState": "VAR6",
+        "ExecutionContext": "VAR7",
+        "executionContext": "VAR8"
+    }
+}

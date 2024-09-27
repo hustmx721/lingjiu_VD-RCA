@@ -1,0 +1,16 @@
+{
+    "type": "1",
+    "func": {
+        "do_async_increment": "FUN1",
+        "dbus_g_method_return": "FUN2",
+        "g_free": "FUN3"
+    },
+    "var": {
+        "IncrementData": "VAR1",
+        "data": "VAR2",
+        "newx": "VAR3",
+        "x": "VAR4",
+        "context": "VAR5",
+        "FALSE": "VAR6"
+    }
+}

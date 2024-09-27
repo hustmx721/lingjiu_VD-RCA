@@ -1,0 +1,34 @@
+{
+    "type": "0",
+    "func": {
+        "lib_file_open": "FUN1",
+        "iodev_default": "FUN2",
+        "get_minst_from_memory": "FUN3"
+    },
+    "var": {
+        "lib_path": "VAR1",
+        "gs_memory_t": "VAR2",
+        "mem": "VAR3",
+        "i_ctx_t": "VAR4",
+        "i_ctx_p": "VAR5",
+        "fname": "VAR6",
+        "flen": "VAR7",
+        "buffer": "VAR8",
+        "blen": "VAR9",
+        "uint": "VAR10",
+        "pclen": "VAR11",
+        "ref": "VAR12",
+        "pfile": "VAR13",
+        "starting_arg_file": "VAR14",
+        "search_with_no_combine": "VAR15",
+        "search_with_combine": "VAR16",
+        "fmode": "VAR17",
+        "CHAR": "VAR18",
+        "gx_io_device": "VAR19",
+        "iodev": "VAR20",
+        "gs_main_instance": "VAR21",
+        "minst": "VAR22",
+        "code": "VAR23",
+        "gx_io_device_table": "VAR24"
+    }
+}

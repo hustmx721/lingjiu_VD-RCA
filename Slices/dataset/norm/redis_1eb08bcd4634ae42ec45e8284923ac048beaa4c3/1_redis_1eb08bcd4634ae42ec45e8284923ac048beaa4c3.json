@@ -1,0 +1,18 @@
+{
+    "type": "1",
+    "func": {
+        "getnum": "FUN1",
+        "isdigit": "FUN2",
+        "luaL_error": "FUN3"
+    },
+    "var": {
+        "lua_State": "VAR1",
+        "L": "VAR2",
+        "fmt": "VAR3",
+        "df": "VAR4",
+        "a": "VAR5",
+        "INT_MAX": "VAR6",
+        "CHAR": "VAR7",
+        "STRING": "VAR8"
+    }
+}

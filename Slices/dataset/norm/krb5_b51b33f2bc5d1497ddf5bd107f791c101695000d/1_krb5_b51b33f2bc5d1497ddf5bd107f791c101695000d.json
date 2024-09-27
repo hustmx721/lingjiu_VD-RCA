@@ -1,0 +1,33 @@
+{
+    "type": "1",
+    "func": {
+        "create_spnego_ctx": "FUN1",
+        "check_spnego_options": "FUN2"
+    },
+    "var": {
+        "spnego_ctx": "VAR1",
+        "spnego_gss_ctx_id_t": "VAR2",
+        "spnego_gss_ctx_id_rec": "VAR3",
+        "magic_num": "VAR4",
+        "SPNEGO_MAGIC_ID": "VAR5",
+        "ctx_handle": "VAR6",
+        "GSS_C_NO_CONTEXT": "VAR7",
+        "mech_set": "VAR8",
+        "internal_mech": "VAR9",
+        "optionStr": "VAR10",
+        "DER_mechTypes": "VAR11",
+        "length": "VAR12",
+        "value": "VAR13",
+        "default_cred": "VAR14",
+        "GSS_C_NO_CREDENTIAL": "VAR15",
+        "mic_reqd": "VAR16",
+        "mic_sent": "VAR17",
+        "mic_rcvd": "VAR18",
+        "mech_complete": "VAR19",
+        "nego_done": "VAR20",
+        "internal_name": "VAR21",
+        "GSS_C_NO_NAME": "VAR22",
+        "actual_mech": "VAR23",
+        "GSS_C_NO_OID": "VAR24"
+    }
+}

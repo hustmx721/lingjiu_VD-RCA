@@ -1,0 +1,20 @@
+{
+    "type": "0",
+    "func": {
+        "GetExtension": "FUN1",
+        "Get": "FUN2",
+        "GetInstalledExtension": "FUN3"
+    },
+    "var": {
+        "extensions": "VAR1",
+        "Extension": "VAR2",
+        "Profile": "VAR3",
+        "profile": "VAR4",
+        "std": "VAR5",
+        "string": "VAR6",
+        "extension_id": "VAR7",
+        "ExtensionRegistry": "VAR8",
+        "registry": "VAR9",
+        "extension": "VAR10"
+    }
+}

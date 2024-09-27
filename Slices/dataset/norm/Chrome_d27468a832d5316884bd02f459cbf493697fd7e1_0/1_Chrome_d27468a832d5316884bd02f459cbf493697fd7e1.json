@@ -1,0 +1,26 @@
+{
+    "type": "1",
+    "func": {
+        "isSelected": "FUN1",
+        "getLayoutObject": "FUN2",
+        "getNode": "FUN3",
+        "getAttribute": "FUN4",
+        "equalIgnoringCase": "FUN5",
+        "axObjectCache": "FUN6",
+        "focusedObject": "FUN7",
+        "ariaRoleAttribute": "FUN8",
+        "activeDescendant": "FUN9",
+        "isTabItem": "FUN10",
+        "isTabItemSelected": "FUN11"
+    },
+    "var": {
+        "AXLayoutObject": "VAR1",
+        "AtomicString": "VAR2",
+        "ariaSelected": "VAR3",
+        "aria_selectedAttr": "VAR4",
+        "STRING": "VAR5",
+        "AXObject": "VAR6",
+        "focusedObject": "VAR7",
+        "ListBoxOptionRole": "VAR8"
+    }
+}

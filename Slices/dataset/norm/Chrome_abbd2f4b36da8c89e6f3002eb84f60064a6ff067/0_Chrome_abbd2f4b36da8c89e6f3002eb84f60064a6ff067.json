@@ -1,0 +1,40 @@
+{
+    "type": "0",
+    "func": {
+        "HandleGetFaviconDominantColor": "FUN1",
+        "CHECK": "FUN2",
+        "GetString": "FUN3",
+        "DCHECK": "FUN4",
+        "StartsWithASCII": "FUN5",
+        "substr": "FUN6",
+        "arraysize": "FUN7",
+        "GetDouble": "FUN8",
+        "GetProfile": "FUN9",
+        "GetFaviconService": "FUN10",
+        "empty": "FUN11",
+        "GetFaviconForURL": "FUN12",
+        "GURL": "FUN13",
+        "NewCallback": "FUN14",
+        "SetClientData": "FUN15"
+    },
+    "var": {
+        "FaviconWebUIHandler": "VAR1",
+        "ListValue": "VAR2",
+        "args": "VAR3",
+        "std": "VAR4",
+        "path": "VAR5",
+        "chrome": "VAR6",
+        "STRING": "VAR7",
+        "id": "VAR8",
+        "FaviconService": "VAR9",
+        "favicon_service": "VAR10",
+        "web_ui_": "VAR11",
+        "Profile": "VAR12",
+        "EXPLICIT_ACCESS": "VAR13",
+        "handle": "VAR14",
+        "history": "VAR15",
+        "FAVICON": "VAR16",
+        "consumer_": "VAR17",
+        "OnFaviconDataAvailable": "VAR18"
+    }
+}

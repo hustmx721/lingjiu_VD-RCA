@@ -1,0 +1,21 @@
+{
+    "type": "1",
+    "func": {
+        "nbd_negotiate_read": "FUN1",
+        "qemu_in_coroutine": "FUN2",
+        "qio_channel_add_watch": "FUN3",
+        "qemu_coroutine_self": "FUN4",
+        "nbd_read": "FUN5",
+        "g_source_remove": "FUN6"
+    },
+    "var": {
+        "QIOChannel": "VAR1",
+        "ioc": "VAR2",
+        "buffer": "VAR3",
+        "size": "VAR4",
+        "ret": "VAR5",
+        "watch": "VAR6",
+        "G_IO_IN": "VAR7",
+        "nbd_negotiate_continue": "VAR8"
+    }
+}

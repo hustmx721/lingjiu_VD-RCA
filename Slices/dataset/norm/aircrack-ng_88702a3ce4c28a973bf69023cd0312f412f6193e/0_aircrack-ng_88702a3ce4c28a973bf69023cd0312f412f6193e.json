@@ -1,0 +1,18 @@
+{
+    "type": "0",
+    "func": {
+        "net_get": "FUN1",
+        "net_read_exact": "FUN2",
+        "ntohl": "FUN3"
+    },
+    "var": {
+        "s": "VAR1",
+        "arg": "VAR2",
+        "len": "VAR3",
+        "nh": "VAR4",
+        "plen": "VAR5",
+        "nh_len": "VAR6",
+        "STRING": "VAR7",
+        "nh_type": "VAR8"
+    }
+}

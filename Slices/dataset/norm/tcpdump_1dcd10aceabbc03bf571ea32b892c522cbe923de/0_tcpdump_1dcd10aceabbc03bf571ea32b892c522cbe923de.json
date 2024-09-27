@@ -1,0 +1,29 @@
+{
+    "type": "0",
+    "func": {
+        "juniper_atm1_print": "FUN1",
+        "juniper_parse_header": "FUN2",
+        "oam_print": "FUN3",
+        "EXTRACT_24BITS": "FUN4",
+        "llc_print": "FUN5",
+        "isoclns_print": "FUN6",
+        "ip_heuristic_guess": "FUN7"
+    },
+    "var": {
+        "netdissect_options": "VAR1",
+        "ndo": "VAR2",
+        "pcap_pkthdr": "VAR3",
+        "h": "VAR4",
+        "u_char": "VAR5",
+        "p": "VAR6",
+        "llc_hdrlen": "VAR7",
+        "l2info": "VAR8",
+        "pictype": "VAR9",
+        "DLT_JUNIPER_ATM1": "VAR10",
+        "header_len": "VAR11",
+        "cookie": "VAR12",
+        "length": "VAR13",
+        "ATM_OAM_NOHEC": "VAR14",
+        "caplen": "VAR15"
+    }
+}

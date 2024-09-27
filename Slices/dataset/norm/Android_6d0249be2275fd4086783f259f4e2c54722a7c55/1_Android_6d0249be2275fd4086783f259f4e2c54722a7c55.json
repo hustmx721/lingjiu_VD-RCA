@@ -1,0 +1,39 @@
+{
+    "type": "1",
+    "func": {
+        "getstring": "FUN1",
+        "setTo": "FUN2",
+        "getHeaderLength": "FUN3",
+        "bswap_16": "FUN4"
+    },
+    "var": {
+        "ID3": "VAR1",
+        "Iterator": "VAR2",
+        "String8": "VAR3",
+        "id": "VAR4",
+        "otherdata": "VAR5",
+        "STRING": "VAR6",
+        "uint8_t": "VAR7",
+        "frameData": "VAR8",
+        "mFrameData": "VAR9",
+        "encoding": "VAR10",
+        "mParent": "VAR11",
+        "mVersion": "VAR12",
+        "ID3_V1": "VAR13",
+        "ID3_V1_1": "VAR14",
+        "mOffset": "VAR15",
+        "tmp": "VAR16",
+        "mFrameSize": "VAR17",
+        "n": "VAR18",
+        "i": "VAR19",
+        "skipped": "VAR20",
+        "len": "VAR21",
+        "framedata": "VAR22",
+        "framedatacopy": "VAR23",
+        "BYTE_ORDER": "VAR24",
+        "LITTLE_ENDIAN": "VAR25",
+        "endif": "VAR26",
+        "eightBit": "VAR27",
+        "frame8": "VAR28"
+    }
+}

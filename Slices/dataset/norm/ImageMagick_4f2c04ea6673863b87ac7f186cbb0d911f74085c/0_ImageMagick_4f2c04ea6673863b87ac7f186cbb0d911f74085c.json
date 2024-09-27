@@ -1,0 +1,31 @@
+{
+    "type": "0",
+    "func": {
+        "RemoveResolutionFromResourceBlock": "FUN1",
+        "GetStringInfoLength": "FUN2",
+        "GetStringInfoDatum": "FUN3",
+        "LocaleNCompare": "FUN4",
+        "PushLongPixel": "FUN5",
+        "PushShortPixel": "FUN6",
+        "PSDQuantum": "FUN7",
+        "CopyMagickMemory": "FUN8",
+        "SetStringInfoLength": "FUN9"
+    },
+    "var": {
+        "StringInfo": "VAR1",
+        "bim_profile": "VAR2",
+        "p": "VAR3",
+        "size_t": "VAR4",
+        "length": "VAR5",
+        "datum": "VAR6",
+        "count": "VAR7",
+        "long_sans": "VAR8",
+        "id": "VAR9",
+        "short_sans": "VAR10",
+        "q": "VAR11",
+        "ssize_t": "VAR12",
+        "cnt": "VAR13",
+        "STRING": "VAR14",
+        "MSBEndian": "VAR15"
+    }
+}

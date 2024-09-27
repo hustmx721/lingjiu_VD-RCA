@@ -1,0 +1,43 @@
+{
+    "type": "0",
+    "func": {
+        "alpha_perf_event_irq_handler": "FUN1",
+        "__get_cpu_var": "FUN2",
+        "wrperfmon": "FUN3",
+        "unlikely": "FUN4",
+        "pr_warning": "FUN5",
+        "perf_sample_data_init": "FUN6",
+        "alpha_perf_event_update": "FUN7",
+        "alpha_perf_event_set_period": "FUN8",
+        "perf_event_overflow": "FUN9",
+        "alpha_pmu_stop": "FUN10"
+    },
+    "var": {
+        "la_ptr": "VAR1",
+        "pt_regs": "VAR2",
+        "regs": "VAR3",
+        "cpu_hw_events": "VAR4",
+        "cpuc": "VAR5",
+        "data": "VAR6",
+        "perf_event": "VAR7",
+        "event": "VAR8",
+        "hw_perf_event": "VAR9",
+        "hwc": "VAR10",
+        "idx": "VAR11",
+        "j": "VAR12",
+        "irq_pmi_count": "VAR13",
+        "PERFMON_CMD_DISABLE": "VAR14",
+        "idx_mask": "VAR15",
+        "alpha_pmu": "VAR16",
+        "num_pmcs": "VAR17",
+        "irq_err_count": "VAR18",
+        "STRING": "VAR19",
+        "PERFMON_CMD_ENABLE": "VAR20",
+        "n_events": "VAR21",
+        "current_idx": "VAR22",
+        "hw": "VAR23",
+        "pmc_max_period": "VAR24",
+        "period": "VAR25",
+        "last_period": "VAR26"
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "type": "0",
+    "func": {
+        "hi3660_stub_clk_probe": "FUN1",
+        "mbox_request_channel": "FUN2",
+        "IS_ERR": "FUN3",
+        "PTR_ERR": "FUN4",
+        "platform_get_resource": "FUN5",
+        "devm_ioremap": "FUN6",
+        "resource_size": "FUN7",
+        "devm_clk_hw_register": "FUN8",
+        "devm_of_clk_add_hw_provider": "FUN9"
+    },
+    "var": {
+        "platform_device": "VAR1",
+        "pdev": "VAR2",
+        "device": "VAR3",
+        "dev": "VAR4",
+        "resource": "VAR5",
+        "res": "VAR6",
+        "i": "VAR7",
+        "ret": "VAR8",
+        "stub_clk_chan": "VAR9",
+        "cl": "VAR10",
+        "tx_done": "VAR11",
+        "tx_block": "VAR12",
+        "knows_txdone": "VAR13",
+        "mbox": "VAR14",
+        "IORESOURCE_MEM": "VAR15",
+        "EINVAL": "VAR16",
+        "freq_reg": "VAR17",
+        "start": "VAR18",
+        "ENOMEM": "VAR19",
+        "HI3660_STUB_CLOCK_DATA": "VAR20",
+        "HI3660_CLK_STUB_NUM": "VAR21",
+        "hi3660_stub_clks": "VAR22",
+        "hw": "VAR23",
+        "hi3660_stub_clk_hw_get": "VAR24"
+    }
+}

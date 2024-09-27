@@ -1,0 +1,23 @@
+{
+    "type": "1",
+    "func": {
+        "GetCachedHostUsage": "FUN1",
+        "find": "FUN2",
+        "end": "FUN3",
+        "begin": "FUN4"
+    },
+    "var": {
+        "ClientUsageTracker": "VAR1",
+        "std": "VAR2",
+        "string": "VAR3",
+        "host": "VAR4",
+        "HostUsageMap": "VAR5",
+        "found": "VAR6",
+        "cached_usage_": "VAR7",
+        "usage": "VAR8",
+        "UsageMap": "VAR9",
+        "map": "VAR10",
+        "second": "VAR11",
+        "iter": "VAR12"
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "type": "0",
+    "func": {
+        "print_array": "FUN1",
+        "ensure": "FUN2",
+        "cJSON_malloc": "FUN3",
+        "print_value": "FUN4",
+        "cJSON_free": "FUN5"
+    },
+    "var": {
+        "cJSON": "VAR1",
+        "item": "VAR2",
+        "depth": "VAR3",
+        "fmt": "VAR4",
+        "printbuffer": "VAR5",
+        "p": "VAR6",
+        "entries": "VAR7",
+        "out": "VAR8",
+        "ptr": "VAR9",
+        "ret": "VAR10",
+        "len": "VAR11",
+        "child": "VAR12",
+        "numentries": "VAR13",
+        "i": "VAR14",
+        "fail": "VAR15",
+        "tmplen": "VAR16",
+        "next": "VAR17",
+        "STRING": "VAR18",
+        "offset": "VAR19",
+        "CHAR": "VAR20",
+        "buffer": "VAR21"
+    }
+}

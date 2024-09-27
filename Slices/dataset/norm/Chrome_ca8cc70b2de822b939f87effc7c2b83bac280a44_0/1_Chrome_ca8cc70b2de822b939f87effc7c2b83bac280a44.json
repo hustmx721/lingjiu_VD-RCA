@@ -1,0 +1,20 @@
+{
+    "type": "1",
+    "func": {
+        "ChromeURLRequestContext": "FUN1",
+        "load_time_stats_": "FUN2",
+        "DCHECK": "FUN3",
+        "CurrentlyOn": "FUN4",
+        "RegisterURLRequestContext": "FUN5"
+    },
+    "var": {
+        "ChromeURLRequestContext": "VAR1",
+        "type": "VAR2",
+        "chrome_browser_net": "VAR3",
+        "LoadTimeStats": "VAR4",
+        "load_time_stats": "VAR5",
+        "BrowserThread": "VAR6",
+        "IO": "VAR7",
+        "load_time_stats_": "VAR8"
+    }
+}

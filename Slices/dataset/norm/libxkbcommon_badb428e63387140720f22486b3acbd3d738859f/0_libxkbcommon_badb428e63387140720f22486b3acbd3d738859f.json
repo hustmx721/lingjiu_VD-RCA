@@ -1,0 +1,28 @@
+{
+    "type": "0",
+    "func": {
+        "CopyKeyAliasesToKeymap": "FUN1",
+        "darray_foreach": "FUN2",
+        "XkbKeyByName": "FUN3",
+        "log_vrb": "FUN4",
+        "KeyNameText": "FUN5"
+    },
+    "var": {
+        "xkb_keymap": "VAR1",
+        "keymap": "VAR2",
+        "KeyNamesInfo": "VAR3",
+        "info": "VAR4",
+        "AliasInfo": "VAR5",
+        "alias": "VAR6",
+        "i": "VAR7",
+        "num_key_aliases": "VAR8",
+        "xkb_key_alias": "VAR9",
+        "key_aliases": "VAR10",
+        "aliases": "VAR11",
+        "real": "VAR12",
+        "ctx": "VAR13",
+        "STRING": "VAR14",
+        "XKB_ATOM_NONE": "VAR15",
+        "s": "VAR16"
+    }
+}

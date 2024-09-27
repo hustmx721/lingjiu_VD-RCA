@@ -1,0 +1,42 @@
+{
+    "type": "0",
+    "func": {
+        "OnCopyDocumentCompleted": "FUN1",
+        "DCHECK": "FUN2",
+        "CurrentlyOn": "FUN3",
+        "is_null": "FUN4",
+        "GDataToGDataFileError": "FUN5",
+        "Run": "FUN6",
+        "doc_entry": "FUN7",
+        "ExtractAndParse": "FUN8",
+        "get": "FUN9",
+        "FromDocumentEntry": "FUN10",
+        "root": "FUN11",
+        "AddEntry": "FUN12",
+        "MoveEntryFromRootDirectory": "FUN13",
+        "GetFilePath": "FUN14"
+    },
+    "var": {
+        "GDataFileSystem": "VAR1",
+        "FilePath": "VAR2",
+        "dir_path": "VAR3",
+        "FileOperationCallback": "VAR4",
+        "callback": "VAR5",
+        "status": "VAR6",
+        "scoped_ptr": "VAR7",
+        "base": "VAR8",
+        "Value": "VAR9",
+        "data": "VAR10",
+        "BrowserThread": "VAR11",
+        "UI": "VAR12",
+        "error": "VAR13",
+        "util": "VAR14",
+        "GDATA_FILE_OK": "VAR15",
+        "DocumentEntry": "VAR16",
+        "doc_entry": "VAR17",
+        "GDATA_FILE_ERROR_FAILED": "VAR18",
+        "GDataEntry": "VAR19",
+        "entry": "VAR20",
+        "directory_service_": "VAR21"
+    }
+}

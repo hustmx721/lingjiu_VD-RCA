@@ -1,0 +1,32 @@
+{
+    "type": "0",
+    "func": {
+        "nfs_readlink_req": "FUN1",
+        "rpc_add_credentials": "FUN2",
+        "nfs_add_fh3": "FUN3",
+        "rpc_req": "FUN4",
+        "IS_ERR": "FUN5",
+        "PTR_ERR": "FUN6",
+        "nfs_read_post_op_attr": "FUN7",
+        "ntoh32": "FUN8",
+        "net_read_uint32": "FUN9",
+        "max_t": "FUN10",
+        "xzalloc": "FUN11"
+    },
+    "var": {
+        "nfs_priv": "VAR1",
+        "npriv": "VAR2",
+        "nfs_fh": "VAR3",
+        "fh": "VAR4",
+        "target": "VAR5",
+        "data": "VAR6",
+        "uint32_t": "VAR7",
+        "p": "VAR8",
+        "len": "VAR9",
+        "packet": "VAR10",
+        "nfs_packet": "VAR11",
+        "PROG_NFS": "VAR12",
+        "NFSPROC3_READLINK": "VAR13",
+        "rpc_reply": "VAR14"
+    }
+}

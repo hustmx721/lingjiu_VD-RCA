@@ -1,0 +1,22 @@
+{
+    "type": "0",
+    "func": {
+        "accept_ice_connection": "FUN1",
+        "g_debug": "FUN2",
+        "IceAcceptConnection": "FUN3",
+        "auth_ice_connection": "FUN4"
+    },
+    "var": {
+        "GIOChannel": "VAR1",
+        "source": "VAR2",
+        "condition": "VAR3",
+        "GsmIceConnectionData": "VAR4",
+        "data": "VAR5",
+        "ice_conn": "VAR6",
+        "status": "VAR7",
+        "STRING": "VAR8",
+        "listener": "VAR9",
+        "IceAcceptSuccess": "VAR10",
+        "TRUE": "VAR11"
+    }
+}

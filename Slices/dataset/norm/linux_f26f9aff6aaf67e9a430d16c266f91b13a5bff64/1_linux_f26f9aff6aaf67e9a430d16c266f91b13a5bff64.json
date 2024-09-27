@@ -1,0 +1,40 @@
+{
+    "type": "1",
+    "func": {
+        "dup_task_struct": "FUN1",
+        "prepare_to_copy": "FUN2",
+        "alloc_task_struct": "FUN3",
+        "alloc_thread_info": "FUN4",
+        "free_task_struct": "FUN5",
+        "arch_dup_task_struct": "FUN6",
+        "prop_local_init_single": "FUN7",
+        "setup_thread_stack": "FUN8",
+        "clear_user_return_notifier": "FUN9",
+        "end_of_stack": "FUN10",
+        "get_random_int": "FUN11",
+        "atomic_set": "FUN12",
+        "account_kernel_stack": "FUN13",
+        "free_thread_info": "FUN14"
+    },
+    "var": {
+        "task_struct": "VAR1",
+        "orig": "VAR2",
+        "tsk": "VAR3",
+        "thread_info": "VAR4",
+        "ti": "VAR5",
+        "stackend": "VAR6",
+        "err": "VAR7",
+        "out": "VAR8",
+        "stack": "VAR9",
+        "dirties": "VAR10",
+        "STACK_END_MAGIC": "VAR11",
+        "CONFIG_CC_STACKPROTECTOR": "VAR12",
+        "stack_canary": "VAR13",
+        "endif": "VAR14",
+        "usage": "VAR15",
+        "fs_excl": "VAR16",
+        "CONFIG_BLK_DEV_IO_TRACE": "VAR17",
+        "btrace_seq": "VAR18",
+        "splice_pipe": "VAR19"
+    }
+}

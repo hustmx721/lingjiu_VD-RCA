@@ -1,0 +1,21 @@
+{
+    "type": "1",
+    "func": {
+        "PHP_METHOD": "FUN1",
+        "zend_parse_parameters_none": "FUN2",
+        "array_init": "FUN3",
+        "add_next_index_stringl": "FUN4",
+        "zend_hash_exists": "FUN5"
+    },
+    "var": {
+        "Phar": "VAR1",
+        "getSupportedSignatures": "VAR2",
+        "FAILURE": "VAR3",
+        "return_value": "VAR4",
+        "STRING": "VAR5",
+        "PHAR_HASH_OK": "VAR6",
+        "endif": "VAR7",
+        "PHAR_HAVE_OPENSSL": "VAR8",
+        "module_registry": "VAR9"
+    }
+}

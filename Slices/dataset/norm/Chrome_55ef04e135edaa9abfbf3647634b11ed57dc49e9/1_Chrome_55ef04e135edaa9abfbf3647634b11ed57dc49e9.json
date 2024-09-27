@@ -1,0 +1,20 @@
+{
+    "type": "1",
+    "func": {
+        "GetLiveObjectsForInstance": "FUN1",
+        "find": "FUN2",
+        "end": "FUN3",
+        "size": "FUN4"
+    },
+    "var": {
+        "ResourceTracker": "VAR1",
+        "instance": "VAR2",
+        "InstanceMap": "VAR3",
+        "found": "VAR4",
+        "instance_map_": "VAR5",
+        "uint32": "VAR6",
+        "second": "VAR7",
+        "resources": "VAR8",
+        "object_vars": "VAR9"
+    }
+}

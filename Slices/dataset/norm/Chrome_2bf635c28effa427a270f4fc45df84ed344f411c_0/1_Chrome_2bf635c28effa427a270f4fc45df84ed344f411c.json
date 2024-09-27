@@ -1,0 +1,14 @@
+{
+    "type": "1",
+    "func": {
+        "InsertedInto": "FUN1"
+    },
+    "var": {
+        "Node": "VAR1",
+        "SVGStyleElement": "VAR2",
+        "ContainerNode": "VAR3",
+        "insertion_point": "VAR4",
+        "SVGElement": "VAR5",
+        "kInsertionShouldCallDidNotifySubtreeInsertions": "VAR6"
+    }
+}

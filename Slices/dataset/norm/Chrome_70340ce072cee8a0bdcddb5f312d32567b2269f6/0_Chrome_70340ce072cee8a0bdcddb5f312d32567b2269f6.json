@@ -1,0 +1,25 @@
+{
+    "type": "0",
+    "func": {
+        "FillVARefFramesFromDPB": "FUN1",
+        "DCHECK_CALLED_ON_VALID_SEQUENCE": "FUN2",
+        "rbegin": "FUN3",
+        "rend": "FUN4",
+        "FillVAPicture": "FUN5"
+    },
+    "var": {
+        "VaapiVideoDecodeAccelerator": "VAR1",
+        "VaapiH264Accelerator": "VAR2",
+        "H264DPB": "VAR3",
+        "dpb": "VAR4",
+        "VAPictureH264": "VAR5",
+        "va_pics": "VAR6",
+        "num_pics": "VAR7",
+        "sequence_checker_": "VAR8",
+        "H264Picture": "VAR9",
+        "Vector": "VAR10",
+        "rit": "VAR11",
+        "i": "VAR12",
+        "ref": "VAR13"
+    }
+}

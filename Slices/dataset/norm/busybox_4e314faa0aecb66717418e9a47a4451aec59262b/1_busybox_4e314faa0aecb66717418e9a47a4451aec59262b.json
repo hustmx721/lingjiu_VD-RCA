@@ -1,0 +1,21 @@
+{
+    "type": "1",
+    "func": {
+        "add_probe": "FUN1",
+        "get_or_add_modentry": "FUN2"
+    },
+    "var": {
+        "name": "VAR1",
+        "module_entry": "VAR2",
+        "m": "VAR3",
+        "option_mask32": "VAR4",
+        "OPT_REMOVE": "VAR5",
+        "OPT_SHOW_DEPS": "VAR6",
+        "flags": "VAR7",
+        "MODULE_FLAG_LOADED": "VAR8",
+        "modname": "VAR9",
+        "STRING": "VAR10",
+        "G": "VAR11",
+        "need_symbols": "VAR12"
+    }
+}

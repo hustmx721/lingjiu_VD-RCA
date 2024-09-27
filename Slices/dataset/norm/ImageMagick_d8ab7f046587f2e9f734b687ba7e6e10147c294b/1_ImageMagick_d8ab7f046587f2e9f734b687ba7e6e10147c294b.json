@@ -1,0 +1,11 @@
+{
+    "type": "1",
+    "func": {
+        "ReadResourceLong": "FUN1"
+    },
+    "var": {
+        "p": "VAR1",
+        "quantum": "VAR2",
+        "size_t": "VAR3"
+    }
+}

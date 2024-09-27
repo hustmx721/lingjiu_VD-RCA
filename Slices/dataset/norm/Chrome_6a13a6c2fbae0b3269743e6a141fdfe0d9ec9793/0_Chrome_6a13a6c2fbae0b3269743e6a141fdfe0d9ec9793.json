@@ -1,0 +1,23 @@
+{
+    "type": "0",
+    "func": {
+        "GoToIndex": "FUN1",
+        "size": "FUN2",
+        "NOTREACHED": "FUN3",
+        "DiscardNonCommittedEntries": "FUN4",
+        "set_transition_type": "FUN5",
+        "PageTransitionFromInt": "FUN6",
+        "transition_type": "FUN7",
+        "NavigateToPendingEntry": "FUN8"
+    },
+    "var": {
+        "NavigationController": "VAR1",
+        "index": "VAR2",
+        "entries_": "VAR3",
+        "transient_entry_index_": "VAR4",
+        "pending_entry_index_": "VAR5",
+        "content": "VAR6",
+        "PAGE_TRANSITION_FORWARD_BACK": "VAR7",
+        "NO_RELOAD": "VAR8"
+    }
+}

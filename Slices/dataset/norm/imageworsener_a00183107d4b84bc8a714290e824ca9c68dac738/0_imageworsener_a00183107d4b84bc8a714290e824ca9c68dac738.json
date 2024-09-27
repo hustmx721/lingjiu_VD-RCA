@@ -1,0 +1,11 @@
+{
+    "type": "0",
+    "func": {
+        "IW_IMPL": "FUN1",
+        "iw_get_ui16le": "FUN2"
+    },
+    "var": {
+        "iw_byte": "VAR1",
+        "b": "VAR2"
+    }
+}

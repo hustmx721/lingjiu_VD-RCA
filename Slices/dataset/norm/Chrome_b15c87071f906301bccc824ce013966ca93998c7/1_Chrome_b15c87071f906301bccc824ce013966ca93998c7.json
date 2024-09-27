@@ -1,0 +1,36 @@
+{
+    "type": "1",
+    "func": {
+        "SetUp": "FUN1",
+        "AutoThreadTaskRunner": "FUN2",
+        "message_loop_proxy": "FUN3",
+        "Bind": "FUN4",
+        "Unretained": "FUN5",
+        "reset": "FUN6",
+        "MockProcessLauncherDelegate": "FUN7",
+        "EXPECT_CALL": "FUN8",
+        "Send": "FUN9",
+        "Times": "FUN10",
+        "AnyNumber": "FUN11",
+        "WillRepeatedly": "FUN12",
+        "Return": "FUN13",
+        "GetExitCode": "FUN14",
+        "ReturnPointee": "FUN15",
+        "KillProcess": "FUN16",
+        "Invoke": "FUN17",
+        "OnMessageReceived": "FUN18"
+    },
+    "var": {
+        "WorkerProcessLauncherTest": "VAR1",
+        "task_runner_": "VAR2",
+        "message_loop_": "VAR3",
+        "base": "VAR4",
+        "QuitMainMessageLoop": "VAR5",
+        "exit_code_": "VAR6",
+        "STILL_ACTIVE": "VAR7",
+        "launcher_delegate_": "VAR8",
+        "_": "VAR9",
+        "KillProcess": "VAR10",
+        "ipc_delegate_": "VAR11"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "type": "0",
+    "func": {
+        "SetClient": "FUN1"
+    },
+    "var": {
+        "AppControllerImpl": "VAR1",
+        "mojom": "VAR2",
+        "client": "VAR3",
+        "AppControllerService": "VAR4",
+        "client_": "VAR5",
+        "std": "VAR6"
+    }
+}

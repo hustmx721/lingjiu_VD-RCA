@@ -1,0 +1,12 @@
+{
+    "type": "0",
+    "func": {
+        "cJSON_InitHooks": "FUN1",
+        "cJSON_strdup": "FUN2"
+    },
+    "var": {
+        "cJSON_Hooks": "VAR1",
+        "hooks": "VAR2",
+        "str": "VAR3"
+    }
+}

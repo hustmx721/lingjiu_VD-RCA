@@ -1,0 +1,33 @@
+{
+    "type": "1",
+    "func": {
+        "overloadedMethod2Callback": "FUN1",
+        "INC_STATS": "FUN2",
+        "Length": "FUN3",
+        "throwNotEnoughArgumentsError": "FUN4",
+        "toNative": "FUN5",
+        "Holder": "FUN6",
+        "EXCEPTION_BLOCK": "FUN7",
+        "HasInstance": "FUN8",
+        "MAYBE_MISSING_PARAMETER": "FUN9",
+        "Cast": "FUN10",
+        "overloadedMethod": "FUN11",
+        "toInt32": "FUN12"
+    },
+    "var": {
+        "v8": "VAR1",
+        "Handle": "VAR2",
+        "Value": "VAR3",
+        "Arguments": "VAR4",
+        "args": "VAR5",
+        "STRING": "VAR6",
+        "V8Proxy": "VAR7",
+        "TestObj": "VAR8",
+        "imp": "VAR9",
+        "V8TestObj": "VAR10",
+        "objArg": "VAR11",
+        "DefaultIsUndefined": "VAR12",
+        "Object": "VAR13",
+        "intArg": "VAR14"
+    }
+}

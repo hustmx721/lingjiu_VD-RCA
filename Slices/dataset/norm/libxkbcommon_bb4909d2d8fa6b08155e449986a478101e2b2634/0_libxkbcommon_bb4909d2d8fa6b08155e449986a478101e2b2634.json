@@ -1,0 +1,29 @@
+{
+    "type": "0",
+    "func": {
+        "ExprResolveLhs": "FUN1",
+        "xkb_atom_text": "FUN2",
+        "log_wsgo": "FUN3"
+    },
+    "var": {
+        "xkb_context": "VAR1",
+        "ctx": "VAR2",
+        "ExprDef": "VAR3",
+        "expr": "VAR4",
+        "elem_rtrn": "VAR5",
+        "field_rtrn": "VAR6",
+        "index_rtrn": "VAR7",
+        "op": "VAR8",
+        "EXPR_IDENT": "VAR9",
+        "ident": "VAR10",
+        "EXPR_FIELD_REF": "VAR11",
+        "field_ref": "VAR12",
+        "element": "VAR13",
+        "field": "VAR14",
+        "EXPR_ARRAY_REF": "VAR15",
+        "array_ref": "VAR16",
+        "entry": "VAR17",
+        "XKB_ATOM_NONE": "VAR18",
+        "STRING": "VAR19"
+    }
+}

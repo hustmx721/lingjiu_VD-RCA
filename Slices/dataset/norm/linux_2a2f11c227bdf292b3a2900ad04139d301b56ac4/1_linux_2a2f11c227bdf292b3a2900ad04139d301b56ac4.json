@@ -1,0 +1,32 @@
+{
+    "type": "1",
+    "func": {
+        "netlbl_cipsov4_add_common": "FUN1",
+        "nla_get_u32": "FUN2",
+        "nla_validate_nested": "FUN3",
+        "nla_for_each_nested": "FUN4",
+        "nla_get_u8": "FUN5"
+    },
+    "var": {
+        "genl_info": "VAR1",
+        "info": "VAR2",
+        "cipso_v4_doi": "VAR3",
+        "doi_def": "VAR4",
+        "nlattr": "VAR5",
+        "nla": "VAR6",
+        "nla_rem": "VAR7",
+        "iter": "VAR8",
+        "doi": "VAR9",
+        "attrs": "VAR10",
+        "NLBL_CIPSOV4_A_DOI": "VAR11",
+        "NLBL_CIPSOV4_A_TAGLST": "VAR12",
+        "NLBL_CIPSOV4_A_MAX": "VAR13",
+        "netlbl_cipsov4_genl_policy": "VAR14",
+        "EINVAL": "VAR15",
+        "nla_type": "VAR16",
+        "NLBL_CIPSOV4_A_TAG": "VAR17",
+        "CIPSO_V4_TAG_MAXCNT": "VAR18",
+        "tags": "VAR19",
+        "CIPSO_V4_TAG_INVALID": "VAR20"
+    }
+}

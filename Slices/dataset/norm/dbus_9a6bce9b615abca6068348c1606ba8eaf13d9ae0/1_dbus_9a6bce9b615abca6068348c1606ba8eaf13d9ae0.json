@@ -1,0 +1,17 @@
+{
+    "type": "1",
+    "func": {
+        "my_object_throw_error": "FUN1",
+        "g_set_error": "FUN2"
+    },
+    "var": {
+        "MyObject": "VAR1",
+        "obj": "VAR2",
+        "GError": "VAR3",
+        "error": "VAR4",
+        "MY_OBJECT_ERROR": "VAR5",
+        "MY_OBJECT_ERROR_FOO": "VAR6",
+        "STRING": "VAR7",
+        "FALSE": "VAR8"
+    }
+}

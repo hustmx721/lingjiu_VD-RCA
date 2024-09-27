@@ -1,0 +1,39 @@
+{
+    "type": "1",
+    "func": {
+        "mntput_no_expire": "FUN1",
+        "rcu_read_lock": "FUN2",
+        "mnt_add_count": "FUN3",
+        "likely": "FUN4",
+        "rcu_read_unlock": "FUN5",
+        "lock_mount_hash": "FUN6",
+        "mnt_get_count": "FUN7",
+        "unlock_mount_hash": "FUN8",
+        "unlikely": "FUN9",
+        "list_del": "FUN10",
+        "init_task_work": "FUN11",
+        "task_work_add": "FUN12",
+        "llist_add": "FUN13",
+        "schedule_delayed_work": "FUN14",
+        "cleanup_mnt": "FUN15"
+    },
+    "var": {
+        "mount": "VAR1",
+        "mnt": "VAR2",
+        "mnt_ns": "VAR3",
+        "mnt_flags": "VAR4",
+        "MNT_DOOMED": "VAR5",
+        "mnt_instance": "VAR6",
+        "MNT_INTERNAL": "VAR7",
+        "task_struct": "VAR8",
+        "task": "VAR9",
+        "current": "VAR10",
+        "flags": "VAR11",
+        "PF_KTHREAD": "VAR12",
+        "mnt_rcu": "VAR13",
+        "__cleanup_mnt": "VAR14",
+        "mnt_llist": "VAR15",
+        "delayed_mntput_list": "VAR16",
+        "delayed_mntput_work": "VAR17"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "type": "1",
+    "func": {
+        "cJSON_CreateIntArray": "FUN1",
+        "cJSON_CreateArray": "FUN2",
+        "cJSON_CreateInt": "FUN3",
+        "suffix_object": "FUN4"
+    },
+    "var": {
+        "cJSON": "VAR1",
+        "int64_t": "VAR2",
+        "numbers": "VAR3",
+        "count": "VAR4",
+        "i": "VAR5",
+        "n": "VAR6",
+        "p": "VAR7",
+        "a": "VAR8",
+        "child": "VAR9"
+    }
+}

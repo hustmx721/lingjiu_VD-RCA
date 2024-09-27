@@ -1,0 +1,23 @@
+{
+    "type": "1",
+    "func": {
+        "FillVARefFramesFromDPB": "FUN1",
+        "rbegin": "FUN2",
+        "rend": "FUN3",
+        "FillVAPicture": "FUN4"
+    },
+    "var": {
+        "VaapiVideoDecodeAccelerator": "VAR1",
+        "VaapiH264Accelerator": "VAR2",
+        "H264DPB": "VAR3",
+        "dpb": "VAR4",
+        "VAPictureH264": "VAR5",
+        "va_pics": "VAR6",
+        "num_pics": "VAR7",
+        "H264Picture": "VAR8",
+        "Vector": "VAR9",
+        "rit": "VAR10",
+        "i": "VAR11",
+        "ref": "VAR12"
+    }
+}

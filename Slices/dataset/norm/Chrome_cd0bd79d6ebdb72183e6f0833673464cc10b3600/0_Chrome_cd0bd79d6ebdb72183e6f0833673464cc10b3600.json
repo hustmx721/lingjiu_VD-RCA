@@ -1,0 +1,11 @@
+{
+    "type": "0",
+    "func": {
+        "GetGPUProcessID": "FUN1",
+        "gpu_host_id": "FUN2"
+    },
+    "var": {
+        "WebGraphicsContext3DCommandBufferImpl": "VAR1",
+        "host_": "VAR2"
+    }
+}

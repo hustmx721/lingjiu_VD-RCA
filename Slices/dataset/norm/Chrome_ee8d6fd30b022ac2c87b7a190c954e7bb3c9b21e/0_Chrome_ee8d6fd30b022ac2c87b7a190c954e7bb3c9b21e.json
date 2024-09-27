@@ -1,0 +1,20 @@
+{
+    "type": "0",
+    "func": {
+        "CaptureSnapshotFromBackingStore": "FUN1",
+        "CopyFromBackingStore": "FUN2",
+        "Rect": "FUN3",
+        "size": "FUN4",
+        "SendResultFromBitmap": "FUN5",
+        "getTopPlatformDevice": "FUN6",
+        "accessBitmap": "FUN7"
+    },
+    "var": {
+        "CaptureVisibleTabFunction": "VAR1",
+        "BackingStore": "VAR2",
+        "backing_store": "VAR3",
+        "skia": "VAR4",
+        "temp_canvas": "VAR5",
+        "gfx": "VAR6"
+    }
+}

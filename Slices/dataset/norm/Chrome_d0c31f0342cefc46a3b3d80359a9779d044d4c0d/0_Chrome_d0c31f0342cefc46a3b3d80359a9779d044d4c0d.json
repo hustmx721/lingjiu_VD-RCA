@@ -1,0 +1,14 @@
+{
+    "type": "0",
+    "func": {
+        "FileReaderLoader": "FUN1",
+        "terminate": "FUN2",
+        "isEmpty": "FUN3",
+        "unregisterBlobURL": "FUN4"
+    },
+    "var": {
+        "FileReaderLoader": "VAR1",
+        "m_urlForReading": "VAR2",
+        "BlobRegistry": "VAR3"
+    }
+}

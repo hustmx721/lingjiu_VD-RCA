@@ -1,0 +1,9 @@
+{
+    "type": "0",
+    "func": {
+        "OnUnregisterAgentError": "FUN1"
+    },
+    "var": {
+        "BluetoothDeviceChromeOS": "VAR1"
+    }
+}

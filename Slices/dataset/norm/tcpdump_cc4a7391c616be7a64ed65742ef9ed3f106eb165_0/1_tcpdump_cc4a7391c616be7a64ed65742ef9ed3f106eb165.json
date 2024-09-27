@@ -1,0 +1,15 @@
+{
+    "type": "1",
+    "func": {
+        "l2tp_proto_ver_print": "FUN1",
+        "ND_PRINT": "FUN2",
+        "EXTRACT_16BITS": "FUN3"
+    },
+    "var": {
+        "netdissect_options": "VAR1",
+        "ndo": "VAR2",
+        "uint16_t": "VAR3",
+        "dat": "VAR4",
+        "STRING": "VAR5"
+    }
+}

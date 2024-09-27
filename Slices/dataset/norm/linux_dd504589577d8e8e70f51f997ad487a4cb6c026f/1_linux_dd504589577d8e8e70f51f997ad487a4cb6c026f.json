@@ -1,0 +1,8 @@
+{
+    "type": "1",
+    "func": {
+        "skcipher_release": "FUN1",
+        "crypto_free_skcipher": "FUN2"
+    },
+    "var": {}
+}

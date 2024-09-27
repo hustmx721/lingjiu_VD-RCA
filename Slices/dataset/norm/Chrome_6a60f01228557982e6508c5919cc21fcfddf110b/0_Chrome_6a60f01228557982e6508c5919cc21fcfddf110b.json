@@ -1,0 +1,12 @@
+{
+    "type": "0",
+    "func": {
+        "GoForward": "FUN1",
+        "GetController": "FUN2",
+        "CanGoForward": "FUN3"
+    },
+    "var": {
+        "FrameImpl": "VAR1",
+        "web_contents_": "VAR2"
+    }
+}

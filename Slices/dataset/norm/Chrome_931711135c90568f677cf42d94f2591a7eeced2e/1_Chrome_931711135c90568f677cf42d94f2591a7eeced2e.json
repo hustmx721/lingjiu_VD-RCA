@@ -1,0 +1,28 @@
+{
+    "type": "1",
+    "func": {
+        "ImportLoader": "FUN1",
+        "ThrowDOMException": "FUN2",
+        "IsHTMLDocument": "FUN3",
+        "GetSecurityOrigin": "FUN4",
+        "IsSameSchemeHostPortAndSuborigin": "FUN5",
+        "ThrowSecurityError": "FUN6",
+        "SetSecurityOrigin": "FUN7",
+        "Url": "FUN8",
+        "SetFragmentIdentifier": "FUN9",
+        "String": "FUN10",
+        "SetURL": "FUN11",
+        "CookieURL": "FUN12"
+    },
+    "var": {
+        "Document": "VAR1",
+        "entered_document": "VAR2",
+        "ExceptionState": "VAR3",
+        "exception_state": "VAR4",
+        "kInvalidStateError": "VAR5",
+        "STRING": "VAR6",
+        "throw_on_dynamic_markup_insertion_count_": "VAR7",
+        "new_url": "VAR8",
+        "cookie_url_": "VAR9"
+    }
+}

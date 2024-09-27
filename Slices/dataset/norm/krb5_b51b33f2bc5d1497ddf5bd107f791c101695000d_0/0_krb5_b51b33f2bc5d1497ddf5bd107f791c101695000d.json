@@ -1,0 +1,21 @@
+{
+    "type": "0",
+    "func": {
+        "spnego_gss_delete_sec_context": "FUN1",
+        "gss_delete_sec_context": "FUN2",
+        "release_spnego_ctx": "FUN3"
+    },
+    "var": {
+        "OM_uint32": "VAR1",
+        "minor_status": "VAR2",
+        "gss_ctx_id_t": "VAR3",
+        "context_handle": "VAR4",
+        "output_token": "VAR5",
+        "ret": "VAR6",
+        "GSS_S_COMPLETE": "VAR7",
+        "spnego_gss_ctx_id_t": "VAR8",
+        "ctx": "VAR9",
+        "GSS_S_FAILURE": "VAR10",
+        "ctx_handle": "VAR11"
+    }
+}

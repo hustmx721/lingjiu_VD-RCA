@@ -1,0 +1,34 @@
+{
+    "type": "1",
+    "func": {
+        "PrintPreviewUI": "FUN1",
+        "ConstrainedWebDialogUI": "FUN2",
+        "initial_preview_start_time_": "FUN3",
+        "Now": "FUN4",
+        "handler_": "FUN5",
+        "source_is_modifiable_": "FUN6",
+        "tab_closed_": "FUN7",
+        "FromWebUI": "FUN8",
+        "AddDataSource": "FUN9",
+        "PrintPreviewDataSource": "FUN10",
+        "PrintPreviewHandler": "FUN11",
+        "AddMessageHandler": "FUN12",
+        "GetPrintPreviewUIAddress": "FUN13",
+        "Get": "FUN14",
+        "Set": "FUN15"
+    },
+    "var": {
+        "PrintPreviewUI": "VAR1",
+        "content": "VAR2",
+        "WebUI": "VAR3",
+        "web_ui": "VAR4",
+        "base": "VAR5",
+        "TimeTicks": "VAR6",
+        "Profile": "VAR7",
+        "profile": "VAR8",
+        "ChromeURLDataManager": "VAR9",
+        "handler_": "VAR10",
+        "preview_ui_addr_str_": "VAR11",
+        "g_print_preview_request_id_map": "VAR12"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "type": "0",
+    "func": {
+        "onEndTest": "FUN1",
+        "ASSERT": "FUN2",
+        "isMainThread": "FUN3",
+        "QuitMessageLoop": "FUN4",
+        "RunAllPendingMessages": "FUN5",
+        "clear": "FUN6"
+    },
+    "var": {
+        "self": "VAR1",
+        "webkit_support": "VAR2",
+        "CCLayerTreeHostTest": "VAR3",
+        "test": "VAR4",
+        "m_layerTreeHost": "VAR5"
+    }
+}

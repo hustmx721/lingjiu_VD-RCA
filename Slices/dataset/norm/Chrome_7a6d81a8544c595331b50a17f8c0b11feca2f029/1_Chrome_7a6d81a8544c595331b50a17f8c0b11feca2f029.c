@@ -1,0 +1,6 @@
+ static void FUN1(const VAR1::VAR2<VAR1::VAR3>& VAR4)
+ {
+     VAR1::VAR5<VAR1::VAR6> VAR7 = VAR4.FUN2();
+    VAR8* VAR9 = VAR10::FUN3(VAR7);
+     FUN4(VAR4, VAR9->FUN5(VAR11::VAR12), VAR4.FUN6());
+ }

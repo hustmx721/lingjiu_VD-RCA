@@ -1,0 +1,108 @@
+VAR1 FUN1(struct VAR2 *VAR2,
+				      const struct VAR3 *VAR4,
+				      const struct VAR5 *VAR6,
+				      const sctp_subtype_t VAR7, void *VAR8,
+				      VAR9 *VAR10)
+{
+	struct VAR11 *VAR12 = VAR8;
+	struct VAR5 *VAR13;
+	VAR14 *VAR15;
+	struct VAR11 *VAR16;
+	struct VAR17 *VAR18, *VAR19 = NULL;
+	int VAR20 = 0;
+	struct VAR11 *VAR21;
+	struct VAR22 *VAR23;
+	if (VAR4 == FUN2(VAR2->VAR24.VAR25)->VAR4) {
+		FUN3(VAR2, VAR26);
+		return FUN4(VAR2, VAR4, VAR6, VAR7, VAR8, VAR10);
+	}
+	if (!FUN5(VAR12, sizeof(VAR27)))
+		return FUN6(VAR2, VAR4, VAR6, VAR7, VAR8, VAR10);
+	VAR23 = VAR4->VAR28.VAR23;
+	if (!FUN7(VAR23, VAR29) ||
+	    (FUN8(VAR23, VAR30) && FUN9(VAR23)))
+		return FUN4(VAR2, VAR4, VAR6, VAR7, VAR8, VAR10);
+	VAR12->VAR31.VAR32 =
+		(struct VAR33 *)VAR12->VAR34->VAR35;
+	if (!FUN10(VAR12->VAR34, FUN11(VAR12->VAR36->VAR37) -
+					 sizeof(VAR27)))
+		goto VAR38;
+	VAR13 = FUN12(VAR4, VAR6, VAR12, VAR39, &VAR20,
+				      &VAR21);
+	if (!VAR13) {
+		switch (VAR20) {
+		case -VAR40:
+			goto VAR38;
+		case -VAR41:
+			FUN13(VAR2, VAR4, VAR6, VAR12, VAR10,
+						   VAR21);
+			return FUN6(VAR2, VAR4, VAR6, VAR7, VAR8, VAR10);
+		case -VAR42:
+		default:
+			return FUN6(VAR2, VAR4, VAR6, VAR7, VAR8, VAR10);
+		}
+	}
+	VAR15 = &VAR12->VAR31.VAR32->VAR43.VAR15[0];
+	if (!FUN14(VAR13, VAR12,
+			       &VAR12->VAR31.VAR32->VAR43.VAR44,
+			       VAR15, VAR39))
+		goto VAR45;
+	VAR20 = FUN15(VAR13, VAR39);
+	if (VAR20)
+		goto VAR45;
+	if (VAR12->VAR46) {
+ 		struct sctp_chunk VAR47;
+ 		sctp_ierror_t VAR48;
+ 		VAR47.VAR34 = VAR12->VAR46;
+ 		VAR47.VAR6 = VAR12->VAR6;
+		VAR47.VAR49 = VAR12->VAR49;
+		VAR47.VAR36 = (VAR27 *)FUN16(VAR12->VAR46,
+					    sizeof(VAR27));
+		FUN17(VAR12->VAR46, sizeof(VAR27));
+		VAR47.VAR50 = VAR12->VAR50;
+		VAR48 = FUN18(VAR2, VAR4, VAR13, VAR7, &VAR47);
+		FUN19(VAR12->VAR46);
+		if (VAR48 != VAR51) {
+			FUN20(VAR13);
+			return FUN6(VAR2, VAR4, VAR6, VAR7, VAR8, VAR10);
+		}
+	}
+	VAR16 = FUN21(VAR13, VAR12);
+	if (!VAR16)
+		goto VAR45;
+	VAR18 = FUN22(VAR13, 0, VAR52, 0,
+					     VAR13->VAR43.VAR53,
+					     VAR13->VAR43.VAR54,
+					     NULL, VAR39);
+	if (!VAR18)
+		goto VAR55;
+	if (VAR13->VAR56.VAR57) {
+		VAR19 = FUN23(VAR13,
+							    VAR39);
+		if (!VAR19)
+			goto VAR58;
+	}
+	FUN24(VAR10, VAR59, FUN25(VAR13));
+	FUN24(VAR10, VAR60,
+			FUN26(VAR61));
+	FUN3(VAR2, VAR62);
+	FUN3(VAR2, VAR63);
+	FUN24(VAR10, VAR64, FUN27());
+	if (VAR13->VAR65[VAR66])
+		FUN24(VAR10, VAR67,
+				FUN28(VAR66));
+	FUN24(VAR10, VAR68, FUN29(VAR16));
+	FUN24(VAR10, VAR69, FUN30(VAR18));
+	if (VAR19)
+		FUN24(VAR10, VAR69,
+				FUN30(VAR19));
+	return VAR70;
+VAR58:
+	FUN31(VAR18);
+VAR55:
+	FUN32(VAR16);
+VAR45:
+	FUN20(VAR13);
+VAR38:
+	return VAR71;
+}

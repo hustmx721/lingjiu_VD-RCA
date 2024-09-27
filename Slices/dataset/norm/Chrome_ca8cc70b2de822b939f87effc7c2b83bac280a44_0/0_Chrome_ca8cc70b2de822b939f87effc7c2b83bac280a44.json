@@ -1,0 +1,21 @@
+{
+    "type": "0",
+    "func": {
+        "ChromeURLRequestContext": "FUN1",
+        "weak_factory_": "FUN2",
+        "load_time_stats_": "FUN3",
+        "DCHECK": "FUN4",
+        "CurrentlyOn": "FUN5",
+        "RegisterURLRequestContext": "FUN6"
+    },
+    "var": {
+        "ChromeURLRequestContext": "VAR1",
+        "type": "VAR2",
+        "chrome_browser_net": "VAR3",
+        "LoadTimeStats": "VAR4",
+        "load_time_stats": "VAR5",
+        "BrowserThread": "VAR6",
+        "IO": "VAR7",
+        "load_time_stats_": "VAR8"
+    }
+}

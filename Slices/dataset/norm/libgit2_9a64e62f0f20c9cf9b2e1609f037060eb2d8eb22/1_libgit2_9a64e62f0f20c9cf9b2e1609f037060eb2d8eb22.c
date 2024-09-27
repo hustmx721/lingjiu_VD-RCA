@@ -1,0 +1,47 @@
+static int FUN1(VAR1 *VAR2)
+{
+	int VAR3;
+	if (VAR2->VAR4 &&
+		FUN2(&VAR2->VAR5) &&
+		VAR2->VAR6)
+		return 0;
+	if (VAR2->VAR7) {
+		FUN3(VAR2->VAR7);
+		FUN4(VAR2->VAR7);
+		VAR2->VAR7 = NULL;
+		VAR2->VAR4 = 0;
+	}
+	if (VAR2->VAR8.VAR9) {
+		VAR3 = FUN5(&VAR2->VAR7, VAR2->VAR8.VAR10, VAR2->VAR8.VAR11);
+	} else {
+#ifdef VAR12
+		VAR3 = FUN6(&VAR2->VAR7, VAR2->VAR8.VAR10, VAR2->VAR8.VAR11);
+#else
+		VAR3 = FUN7(&VAR2->VAR7,  VAR2->VAR8.VAR10, VAR2->VAR8.VAR11);
+#VAR13
+	}
+	if (VAR3 < 0)
+		return VAR3;
+	FUN8(VAR2->VAR7, VAR14, VAR15);
+	FUN9(VAR2);
+	VAR3 = FUN10(VAR2->VAR7);
+ 	if ((!VAR3 || VAR3 == VAR16) && VAR2->VAR17->VAR18 != NULL &&
+ 	    FUN11(VAR2->VAR7)) {
+ 		VAR19 *VAR20;
+		int VAR21;
+ 		if ((VAR3 = FUN12(&VAR20, VAR2->VAR7)) < 0)
+ 			return VAR3;
+ 		FUN13();
+		VAR21 = VAR3 != VAR16;
+ 		VAR3 = VAR2->VAR17->FUN14(VAR20, VAR21, VAR2->VAR8.VAR10, VAR2->VAR17->VAR22);
+ 		if (VAR3 < 0) {
+			if (!FUN15())
+				FUN16(VAR23, VAR15);
+			return VAR3;
+		}
+	}
+	if (VAR3 < 0)
+		return VAR3;
+	VAR2->VAR4 = 1;
+	return 0;
+}

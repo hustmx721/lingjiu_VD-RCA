@@ -1,0 +1,174 @@
+FUN1(VAR1 *VAR2, struct VAR3 *VAR3,
+		     struct VAR4 *VAR5,
+		     struct VAR6 *VAR7)
+{
+ 	struct VAR8 *VAR9 = VAR3->VAR10;
+ 	struct VAR11 *VAR12 = NULL;
+ 	struct VAR13 *VAR14 = &VAR7->VAR14;
+	struct VAR15 *VAR16 = NULL;
+ 	int VAR17 = 0;
+	struct VAR18 *VAR19 = FUN2(VAR3);
+ #VAR20 FUN3(VAR21) ((struct VAR22 *)(VAR21))
+ 	if (VAR5->VAR23 && VAR5->VAR24 > VAR9->VAR25)
+ 		return -VAR26;
+ 	if (VAR14->VAR27) {
+		VAR16 = FUN4(VAR19, VAR7->VAR28->VAR29,
+					VAR7->VAR28->VAR30);
+ 		FUN5(VAR7->VAR28, VAR31);
+ 		VAR17 = FUN6(VAR2, VAR7->VAR28);
+ 		if (VAR17)
+ 			goto VAR32;
+ 		FUN7(VAR7->VAR28);
+ 		if (FUN3(VAR14->VAR27)->VAR33 == FUN8(1)) {
+			if (VAR16) {
+				FUN9(VAR16);
+				VAR16 = NULL;
+			}
+ 			FUN10(VAR7->VAR28, VAR31);
+ 			VAR17 = FUN11(VAR5, VAR14);
+ 			if (!VAR17) {
+				if (!FUN12(VAR14->VAR34))
+					FUN13(FUN3(VAR14->VAR27),
+							  VAR14->VAR35);
+				FUN14(VAR19,
+					VAR7->VAR28);
+			}
+			FUN15(VAR7->VAR28);
+			if (VAR17 == -VAR36)
+				goto VAR37;
+			if (!VAR17)
+				VAR17 = FUN16(VAR2,
+								      VAR3,
+								      VAR7->VAR28);
+			if (VAR17)
+				goto VAR32;
+			goto VAR38;
+		} else {
+ 			int VAR39 = (char *)VAR14->VAR35 - VAR7->VAR28->VAR40;
+ 			FUN15(VAR7->VAR28);
+			if (VAR16) {
+				FUN17(VAR16);
+				VAR16 = NULL;
+			}
+ 			FUN10(VAR7->VAR28, VAR31);
+ 			VAR14->VAR27 = FUN18(VAR7->VAR28->VAR41, VAR42);
+ 			VAR17 = -VAR43;
+			if (VAR14->VAR27 == NULL)
+				goto VAR32;
+			memcpy(VAR14->VAR27, FUN19(VAR7->VAR28), VAR7->VAR28->VAR41);
+			VAR14->VAR34 = FUN20(FUN3(VAR14->VAR27)+1);
+			FUN3(VAR14->VAR27)->VAR33 = FUN8(1);
+			VAR14->VAR35 = FUN20(VAR14->VAR27 + VAR39);
+			VAR14->VAR44 = VAR14->VAR27 + VAR7->VAR28->VAR41;
+		}
+	} else {
+		VAR14->VAR27 = FUN21(VAR9->VAR25, VAR42);
+		VAR17 = -VAR43;
+		if (VAR14->VAR27 == NULL)
+			goto VAR32;
+		FUN3(VAR14->VAR27)->VAR45 = FUN8(VAR46);
+		FUN3(VAR14->VAR27)->VAR47 = FUN8(1);
+		FUN3(VAR14->VAR27)->VAR33 = FUN8(1);
+		VAR14->VAR34 = FUN20(FUN3(VAR14->VAR27)+1);
+		VAR14->VAR35 = FUN20(FUN3(VAR14->VAR27)+1);
+		VAR14->VAR44 = VAR14->VAR27 + VAR9->VAR25;
+	}
+	VAR17 = FUN11(VAR5, VAR14);
+	if (VAR17 == -VAR36)
+		goto VAR37;
+	if (VAR17)
+		goto VAR32;
+	if (!FUN12(VAR14->VAR34))
+		FUN13(FUN3(VAR14->VAR27), VAR14->VAR35);
+VAR38:
+	if (!FUN12(VAR14->VAR34)) {
+		VAR12 = FUN22(VAR3, FUN3(VAR14->VAR27), &VAR16);
+		if (VAR12) {
+			if (VAR12 == VAR7->VAR28)
+				FUN10(VAR12, VAR31);
+			else {
+				VAR17 = FUN23(VAR3,
+						FUN24(FUN25(VAR9), 1));
+				if (VAR17)
+					goto VAR32;
+				FUN5(VAR12, VAR31);
+				VAR17 = FUN6(VAR2,
+								      VAR12);
+ 				if (VAR17)
+ 					goto VAR48;
+ 				FUN7(VAR12);
+ 				FUN26(&FUN19(VAR12)->VAR33, 1);
+ 				FUN10(VAR12, VAR31,
+ 					FUN27(FUN19(VAR12)->VAR33));
+				FUN15(VAR12);
+				VAR17 = FUN16(VAR2,
+								      VAR3,
+								      VAR12);
+ 				if (VAR17)
+ 					goto VAR48;
+ 			}
+			FUN17(VAR16);
+ 			VAR16 = NULL;
+ 		} else if (VAR7->VAR28 && VAR14->VAR27 == VAR7->VAR28->VAR40) {
+			FUN10(VAR7->VAR28, VAR31);
+			VAR12 = VAR7->VAR28;
+			FUN28(VAR12);
+		} else {
+			ext4_fsblk_t VAR49, VAR50;
+			VAR49 = FUN29(VAR9,
+						FUN30(VAR3)->VAR51);
+			if (!(FUN31(VAR3, VAR52)))
+				VAR49 = VAR49 & VAR53;
+			VAR50 = FUN32(VAR2, VAR3, VAR49, 0,
+						     NULL, &VAR17);
+			if (VAR17)
+				goto VAR32;
+			if (!(FUN31(VAR3, VAR52)))
+				FUN33(VAR50 > VAR53);
+			FUN34(VAR3, VAR31,
+				  (unsigned long long)VAR50);
+			VAR12 = FUN35(VAR9, VAR50);
+			if (FUN36(!VAR12)) {
+				VAR17 = -VAR43;
+VAR54:
+				FUN37(VAR2, VAR3, NULL, VAR50, 1,
+						 VAR55);
+				goto VAR32;
+			}
+			FUN7(VAR12);
+			VAR17 = FUN38(VAR2, VAR12);
+			if (VAR17) {
+				FUN15(VAR12);
+				VAR17 = -VAR56;
+				goto VAR54;
+			}
+			memcpy(VAR12->VAR40, VAR14->VAR27, VAR12->VAR41);
+			FUN39(VAR12);
+			FUN15(VAR12);
+			FUN14(VAR19, VAR12);
+			VAR17 = FUN16(VAR2,
+							      VAR3, VAR12);
+			if (VAR17)
+				goto VAR32;
+		}
+	}
+	FUN30(VAR3)->VAR57 = VAR12 ? VAR12->VAR30 : 0;
+	if (VAR7->VAR28 && VAR7->VAR28 != VAR12)
+		FUN40(VAR2, VAR3, VAR7->VAR28);
+	VAR17 = 0;
+ VAR32:
+ 	if (VAR16)
+		FUN17(VAR16);
+ 	FUN41(VAR12);
+ 	if (!(VAR7->VAR28 && VAR14->VAR27 == VAR7->VAR28->VAR40))
+ 		FUN42(VAR14->VAR27);
+	return VAR17;
+VAR48:
+	FUN43(VAR3, FUN24(FUN25(VAR9), 1));
+	goto VAR32;
+VAR37:
+	FUN44(VAR3, VAR31,
+			 FUN30(VAR3)->VAR57);
+	goto VAR32;
+#undef VAR58
+}

@@ -1,0 +1,12 @@
+{
+    "type": "0",
+    "func": {
+        "image_transform_ini_end": "FUN1",
+        "UNUSED": "FUN2"
+    },
+    "var": {
+        "image_transform": "VAR1",
+        "transform_display": "VAR2",
+        "that": "VAR3"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "type": "0",
+    "func": {
+        "ChangeTabGroup": "FUN1",
+        "tab_at": "FUN2",
+        "SetGroup": "FUN3",
+        "has_value": "FUN4",
+        "value": "FUN5",
+        "set_owned_by_client": "FUN6",
+        "AddChildView": "FUN7",
+        "get": "FUN8",
+        "ListTabsInGroup": "FUN9",
+        "size": "FUN10",
+        "erase": "FUN11",
+        "UpdateIdealBounds": "FUN12",
+        "AnimateToIdealBounds": "FUN13"
+    },
+    "var": {
+        "TabStrip": "VAR1",
+        "model_index": "VAR2",
+        "base": "VAR3",
+        "Optional": "VAR4",
+        "old_group": "VAR5",
+        "new_group": "VAR6",
+        "group_headers_": "VAR7",
+        "header": "VAR8",
+        "std": "VAR9",
+        "make_unique": "VAR10",
+        "TabGroupHeader": "VAR11",
+        "controller_": "VAR12"
+    }
+}

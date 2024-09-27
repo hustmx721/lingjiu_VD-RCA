@@ -1,0 +1,14 @@
+{
+    "type": "1",
+    "func": {
+        "cJSON_InitHooks": "FUN1"
+    },
+    "var": {
+        "cJSON_Hooks": "VAR1",
+        "hooks": "VAR2",
+        "cJSON_malloc": "VAR3",
+        "cJSON_free": "VAR4",
+        "malloc_fn": "VAR5",
+        "free_fn": "VAR6"
+    }
+}

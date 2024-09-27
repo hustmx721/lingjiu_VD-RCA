@@ -1,0 +1,15 @@
+{
+    "type": "1",
+    "func": {
+        "DidNotifySubtreeInsertionsToDocument": "FUN1",
+        "ProcessStyleSheet": "FUN2",
+        "GetDocument": "FUN3",
+        "NotifyLoadedSheetAndAllCriticalSubresources": "FUN4"
+    },
+    "var": {
+        "SVGStyleElement": "VAR1",
+        "StyleElement": "VAR2",
+        "kProcessingFatalError": "VAR3",
+        "kErrorOccurredLoadingSubresource": "VAR4"
+    }
+}

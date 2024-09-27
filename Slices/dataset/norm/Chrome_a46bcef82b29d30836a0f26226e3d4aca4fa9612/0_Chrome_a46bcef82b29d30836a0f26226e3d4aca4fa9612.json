@@ -1,0 +1,33 @@
+{
+    "type": "0",
+    "func": {
+        "SetUp": "FUN1",
+        "set": "FUN2",
+        "EXPECT_CALL": "FUN3",
+        "size_most_recent": "FUN4",
+        "WillRepeatedly": "FUN5",
+        "ReturnRef": "FUN6",
+        "MockSession": "FUN7",
+        "jid": "FUN8",
+        "SetStateChangeCallback": "FUN9",
+        "ClientSession": "FUN10",
+        "ConnectionToClient": "FUN11",
+        "current": "FUN12"
+    },
+    "var": {
+        "OVERRIDE": "VAR1",
+        "client_jid_": "VAR2",
+        "STRING": "VAR3",
+        "default_screen_size_": "VAR4",
+        "capturer_": "VAR5",
+        "protocol": "VAR6",
+        "MockSession": "VAR7",
+        "session": "VAR8",
+        "_": "VAR9",
+        "client_session_": "VAR10",
+        "session_event_handler_": "VAR11",
+        "base": "VAR12",
+        "MessageLoopProxy": "VAR13",
+        "input_stub_": "VAR14"
+    }
+}

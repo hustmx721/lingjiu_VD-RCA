@@ -1,0 +1,38 @@
+{
+    "type": "0",
+    "func": {
+        "WT_Interpolate": "FUN1",
+        "ALOGE": "FUN2",
+        "defined": "FUN3"
+    },
+    "var": {
+        "S_WT_VOICE": "VAR1",
+        "pWTVoice": "VAR2",
+        "S_WT_INT_FRAME": "VAR3",
+        "pWTIntFrame": "VAR4",
+        "EAS_PCM": "VAR5",
+        "pOutputBuffer": "VAR6",
+        "phaseInc": "VAR7",
+        "phaseFrac": "VAR8",
+        "acc0": "VAR9",
+        "EAS_SAMPLE": "VAR10",
+        "pSamples": "VAR11",
+        "loopEnd": "VAR12",
+        "samp1": "VAR13",
+        "samp2": "VAR14",
+        "numSamples": "VAR15",
+        "STRING": "VAR16",
+        "pAudioBuffer": "VAR17",
+        "phaseAccum": "VAR18",
+        "frame": "VAR19",
+        "phaseIncrement": "VAR20",
+        "_8_BIT_SAMPLES": "VAR21",
+        "endif": "VAR22",
+        "NUM_PHASE_FRAC_BITS": "VAR23",
+        "EAS_I16": "VAR24",
+        "EAS_I32": "VAR25",
+        "EAS_U32": "VAR26",
+        "PHASE_FRAC_MASK": "VAR27",
+        "loopStart": "VAR28"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "type": "1",
+    "func": {
+        "vapic_enter": "FUN1",
+        "gfn_to_page": "FUN2",
+        "is_error_page": "FUN3"
+    },
+    "var": {
+        "kvm_vcpu": "VAR1",
+        "vcpu": "VAR2",
+        "kvm_lapic": "VAR3",
+        "apic": "VAR4",
+        "arch": "VAR5",
+        "page": "VAR6",
+        "vapic_addr": "VAR7",
+        "kvm": "VAR8",
+        "PAGE_SHIFT": "VAR9",
+        "EFAULT": "VAR10",
+        "vapic_page": "VAR11"
+    }
+}

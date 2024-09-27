@@ -1,0 +1,12 @@
+{
+    "type": "0",
+    "func": {
+        "OpenInterface": "FUN1"
+    },
+    "var": {
+        "UsbDevice": "VAR1",
+        "interface_id": "VAR2",
+        "OpenCallback": "VAR3",
+        "callback": "VAR4"
+    }
+}

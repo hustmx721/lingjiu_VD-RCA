@@ -1,0 +1,41 @@
+{
+    "type": "1",
+    "func": {
+        "perf_syscall_enter": "FUN1",
+        "trace_get_syscall_nr": "FUN2",
+        "test_bit": "FUN3",
+        "syscall_nr_to_meta": "FUN4",
+        "this_cpu_ptr": "FUN5",
+        "hlist_empty": "FUN6",
+        "ALIGN": "FUN7",
+        "perf_trace_buf_prepare": "FUN8",
+        "syscall_get_arguments": "FUN9",
+        "perf_trace_buf_submit": "FUN10"
+    },
+    "var": {
+        "ignore": "VAR1",
+        "pt_regs": "VAR2",
+        "regs": "VAR3",
+        "id": "VAR4",
+        "syscall_metadata": "VAR5",
+        "sys_data": "VAR6",
+        "syscall_trace_enter": "VAR7",
+        "rec": "VAR8",
+        "hlist_head": "VAR9",
+        "head": "VAR10",
+        "syscall_nr": "VAR11",
+        "rctx": "VAR12",
+        "size": "VAR13",
+        "current": "VAR14",
+        "enabled_perf_enter_syscalls": "VAR15",
+        "enter_event": "VAR16",
+        "perf_events": "VAR17",
+        "nb_args": "VAR18",
+        "u32": "VAR19",
+        "u64": "VAR20",
+        "event": "VAR21",
+        "type": "VAR22",
+        "nr": "VAR23",
+        "args": "VAR24"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "type": "1",
+    "func": {
+        "OnGenerationRequested": "FUN1",
+        "DCHECK": "FUN2"
+    },
+    "var": {
+        "ManualFillingControllerImpl": "VAR1",
+        "pwd_controller_": "VAR2"
+    }
+}

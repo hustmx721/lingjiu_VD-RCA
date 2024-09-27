@@ -1,0 +1,19 @@
+{
+    "type": "1",
+    "func": {
+        "l2tp_framing_cap_print": "FUN1",
+        "EXTRACT_32BITS": "FUN2",
+        "ND_PRINT": "FUN3"
+    },
+    "var": {
+        "netdissect_options": "VAR1",
+        "ndo": "VAR2",
+        "u_char": "VAR3",
+        "dat": "VAR4",
+        "uint32_t": "VAR5",
+        "ptr": "VAR6",
+        "L2TP_FRAMING_CAP_ASYNC_MASK": "VAR7",
+        "STRING": "VAR8",
+        "L2TP_FRAMING_CAP_SYNC_MASK": "VAR9"
+    }
+}

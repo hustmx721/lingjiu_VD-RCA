@@ -1,0 +1,38 @@
+{
+    "type": "0",
+    "func": {
+        "pdf_summarize": "FUN1",
+        "ERR": "FUN2",
+        "pdf_get_object_status": "FUN3",
+        "get_type": "FUN4"
+    },
+    "var": {
+        "FILE": "VAR1",
+        "fp": "VAR2",
+        "pdf_t": "VAR3",
+        "pdf": "VAR4",
+        "name": "VAR5",
+        "flags": "VAR6",
+        "i": "VAR7",
+        "j": "VAR8",
+        "page": "VAR9",
+        "n_versions": "VAR10",
+        "n_entries": "VAR11",
+        "dst": "VAR12",
+        "out": "VAR13",
+        "dst_name": "VAR14",
+        "c": "VAR15",
+        "STRING": "VAR16",
+        "CHAR": "VAR17",
+        "stdout": "VAR18",
+        "n_xrefs": "VAR19",
+        "xrefs": "VAR20",
+        "is_linear": "VAR21",
+        "end": "VAR22",
+        "has_xref_streams": "VAR23",
+        "PDF_FLAG_QUIET": "VAR24",
+        "version": "VAR25",
+        "entries": "VAR26",
+        "obj_id": "VAR27"
+    }
+}

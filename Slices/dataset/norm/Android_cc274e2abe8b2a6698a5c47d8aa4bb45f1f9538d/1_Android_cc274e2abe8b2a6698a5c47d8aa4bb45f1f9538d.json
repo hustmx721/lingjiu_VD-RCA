@@ -1,0 +1,22 @@
+{
+    "type": "1",
+    "func": {
+        "PreloadCuePoint": "FUN1",
+        "CuePoint": "FUN2"
+    },
+    "var": {
+        "Cues": "VAR1",
+        "cue_points_size": "VAR2",
+        "pos": "VAR3",
+        "m_count": "VAR4",
+        "m_preload_count": "VAR5",
+        "n": "VAR6",
+        "CuePoint": "VAR7",
+        "qq": "VAR8",
+        "q": "VAR9",
+        "p": "VAR10",
+        "m_cue_points": "VAR11",
+        "pp": "VAR12",
+        "pCP": "VAR13"
+    }
+}

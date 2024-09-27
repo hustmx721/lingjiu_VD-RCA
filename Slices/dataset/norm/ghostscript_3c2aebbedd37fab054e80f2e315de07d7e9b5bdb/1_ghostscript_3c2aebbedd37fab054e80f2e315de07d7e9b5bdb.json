@@ -1,0 +1,36 @@
+{
+    "type": "1",
+    "func": {
+        "xps_load_sfnt_name": "FUN1",
+        "xps_find_sfnt_table": "FUN2",
+        "gs_warn": "FUN3",
+        "u16": "FUN4",
+        "isprint": "FUN5",
+        "u32": "FUN6"
+    },
+    "var": {
+        "xps_font_t": "VAR1",
+        "font": "VAR2",
+        "namep": "VAR3",
+        "byte": "VAR4",
+        "namedata": "VAR5",
+        "offset": "VAR6",
+        "length": "VAR7",
+        "count": "VAR8",
+        "stringoffset": "VAR9",
+        "found": "VAR10",
+        "i": "VAR11",
+        "k": "VAR12",
+        "STRING": "VAR13",
+        "data": "VAR14",
+        "record": "VAR15",
+        "pid": "VAR16",
+        "eid": "VAR17",
+        "langid": "VAR18",
+        "nameid": "VAR19",
+        "s": "VAR20",
+        "n": "VAR21",
+        "c": "VAR22",
+        "CHAR": "VAR23"
+    }
+}

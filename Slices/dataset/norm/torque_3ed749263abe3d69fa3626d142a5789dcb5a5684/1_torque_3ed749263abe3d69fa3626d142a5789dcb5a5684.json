@@ -1,0 +1,33 @@
+{
+    "type": "1",
+    "func": {
+        "disrsi_": "FUN1",
+        "disiui_": "FUN2"
+    },
+    "var": {
+        "stream": "VAR1",
+        "negate": "VAR2",
+        "value": "VAR3",
+        "count": "VAR4",
+        "c": "VAR5",
+        "locval": "VAR6",
+        "ndigs": "VAR7",
+        "cp": "VAR8",
+        "scratch": "VAR9",
+        "DIS_BUFSIZ": "VAR10",
+        "dis_getc": "VAR11",
+        "dis_gets": "VAR12",
+        "dis_umaxd": "VAR13",
+        "CHAR": "VAR14",
+        "DIS_EOD": "VAR15",
+        "overflow": "VAR16",
+        "dis_umax": "VAR17",
+        "DIS_NONDIGIT": "VAR18",
+        "DIS_SUCCESS": "VAR19",
+        "DIS_LEADZRO": "VAR20",
+        "DIS_EOF": "VAR21",
+        "FALSE": "VAR22",
+        "UINT_MAX": "VAR23",
+        "DIS_OVERFLOW": "VAR24"
+    }
+}

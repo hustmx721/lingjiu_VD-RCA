@@ -1,0 +1,33 @@
+{
+    "type": "1",
+    "func": {
+        "GetFloorplanImage": "FUN1",
+        "findValue": "FUN2",
+        "safe_queryBlob": "FUN3",
+        "c_str": "FUN4",
+        "empty": "FUN5",
+        "set_content": "FUN6",
+        "begin": "FUN7",
+        "end": "FUN8",
+        "size": "FUN9",
+        "add_header_attachment": "FUN10"
+    },
+    "var": {
+        "CWebServer": "VAR1",
+        "WebEmSession": "VAR2",
+        "session": "VAR3",
+        "request": "VAR4",
+        "req": "VAR5",
+        "reply": "VAR6",
+        "rep": "VAR7",
+        "std": "VAR8",
+        "idx": "VAR9",
+        "STRING": "VAR10",
+        "vector": "VAR11",
+        "string": "VAR12",
+        "result": "VAR13",
+        "m_sql": "VAR14",
+        "oname": "VAR15",
+        "CHAR": "VAR16"
+    }
+}
