@@ -6,7 +6,7 @@ Vulnerability Detection and Root Cause Analysis(VD-RCA) of C/C++ programs, imple
  ![系统框架图](./imgs/Overview.png)
 
 ## Results
-    The Final Results of the Testset(TestCode, C/C++ scripts) provided by the CSC-709:
+The Final Results of the Testset(TestCode, C/C++ scripts) provided by the CSC-709:
 ![Test Results](./imgs/result.png)
 
 ## LLMs Rundown
@@ -49,3 +49,5 @@ python app.py
 Please configure your environment first and install the appropriate version of jdk-17, Joern, torch-geometric and other necessary software dependencies. Please follow
 the instructions in the README.md file in the `SLices/preprocess/Readme.md` directory to set up the environment and run the experiments.
 ![GNNs Pipeline](./imgs/GNN.png)
+## Email
+Any furthur questions or concerns, please feel free to contact me at <hustmx721@gmail.com>
