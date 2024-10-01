@@ -1,0 +1,110 @@
+/* 设置网页背景 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-image: url('/static/img/background.png');  /* 根据实际路径更新 */
+    background-size: cover;   /* 背景图片适应整个页面 */
+    background-position: center;
+    background-attachment: fixed;  /* 背景固定不随页面滚动 */
+}
+
+/* 页面容器，确保内容在白色框框中 */
+.content-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 70%;  /* 调整宽度为70% */
+    margin: 0 auto;
+    padding: 15px;  /* 减少顶部和底部的内边距 */
+}
+
+/* 顶部模型、数据集和默认测试集在一行显示 */
+.single-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 减少顶部内容的内边距 */
+.reduced-padding {
+    padding-bottom: 10px;
+}
+
+/* 标题样式 */
+h1 {
+    text-align: center;
+    margin-bottom: 10px;  /* 减少标题和内容的间距 */
+}
+
+/* 模型和数据集的字体，并排显示 */
+h2 {
+    font-size: 16px;  /* 减小字体大小 */
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+
+/* 斜体表示默认测试数据集 */
+.italic-text {
+    font-size: 16px;  /* 调整字体大小 */
+    font-style: italic;
+    color: #333;
+    text-align: center;
+}
+
+/* 检查按钮样式 */
+.check-button {
+    padding: 10px 30px;  /* 减少按钮的大小 */
+    font-size: 16px;
+    border: none;
+    background-color: #205e79;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.check-button:hover {
+    background-color: #82c4ff;
+}
+
+/* 按钮居中对齐 */
+.footer-centered {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;  /* 减少按钮和上方的距离 */
+}
+
+/* 交互式聊天界面样式，增大比例 */
+.chat-container {
+    height: 600px;  /* 增加交互历史展示区域的高度 */
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* 每条聊天记录的样式 */
+.chat-entry {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.chat-entry.user {
+    background-color: #d0eaff;
+    text-align: right;
+}
+
+.chat-entry.bot {
+    background-color: #ffe0e0;
+    text-align: left;
+}
+
+/* Interaction History 字体减小 */
+h3 {
+    font-size: 16px;
+    color: #555;
+}

@@ -3,7 +3,6 @@ import pandas as pd
 import torch
 from datasets import Dataset
 from modelscope import snapshot_download, AutoTokenizer
-from swanlab.integration.huggingface import SwanLabCallback
 from peft import LoraConfig, TaskType, get_peft_model, PeftModel
 from transformers import (
     AutoModelForCausalLM,
@@ -14,11 +13,13 @@ from transformers import (
 import os
 import numpy as np
 import random
-import swanlab
 
-# cd /mnt/data/train/LLM-Finetune/
-# CUDA_VISIBLE_DEVICES=3 python train_linjiu.py
-# conda activate llm
+base_dir = os.path.dirname(os.path.abspath(__file__)) # xx/LLM-Finetune/
+os.environ["CUDA_VISIBLE_DEVICES"] = "0" # 指定显卡型号
+seed = 1 # 设置随机种子
+# python train_linjiu.py
+
+print(f"Seed:{seed} GPU:{os.environ['CUDA_VISIBLE_DEVICES']}")
 
 def set_random_seed(seed: int) -> None:
 	random.seed(seed)
@@ -29,7 +30,6 @@ def set_random_seed(seed: int) -> None:
 	torch.backends.cudnn.benchmark = False
 	torch.backends.cudnn.deterministic = True
 
-seed = 0
 set_random_seed(seed)
 
 
@@ -102,37 +102,44 @@ def predict(messages, model, tokenizer):
 
     response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
 
-    print(response)
-
     return response
-
-
-# 在modelscope上下载Qwen模型到本地目录下
-# model_dir = snapshot_download(
-#     "qwen/Qwen2-1.5B-Instruct", cache_dir="./", revision="master"
-# )
 
 # Transformers加载模型权重
 tokenizer = AutoTokenizer.from_pretrained(
-    "/mnt/data/train/models/qwen2.5-coder-7b-instruct/", use_fast=False, trust_remote_code=True,local_files_only=True
+    os.path.join(base_dir, "PretrainModels/qwen2.5-coder-7b-instruct/"), 
+    use_fast=False, trust_remote_code=True, local_files_only=True
 )
 model = AutoModelForCausalLM.from_pretrained(
-    "/mnt/data/train/models/qwen2.5-coder-7b-instruct/", device_map="auto", torch_dtype=torch.bfloat16,local_files_only=True
+    os.path.join(base_dir, "PretrainModels/qwen2.5-coder-7b-instruct/"), 
+    device_map="auto", torch_dtype=torch.bfloat16,local_files_only=True
 )
 
 model.enable_input_require_grads()  # 开启梯度检查点时，要执行该方法
 
 # 加载、处理数据集和测试集
-train_dataset_path = "train_linjiu.jsonl"
-test_dataset_path = "test_linjiu.jsonl"
+train_dataset_path = os.path.join(base_dir, "data", "train_linjiu.jsonl")
+test_dataset_path = os.path.join(base_dir, "data", "test_linjiu.jsonl")
 
-train_jsonl_new_path = "new_train_linjiu.jsonl"
-test_jsonl_new_path = "new_test_linjiu.jsonl"
+train_jsonl_new_path = os.path.join(base_dir, "data", "new_train_linjiu.jsonl")
+test_jsonl_new_path = os.path.join(base_dir, "data", "new_test_linjiu.jsonl")
 
 if not os.path.exists(train_jsonl_new_path):
     dataset_jsonl_transfer(train_dataset_path, train_jsonl_new_path)
+
+import time
+
+# 记录开始时间
+start_time = time.time()
+
 if not os.path.exists(test_jsonl_new_path):
     dataset_jsonl_transfer(test_dataset_path, test_jsonl_new_path)
+
+# 记录结束时间
+end_time = time.time()
+
+# 计算并打印运行时间
+elapsed_time = end_time - start_time
+print(f"脚本运行时间: {elapsed_time:.2f} 秒")
 
 #之前安全
 #
@@ -162,7 +169,7 @@ config = LoraConfig(
 model = get_peft_model(model, config)
 
 args = TrainingArguments(
-    output_dir="./output/Qwen2.5-7b",
+    output_dir=os.path.join(base_dir, f"output/Qwen2.5-7b/Seed{seed}"),
     per_device_train_batch_size=4,
     gradient_accumulation_steps=4,
     logging_steps=10,
@@ -174,18 +181,26 @@ args = TrainingArguments(
     report_to="none",
 )
 
-
 trainer = Trainer(
     model=model,
     args=args,
     train_dataset=train_dataset,
     data_collator=DataCollatorForSeq2Seq(tokenizer=tokenizer, padding=True),
-    #callbacks=[swanlab_callback],
 )
 
 trainer.train()
 
-# 用测试集测试模型
+#模型存储地址
+model_path = os.path.join(base_dir, f"output/linjiu/Seed{seed}")
+trainer.save_model(model_path)
+tokenizer.save_pretrained(model_path)
+
+import time
+
+# 记录开始时间
+start_time = time.time()
+
+# 用测试集的前10条，测试模型
 test_df = pd.read_json(test_jsonl_new_path, lines=True)[:]
 keys = test_df.columns.tolist()
 
@@ -203,18 +218,7 @@ for index, row in test_df.iterrows():
 
     response = predict(messages, model, tokenizer)
     messages.append({"role": "assistant", "content": f"{response}"})
-    #result_text = f"{messages[0]}\n\n{messages[1]}\n\n{messages[2]}"
-
-    #print('messages[2]',messages[2]['content'])
     test_text.append(messages[2]['content'])
-    #print('result_text',result_text)
-    #test_text_list.append(result_text)
-    #test_text_list.append(swanlab.Text(result_text, caption=response))
-
-# print('test_text',test_text)
-#
-# print("JSON 数据中的键有：", keys)
-# print('test_df',test_df['output'].values.tolist())
 
 num = 0
 for i in range(len(test_text)):
@@ -224,3 +228,12 @@ for i in range(len(test_text)):
         pass
 
 print('ACC',num/len(test_text))
+
+
+
+# 记录结束时间
+end_time = time.time()
+
+# 计算并打印运行时间
+elapsed_time = end_time - start_time
+print(f"脚本运行时间: {elapsed_time:.2f} 秒")

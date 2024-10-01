@@ -1,0 +1,1 @@
+这段C语言代码存在内存泄露的问题。问题出现在FUNC_int64_t_realloc_34_norm函数中，具体在分配（或重新分配）内存的行：data = (int64_t *)realloc(data, 100*sizeof(int64_t));内存泄露类型属于“忘记释放已分配的内存”。因为在FUNC_int64_t_realloc_34_norm函数结束前，没有对应的free(data);语句来释放这块内存。尽管内存被分配给了data，并且后来data的地址被存储在了联合体myUnion的unionFirst成员中，但这并没有改变内存需要被释放的事实。风险值为0.9。

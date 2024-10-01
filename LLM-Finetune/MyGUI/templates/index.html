@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Leak Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="content-container">
+        <h1>Memory Leak Detection</h1>
+
+        <!-- 顶部模型、数据集和默认测试集在同一行显示 -->
+        <div class="top-row single-line reduced-padding">
+            <h2>Model: Qwen2.5-coder-7B-Instruct</h2>
+            <p class="italic-text">Default Test Dataset: TestCode</p>
+            <h2>SFT Dataset: Mixup(SARD-leak_mem-TestList)</h2>
+        </div>
+
+        <!-- 检查按钮居中 -->
+        <div class="footer-centered">
+            <!-- 添加ID "checkButton" -->
+            <button id="checkButton" type="submit" class="check-button blue-btn" form="codeForm">Check for Memory Leaks</button>
+        </div>
+
+        <!-- 交互结果展示，页面比例增大 -->
+        <h3>Interaction History</h3>
+        <div id="chatContainer" class="chat-container"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>
