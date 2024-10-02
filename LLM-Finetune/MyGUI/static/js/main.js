@@ -23,8 +23,8 @@ document.getElementById('checkButton').addEventListener('click', function(e) {
                     const fileCode = result.file || 'No code provided';
                     const hasLeak = result.has_leak ? '×, 这段代码存在漏洞泄漏' : '√, 这段代码没问题';
                     const filename = result.filename || 'No filename provided';
-                    chatContainer.innerHTML += `<div class="chat-entry bot">文件${index + 1}/50 -- ${filename} : ${hasLeak}<br></div>`;
-                    // chatContainer.innerHTML += `<div class="chat-entry bot">文件${index + 1}/50 : ${hasLeak}<br> ${fileCode}</div>`;
+                    // chatContainer.innerHTML += `<div class="chat-entry bot">文件${index + 1}/50 -- ${filename} : ${hasLeak}<br></div>`;
+                    chatContainer.innerHTML += `<div class="chat-entry bot">文件${index + 1}/50 -- ${filename}  :  ${hasLeak}<br> ${fileCode}</div>`;
                 });
             } else {
                 chatContainer.innerHTML += `<div class="chat-entry bot">Unexpected data format returned.</div>`;

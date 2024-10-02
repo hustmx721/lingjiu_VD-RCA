@@ -18,7 +18,7 @@ warnings.filterwarnings("ignore")
 
 base_dir = os.path.dirname(os.path.abspath(__file__)) # xx/LLM-Finetune/
 os.environ["CUDA_VISIBLE_DEVICES"] = "0" # 指定显卡型号
-seed = 1 # 设置随机种子
+seed = 3 # 设置随机种子
 # cd
 # python predict_linjiu_root.py
 
@@ -41,7 +41,9 @@ def predict(messages, model, tokenizer):
     )
     model_inputs = tokenizer([text], return_tensors="pt").to(device)
 
-    generated_ids = model.generate(model_inputs.input_ids, max_new_tokens=512)
+    attention_mask = model_inputs.attention_mask
+
+    generated_ids = model.generate(model_inputs.input_ids, max_new_tokens=512, attention_mask=attention_mask, pad_token_id=tokenizer.eos_token_id)
     generated_ids = [
         output_ids[len(input_ids) :]
         for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
@@ -162,11 +164,19 @@ print(f"根因定位--脚本运行时间: {elapsed_time:.2f} 秒")
 
 
 """ 
-seed0: 180.67s
-seed1: 191.68s
-seed2: 161.62s
-seed3: 192.70s
-seed4: 166.84s
+qwen2.5-coder-7b-instruct:
+seed0: 308.23s
+seed1: 289.70s
+seed2: 333.41s
+seed3: 289.45s
+seed4: 283.36s
+平均用时(单卡): 300.83s
 
-平均用时(单卡): 178.702s
+Qwen2-7B
+seed0: 165.46s
+seed1: 158.50s
+seed2: 155.47s
+seed3: 159.28s
+seed4: 147.15s
+平均用时(单卡): 157.172s
 """

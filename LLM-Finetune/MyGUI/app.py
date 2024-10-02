@@ -6,7 +6,7 @@ base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # projec
 sys.path.append(base_dir)
 
 app = Flask(__name__)
-
+seed = 3  # 设置随机种子
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'  # 设置GPU
 
 # 修改的命令
@@ -21,9 +21,9 @@ def run_root_cause_analysis():
     os.chdir(base_dir)
 
     # 读取漏洞检测和根因定位结果
-    with open(os.path.join(base_dir, 'result/detect_predict/result_seed1.json'), 'r', encoding='utf-8') as f:
+    with open(os.path.join(base_dir, f'result/detect_predict/result_seed{seed}.json'), 'r', encoding='utf-8') as f:
         detects = json.load(f)
-    with open(os.path.join(base_dir, 'result/root_predict/result_root_seed1.json'), 'r', encoding='utf-8') as f:
+    with open(os.path.join(base_dir, f'result/root_predict/result_root_seed{seed}.json'), 'r', encoding='utf-8') as f:
         roots = json.load(f)
     out = zip(detects, roots)
 
@@ -47,7 +47,7 @@ def check_code_memory_leak():
     os.system(CMD1)
 
     # 读取检测结果和源文件
-    with open(os.path.join(base_dir, 'result/detect_predict/result_seed1.json'), 'r', encoding='utf-8') as f:
+    with open(os.path.join(base_dir, f'result/detect_predict/result_seed{seed}.json'), 'r', encoding='utf-8') as f:
         detects = json.load(f)
 
     with open(os.path.join(base_dir, 'data/testCode.json'), 'r', encoding='utf-8') as f:
@@ -62,8 +62,8 @@ def check_code_memory_leak():
         "filename": file['filename'],
         }
         # print(f"文件{idx+1}:")
-        # print(f"源码----->:\n{src_code}")
-        # print(f"检测结果: {detect}")
+        # print(f"源码----->:\n{file['content']}")
+        # print(f"检测结果: {predict}")
         results.append(tmpresult)
 
     # 启动后台线程执行根因定位

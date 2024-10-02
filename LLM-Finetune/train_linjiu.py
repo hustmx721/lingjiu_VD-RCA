@@ -15,8 +15,8 @@ import numpy as np
 import random
 
 base_dir = os.path.dirname(os.path.abspath(__file__)) # xx/LLM-Finetune/
-os.environ["CUDA_VISIBLE_DEVICES"] = "0" # 指定显卡型号
-seed = 1 # 设置随机种子
+os.environ["CUDA_VISIBLE_DEVICES"] = "4" # 指定显卡型号
+seed = 4 # 设置随机种子
 # python train_linjiu.py
 
 print(f"Seed:{seed} GPU:{os.environ['CUDA_VISIBLE_DEVICES']}")

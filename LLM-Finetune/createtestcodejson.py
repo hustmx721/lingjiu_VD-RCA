@@ -15,12 +15,57 @@ def set_seed(myseed = 23721):
     torch.backends.cudnn.enabled = False # forbidden to use unsure algorithm
     torch.backends.cudnn.deterministic = True # use the same conv
 
-if __name__ == "__main__":
-    set_seed(2024)
 
+
+def FullRoot():
+    def get_idx(file_name):
+        return int(file_name.split('/')[-2])
+    def get_tail(file_name):
+        return file_name.split('/')[-1].split('.')[0]
+    def make_root_instruction(file_name, data):
+        array = {}
+        idx, tail = get_idx(file_name), get_tail(file_name)
+        txt_name = "/".join(file_name.split('/')[:-1] + [f"{tail}.txt"])
+        with open(file_name, 'r', encoding='utf-8') as file:
+            word_0 = ''
+            for line in file:
+                word_0 = (word_0+line.strip()+'\n')
+        with open(txt_name, 'r', encoding='utf-8') as file:
+            word_1 = ''
+            for line in file:
+                word_1 = (word_1+line.strip()+'\n')
+        array['text'] = word_0
+        array['category'] = ['NULL']
+        array['output'] = word_1
+        data.append(array)
+    data, savejson = [], []
+    # 取全部的根因定位数据集
+    setnames = ["linjiu_root", "SARD_LLM_root_old"]
+    for setname in setnames:
+        files = []
+        root = os.path.join(base_dir, f'dataset/{setname}')
+        for subdir in os.listdir(root):
+            files.extend(glob.glob(os.path.join(root, subdir, '*.c')))
+            files.extend(glob.glob(os.path.join(root, subdir, '*.cpp')))
+        print(f"{setname}: {len(files)}")
+        data.append(files)
+    print(len(data[1]))
+    data[1] = list(filter(lambda x: get_idx(x) in range(1,51), data[1]))
+    allrootfiles = data[0] + data[1]
+    for idx,file in enumerate(allrootfiles):
+        # print(f"---------> now processing file {idx+1}")
+        if get_tail(file) == "0":
+            continue
+        make_root_instruction(file, savejson)
+    with open(os.path.join(base_dir, f'data/full_root.json'), 'w', encoding='utf-8') as file:
+        json.dump(savejson, file, ensure_ascii=False)
+    print(f"full_root.json saved, {len(savejson)} prompts!")
+
+
+def create_testCode_json():
+    set_seed(2024)
     # 记录开始时间
     start_time = time.time()
-
 
     base_dir = os.path.dirname(os.path.abspath(__file__)) # 脚本工程文件根目录, xx/LLM-Finetune/
     # ! 请修改你的数据集名称
@@ -51,3 +96,8 @@ if __name__ == "__main__":
         json.dump(data, json_file, ensure_ascii=False, indent=4)
 
     print(f"JSON 文件已生成: {os.path.join(base_dir, 'data/testCode.json')}")
+
+
+if __name__ == "__main__":
+    create_testCode_json()
+    # FullRoot()

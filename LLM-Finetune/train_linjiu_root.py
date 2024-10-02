@@ -19,7 +19,8 @@ warnings.filterwarnings("ignore")
 
 base_dir = os.path.dirname(os.path.abspath(__file__)) # xx/LLM-Finetune/
 os.environ["CUDA_VISIBLE_DEVICES"] = "0" # 指定显卡型号
-seed = 1 # 设置随机种子
+seed = 3 # 设置随机种子
+
 
 # python train_linjiu_root.py
 
@@ -112,11 +113,11 @@ def predict(messages, model, tokenizer):
 
 # Transformers加载模型权重
 tokenizer = AutoTokenizer.from_pretrained(
-    os.path.join(base_dir, "PretrainModels/qwen2.5-coder-7b-instruct/"), 
+    os.path.join(base_dir, "PretrainModels/Qwen2-7B/"), 
     use_fast=False, trust_remote_code=True,local_files_only=True
 )
 model = AutoModelForCausalLM.from_pretrained(
-    os.path.join(base_dir, "PretrainModels/qwen2.5-coder-7b-instruct/"), 
+    os.path.join(base_dir, "PretrainModels/Qwen2-7B/"), 
     device_map="auto", torch_dtype=torch.bfloat16,local_files_only=True
 )
 
