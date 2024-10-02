@@ -1,7 +1,7 @@
 ## 引言
 *基于LLMs(Scheme2)-Method3的方法，我们的最终方案。*
-> *漏洞检测*:`qwen2.5-coder-7b-instruct`模型 <br>
-> *根因定位*:`Qwen2-7B`模型 
+> *漏洞检测* : `qwen2.5-coder-7b-instruct`模型 <br>
+> *根因定位* : `Qwen2-7B`模型 
 #### 漏洞检测
 `qwen2.5-coder-7b-instruct`模型
 | Seed | Run 1 (s) | Run 2 (s) | Run 3 (s) | Average (s) |
@@ -16,6 +16,7 @@
 平均用时(单卡): **14.522s**
 #### 根因定位
 - `qwen2.5-coder-7b-instruct`模型:
+  
 | Seed   |   Time (s) |
 |:-------|-----------:|
 | Seed 0 |     308.23 |
@@ -26,6 +27,7 @@
 
 平均用时(单卡): ~300.83s~
 - `Qwen2-7B`模型
+  
 | Seed   |   Time (s) |
 |:-------|-----------:|
 | Seed 0 |     165.46 |
